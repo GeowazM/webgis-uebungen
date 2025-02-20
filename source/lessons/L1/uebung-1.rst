@@ -83,13 +83,13 @@ Finetuning
 --------
 
 Jetzt können wir noch zahlreiche Details mit Hilfe des Plugins festlegen.
-a) Titel im Browser-Tab
-b) Titel in der Webmap
-c) Zusammenfassung in der Webmap
-d) Messwerkzeug & Suchfunktion
+- Titel im Browser-Tab
+- Titel in der Webmap
+- Zusammenfassung in der Webmap
+- Messwerkzeug & Suchfunktion
 
 
-Weitere Anpassungen wie Quellenangabe, Farbe, Style der Layer gehen wir in Übung.
+Weitere Anpassungen wie Quellenangabe, Browsertab, Farbe, Style der Layer gehen wir in Übung 3 an.
 
 
 In QGIS können Profile mit speziellen Einstellungen angelegt werden. Beispielsweise können für die Verwendung von Erweiterungen diverse Profile verwendet werden.
