@@ -6,13 +6,13 @@
 .. image:: img/banner/world-map.png
     :class: dark-light
 
-Willkommen zu Einführung in GIS für Geowissenschaften!
+Willkommen zum Modul WebGIS!
 ===========================
 
 
-Der GIS-Kurs vermittelt Ihnen die grundlegenden Konzepte Geographischer informationssysteme (GIS) sowie der wissenschaftlichen Datenanalyse unter Verwendung der 
-GIS-Software QGIS (keine Vorkenntnisse erforderlich). Jede Aufgabe behandelt eine methodische Vorgehensweise, die mit GIS-Software typisch behandelt werden können. Das Ziel besteht darin, ein Verständnis und praktische Fähigkeiten in der Verarbeitung raumbezogener Daten (Geodaten) zu erlernen. 
-Der Kurs wurde in Kooperation mit der GIS-Station, der Pädagogischen Hochschule Heidelberg für das Geowissenschaftliche Institut der Universität Heidelberg entwickelt. 
+Das Modul behandelt die theoretischen Grundlagen zum Aufbau internetgestützter GIS-Plattformen. Dabei werden neben den grundlegenden Systemanforderungen an die Technik auch mögliche Umsetzungen mit 
+Open Source- wie auch proprietären Softwarepaketen vermittelt. Die Teilnehmenden erarbeiten sich in praktischen Übungen erste Kenntnisse zu Aufbau und Verwaltung eines Web-GIS unter Einbeziehung eigener und fremder Datensätzen.
+Das Modul wird im Rahmen der berufsbegleitenden Weiterbildung Geodatenmanager/-in der Universität Tübingen genutzt & weiterentwickelt. 
 
 
 Lernziele
@@ -48,12 +48,12 @@ Inhalte
 Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kommen. Ihr versteht **warum** eure Lösungen funkionieren und erhaltet eine
 Übersicht wie **GIS-Systeme funktionieren**. Die Übungen sind als praxisorientierte **Hands-On** Sessions gestaltet.
 
-+-------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
-| Übung | Thema                  | Methode                                                                                                                                                            | Datentyp |
-+=======+========================+====================================================================================================================================================================+==========+
-| 0     | QGIS Nutzeroberfläche  | `Einführung <https://github.com/GeowazM/Einfuehrung-GIS-fur-Geowissenschaften/tree/main/exercise_0>`__                                                             | Vektor   |
-+-------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
-| 1     | Erdbeben weltweit      | `Layer- & Attribute <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L1/exercise-1-tectonicplates.html>`__                           | Vektor   |
++-------+---------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
+| Übung | Thema                     | Anwendungen, Tools u.ä.                                                                                                                                                            | Datentyp |
++=======+===========================+====================================================================================================================================================================+==========+
+| 0     | WebGIS & Geoportale       | `Einführung <https://github.com/GeowazM/Einfuehrung-GIS-fur-Geowissenschaften/tree/main/exercise_0>`__                                                             | Vektor   |
++-------+---------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
+| 1     | Erste interaktive Webmaps | `Layer- & Attribute <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L1/exercise-1-tectonicplates.html>`__                           | Vektor   |
 +-------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
 | 2     | Bodenschätze in BW     | `Eine Karte erstellen <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L2/exercise-2.html>`__                                        | Vektor   |
 +-------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+

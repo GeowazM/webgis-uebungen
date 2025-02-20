@@ -6,7 +6,7 @@ pydata-sphinx-theme
 IPython
 jupyter_client
 ipykernel
-git+https://github.com/jelmer/googleanalytics.git@master
+#git+https://github.com/jelmer/googleanalytics.git@master
 MyST-NB
 matplotlib
 pandas
