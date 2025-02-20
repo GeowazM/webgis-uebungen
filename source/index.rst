@@ -15,6 +15,19 @@ Das Modul behandelt die theoretischen Grundlagen zum Aufbau internetgestützter 
 Open Source- wie auch proprietären Softwarepakete vermittelt. Die Teilnehmenden erarbeiten sich in praktischen Übungen erste Kenntnisse zu Aufbau und Verwaltung eines Web-GIS unter Einbeziehung eigener und fremder Datensätzen.
 Das Modul wird im Rahmen der berufsbegleitenden Weiterbildung Geodatenmanager/-in der Universität Tübingen genutzt & weiterentwickelt. 
 
+Diese Übung behandelt die Erstellung interaktiven WebMaps mit OpenLayers & Leaflet.
+Modul führt ein in Theorie, Anwendung und Praxis von Web-GIS. Theorie und Anwen-dungsbeispiele werden in den Präsentationsfolien erläutert.
+
+Sie tasten sich Schritt für Schritt an die Erstellung von Karten im Internet heran, bis hin zu ei-nem vollständigen Web-GIS. Wir beginnen mit einem QGIS-Plugin, dass uns aus einem QGIS-Projekt eine einfache interaktive Webmap erstellt. Mit dieser einfachen interaktiven Webmap lernen wir die grundlegenden Technologien kennen, die fürs Internet gelten.
+•	Kennenlernen Plugins
+•	Anwenden HTML
+•	Kennenlernen CSS, PHP, JavaScript-API
+
+Der praktische Teil wird in diesem Modul mit Übungen zu QGIS-Server und Lizmap als Schwerpunkte vorgestellt. Das Desktop-GIS zur Vorbereitung von Web-GIS Projekten wird QGIS sein. 
+Theoretisch kann mit anderen Desktop GIS auch gearbeitet werden.
+
+Das Modul ist ausgerichtet auf die Entwicklung und Administration von Web-GIS Anwendun-gen, die Installation von Server und Client wird nicht behandelt. In den meisten Fällen in Bü¬ros oder Verwaltungen gibt es strenge IT-Regeln, für die eine Administrationsabteilung zu¬ständig ist. Ziel dieses Kurses ist es, spezielle Kenntnisse zu vermitteln, um mit diesen Abtei¬lungen erfolgreich zusammenarbeiten zu können.
+Selbstverständlich können Web-GIS Systeme zum Testen und Üben auch lokal installiert werden. Entsprechende Anregungen werden am Rande gegeben und Unterlagen dazu wer-den bereitgestellt bzw. wird auf solche im Internet verwiesen.
 
 Lernziele
 ---------
@@ -85,27 +98,23 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
 
 .. toctree::
     :maxdepth: 2
-    :caption: Erste interaktive Webmaps erstellen
+    :caption: Einen Überblick gewinnen
 
     lessons/L0/uebung-0
 
 
 .. toctree::
     :maxdepth: 2
-    :caption: Das Layerprinzip
+    :caption: Eine erste interaktive Webmap erstellen
 
-    lessons/L1/overview
-    lessons/L1/exercise-1-germany
-    lessons/L1/exercise-1-tectonicplates
-    lessons/L1/exercise-1-tectonicplates_additional
+    lessons/L1/uebung-1
 
 .. toctree::
     :maxdepth: 2
     :caption: Eine Karte erstellen
 
     lessons/L2/overview
-    lessons/L2/exercise-2
-    lessons/L2/exercise-2_additional
+    lessons/L1/uebung-2
 
 .. toctree::
     :maxdepth: 2

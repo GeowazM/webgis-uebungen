@@ -1,4 +1,4 @@
-Übung Webmapping
+Übung 1
 ==========
 
 .. hint::
@@ -7,29 +7,80 @@
       * Die ersten Schritte zum Webmapping
       * Die Benutzeroberfläche von qgis2web kennenlernen
 
+.. important::
+
+   Für Ihre Firma soll in die Internetpräsenz eine interaktive Karte eingebaut werden. Die von der Firma beauftragten Web-Entwickler/innen erwarten eine fertige Struktur, 
+   die per Link aufgerufen werden kann. Die Lösung ist ein web-basierter Geoviewer der als Client-Lösung responsiv über einen Browser läuft. Hierfür gibt es mehrere Möglichkeiten.
+   Wir werden uns in dieser und in den kommenden Aufgaben mit *OpenLayers*, *Leaflet* und dem *Masterportal* beschäftigen.
+
 .. note::
 
    **Für diese Übung nutzen wir folgende Tools**
       *  `QGIS <https://qgis.org/>`__
       *  `Plugin *qgis2web* <https://plugins.qgis.org/plugins/qgis2web/>`__
       *  `QGIS Cloud <https://qgiscloud.com/de/pages/quickstart>`__
-   
-.. seealso::
-
-   Daten
-      Lade dir die `Daten für die Exercise 1 herunter <https://drive.google.com/drive/folders/1xKB8gI3v29XL_NEvdtLZcm6ugaeuyl2L?usp=sharing>`__ und speichert
-      sie auf eurem PC. Legt einen lokalen Ordner (nicht auf einem Netzlaufwerk wie zum Beispiel “Q://Abgabe”) an und speichert dort die obigen Daten (.zip Ordner müssen vorher entpackt werden).
-
-      -  Erdbeben (Point) (Quelle: `United State Geological Suvey (USGS) <https://earthquake.usgs.gov/earthquakes/map/?extent=3.86425,-135.08789&extent=61.93895,-54.93164>`__)
-      -  Plattengrenzen (Linie) (Quelle: `Hugo Ahlenius, Nordpil and Peter Bird basierend auf doi: 10.1029/2001GC000252 <https://github.com/fraxen/tectonicplates>`__)
-      -  Platten (Polygon) (Quelle: `Hugo Ahlenius, Nordpil and Peter Bird basierend auf doi: 10.1029/2001GC000252 <https://github.com/fraxen/tectonicplates>`__)
-
 
 
 Aufgaben
 --------
 
-Ein QGIS-Projekt anlegen, Layer hinzufügen und speichern.
+Mit dem Plugin *qgis2web* lassen sich schnell und einfach interaktive Webmaps erstellen. Dafür brauchen wir ein QGIS-Projekt mit einigen Layern:
+-	Starte QGIS
+-	Lade dir die Daten `„uebung_1_13.zip“ aus ILIAS <https://lms-ubinfo.uni-tuebingen.de/ilias3/ilias.php?baseClass=ilrepositorygui&ref_id=37653>`__ herunter
+-	Öffne das QGIS-Projekt
+      *	Füge mind. einen WMS oder WMTS-Layer hinzu
+      *	OpenStreetMap 
+      *	Digitales Orthophotos
+      *	Installiere das Plugin *qgis2web* 
+
+.. figure:: img/qgis2web.png
+   :alt: QGIS-Plugin *qgis2web*
+   :width: 800px
+
+   QGIS-Plugin *qgis2web*
+
+
+-	Öffne das Plugin *qgis2web*  
+
+.. figure:: img/qgis2web_logo.png
+   :alt: *qgis2web* Logo
+   :width: 150px
+
+   Logo *qgis2web*
+
+- Passe zwei Popup Fields zu *inline Label - always visible* an
+
+.. figure:: img/qgis2web_screenshot_ol_v2.PNG
+   :alt: *qgis2web* Menü
+   :width: 150px
+
+   Menü *qgis2web*
+
+-	Exportiere deine WebMap 
+
+.. figure:: img/export.png
+   :alt: *qgis2web* Export
+   :width: 150px
+
+   Export *qgis2web*
+
+- Eine Browser-Tab sollte sich öffnen & die Karte anzeigen.
+
+**So (oder ähnlich) kann deine erste Webmap aussehen**
+
+
+.. figure:: img/qgis2web_screenshot_map.PNG
+   :alt: *qgis2web* Webmap
+   :width: 800px
+
+   Webmap *qgis2web*
+
+
+Gratulation! Deine erste Webmap ist fertig! 
+
+Jetzt gehen wir an die Details
+--------
+
 
 1. Öffne QGIS und mach dich mit der Nutzeroberfläche vertraut.
 2. Öffne die oben angegebenen Dateien in QGIS. Ladet dazu die Vektor-Layer in euer Programm.
@@ -51,24 +102,3 @@ Ein QGIS-Projekt anlegen, Layer hinzufügen und speichern.
    :width: 800px
 
    Layer in QGIS zeigen Platten, Plattengrenzen & Erdbeben
-
-
-Optionale Aufgabe
---------
-
-.. tip::
-
-    Du bist früher fertig als angedacht? Dann versuche die obigen Geodaten selbstständig herunterzuladen.
-
-
-Die aktuellen Erdbebendaten findest du bei `United State Geological Suvey (USGS) <https://earthquake.usgs.gov/earthquakes/map/?extent=3.86425,-135.08789&extent=61.93895,-54.93164>`__
-Die Platten und PLattengrenzen findest du bei `Hugo Ahlenius, Nordpil and Peter Bird (doi: 10.1029/2001GC000252) <https://github.com/fraxen/tectonicplates>`__)
-    
-**Lade die Geodaten selbstständig herunter & importiere diese in dein QGIS Projekt!**.
-
-**So (oder ähnlich) kann es am Ende aussehen**
-
-.. figure:: https://raw.githubusercontent.com/fraxen/tectonicplates/master/example_plates.png
-   :alt: Beispielkarte der Platten und der Plattengrenzen
-
-   Beispielkarte der Platten und der Plattengrenzen nach Hugo Ahlenius, Nordpil and Peter Bird (doi: 10.1029/2001GC000252)
