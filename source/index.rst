@@ -6,27 +6,27 @@
 .. image:: img/banner/world-map.png
     :class: dark-light
 
-Willkommen zum Modul WebGIS!
+Willkommen zum Modul WebGIS 🗺🌐
 ===========================
 
+Informationen finden Sie `hier <https://wissenschaftliche-weiterbildung.info/Veranstaltung/cmx64c779c751049.html>`__  !
 
 Das Modul behandelt die theoretischen Grundlagen zum Aufbau internetgestützter GIS-Plattformen. Dabei werden neben den grundlegenden Systemanforderungen an die Technik auch mögliche Umsetzungen mit 
-Open Source- wie auch proprietären Softwarepaketen vermittelt. Die Teilnehmenden erarbeiten sich in praktischen Übungen erste Kenntnisse zu Aufbau und Verwaltung eines Web-GIS unter Einbeziehung eigener und fremder Datensätzen.
+Open Source- wie auch proprietären Softwarepakete vermittelt. Die Teilnehmenden erarbeiten sich in praktischen Übungen erste Kenntnisse zu Aufbau und Verwaltung eines Web-GIS unter Einbeziehung eigener und fremder Datensätzen.
 Das Modul wird im Rahmen der berufsbegleitenden Weiterbildung Geodatenmanager/-in der Universität Tübingen genutzt & weiterentwickelt. 
 
 
 Lernziele
 ---------
 
--  Übertragung von Konzepten aus der Vorlesung in praktische Anwendung
--  Betrachtung des Workflows von GIS-Analysen (EVAP nach ?)
-
-   -  **E**rhebung     
-   -  **V**erarbeitung
-   -  **A**nalyse 
-   -  **P**räsentation
-
--  Einführung in das Desktop GIS QGIS (open source)
+- Übersicht über verschiedene Web-GIS-Systeme.
+- Kenntnisse der möglichen Einsatzbereiche und ihrer Grenzen.
+- Kenntnisse spezifischer Systemanforderungen.
+- Basiswissen zum Aufbau eines Web-GIS mit entsprechenden OGC (Open Geospatial Consortium) Standards.
+- Implementierung eines Web-GIS mit Basisfunktionalität.
+- Integration eigener Daten in ein Web-GIS.
+- Einbindung von Hintergrundkarten in ein Web-GIS.
+- Einführung in die Erstellung einer GDI.
 
 Ablauf und Inhalte der Übungen
 -----------------------------------------------------
@@ -35,66 +35,35 @@ Ablauf
 ~~~~~~
 
 -  Die Übungen werden hier bereitgestellt.
--  Die Inhalte der Übungen sollt ihr euch großteils selbständig erarbeiten. Im `Wiki <https://courses.gistools.geog.uni-heidelberg.de/giscience/gis-einfuehrung/-/wikis/home>`__
-   findet ihr alle nötigen Informationen um Übungsaufgaben zu meistern.
-   Hier findet ihr Kurzanleitungen, Tipps und Videos. Ein Dankeschön geht hier an die Ersteller:innen der Seite, an die GIScience Group der Uni Heidelberg & das HeiGIT.
--  Beachtet: Aufgrund technischer Probleme mit dem Gitlab Wiki kann es vorkommen, dass einige Links nicht funktionieren.
--  Die Vorlesungsfolien werden euch per Mail zugeschickt.
+-  Die Inhalte der Übungen sollt ihr euch großteils selbständig erarbeiten. In ILIAS findet ihr weitere Informationen, um die Übungsaufgaben zu meistern.
+-  Die Vorlesungsfolien und alles weiteren Materialien werden euch über ILIAS bereitgestellt.
 -  Bei Fragen wendet euch direkt an mich oder schreibt per Mail (siehe Folien).
 
 Inhalte
 ~~~~~~~
 
 Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kommen. Ihr versteht **warum** eure Lösungen funkionieren und erhaltet eine
-Übersicht wie **GIS-Systeme funktionieren**. Die Übungen sind als praxisorientierte **Hands-On** Sessions gestaltet.
+Übersicht wie **WebMaps & WebGIS-Systeme** funktionieren. Die Übungen sind als praxisorientierte **Hands-On** Sessions gestaltet.
 
-+-------+---------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
-| Übung | Thema                     | Anwendungen, Tools u.ä.                                                                                                                                                            | Datentyp |
-+=======+===========================+====================================================================================================================================================================+==========+
-| 0     | WebGIS & Geoportale       | `Einführung <https://github.com/GeowazM/Einfuehrung-GIS-fur-Geowissenschaften/tree/main/exercise_0>`__                                                             | Vektor   |
-+-------+---------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
-| 1     | Erste interaktive Webmaps | `Layer- & Attribute <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L1/exercise-1-tectonicplates.html>`__                           | Vektor   |
-+-------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
-| 2     | Bodenschätze in BW     | `Eine Karte erstellen <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L2/exercise-2.html>`__                                        | Vektor   |
-+-------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
-| 3     | Vulkanismus weltweit   | `Mit Attributtabellen arbeiten <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L3/exercise-3.html>`__                               | Vektor   |
-+-------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
-| 4     | Hochwasser in OS       | `Räumliche Abfrage nutzen <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L4/exercise-4.html>`__                                    | Vektor   |
-+-------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
-| 5     | Geol. Karte in HD      | `Digitalisieren <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L5/exercise-5.html>`__                                              | Raster   |
-+-------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
-| 6     | Gelände in Kenia       | `Copernicus Daten & 3D Visualisierungen <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L6/exercise-6.html>`__                      | Raster   |
-+-------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
-| 7     | Steigung Wanderweg     | `Digitale Geländemodelle nutzen <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L7/exercise-7b.html>`__                             | Raster   |
-+-------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
-| 8     | Temperaturen in DE     | `Räumliche Interpolation durchführen <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L8/exercise-8.html8>`__                        | Raster   |
-+-------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
-| 9     | Straßenlärm in HD      | `Prozesse automatisieren <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L9/exercise-9.html>`__                                     | Vektor   |
-+-------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
-|                                | Vorbereitung Abschlussprojekt                                                                                                                                      |          |
-+-------+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+
++-------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Übung | Thema                     | Anwendungen, Tools u.ä.                                                                                                                                         |
++=======+===========================+=================================================================================================================================================================+
+| 0     | WebGIS & Geoportale       | `Geoportal Stuttgart <https://maps.stuttgart.de/stadtplan/>`__                                                                                                  |
++-------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 1     | Erste interaktive Webmaps | `QGIS und qgis2web <https://plugins.qgis.org/plugins/qgis2web/>`__                                                                                              | 
++-------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2     | HTML,CSS und JavaScript   | `Eine Karte erstellen <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L2/exercise-2.html>`__                                     |
++-------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 3     | Vulkanismus weltweit      | `Mit Attributtabellen arbeiten <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L3/exercise-3.html>`__                            |
++-------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 --------------
-
-
-.. attention::
-
-    **WICHTIG:** Die **Abgabe des Abschlussprojekts** erfolgt ausschließlich per Mail. Achtet darauf, dass ein anderer Nutzer dein QGIS Projekt inkl. allen relevanten Layern öffnen kann. 
-    Die aus der Gesamt-Punktzahl resultierende Note wird dem Prüfungssekretariat gemeldet.
-
-
-.. admonition:: Interessante Links
-
-    - https://arcg.is/1vqrur 
-    - https://www.geotis.de/geotisapp/geotis.php
-    - https://www.nlog.nl/southern-permian-basin-atlas
-    - https://nibis.lbeg.de/cardomap3/
 
 .. admonition:: Hilfe
 
     Im Laude der Übungen werden euch typische Probleme von Geodaten und GIS-Software begegnen. Das Auftreten dieser Probleme ist i.d.R. beabsichtig. 
     Lösungen, Herangehensweisen zu diesen Problemen besprechen wir in der Vorlesung und während der gesamten Kurswoche.
-    Online Hilfe findet ihr im `Wiki <https://courses.gistools.geog.uni-heidelberg.de/giscience/gis-einfuehrung/-/wikis/home>`__ des Geographischen Instituts der Uni Heidelberg und ganz allgemein im Internet.
+    Online Hilfe findet ihr im `ILIAS <https://lms-ubinfo.uni-tuebingen.de/ilias3/ilias.php?baseClass=ilrepositorygui&cmd=render&ref_id=37481>`__ des Geographischen Instituts der Uni Heidelberg und ganz allgemein im Internet.
 
 .. admonition:: Hilfe
 
@@ -104,11 +73,7 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
     :maxdepth: 2
     :caption: Kursinhalte
 
-    course-info/kursinfo
-    course-info/abschlussaprojekt
-    course-info/resources
-    course-info/theteam
-    course-info/licensing
+    modul-info/info
 
 .. toctree::
     :maxdepth: 2

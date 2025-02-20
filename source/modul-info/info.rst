@@ -18,5 +18,7 @@ Dozent
 ~~~~~~~~~
 
 - Mario Blersch, M.Sc.
-  - Doktorand am Institut für Geographie der Pädagogischen Hochschule Heildeberg
-  - Wissenschaftlicher Mitarbeiter der AG Geoinformatik am Geographischen Institut der Universität Tübingen
+  - `Koordinator Zertifikatsstudium Geodatenmanager/-in  <https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/geowissenschaften/arbeitsgruppen/geographie/institut/berufsbegleitende-weiterbildung-geodatenmanager-in/kontakt/>`__
+  - `AG Geoinformatik - Geographischs Institut <https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/geowissenschaften/arbeitsgruppen/geographie/forschungsbereich/geoinformatik-gis/arbeitsgruppe/team/>`__
+  - `Tübinger Zentrum für Wissenschaftliche Weiterbildung <https://uni-tuebingen.de/zh/weiterbildung/programm/geodatenmanager-in/>`__
+  - `Eberhard Karls Universität Tübingen <https://uni-tuebingen.de/>`__
