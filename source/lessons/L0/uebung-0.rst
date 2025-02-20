@@ -1,4 +1,4 @@
-Übung Webmapping
+Geoviewer, WebGIS & Geoportale
 ==========
 
 .. hint::
@@ -14,6 +14,8 @@
       
 Geoportale u.ä.
 --------
+
+Die Landschaft der Geodatenportale, GDIs, WebGIS, Webmapping oder Digitaler Zwillinge wächst kontnuierlich....und die Begrifflicheiten mit ihnen.
 
 *  `COVID-19 Dashboard - John Hopkins University <https://coronavirus.jhu.edu/map.html>`__
 *  `Thünen Atlas <https://atlas.thuenen.de/#/>`__

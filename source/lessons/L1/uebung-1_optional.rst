@@ -27,25 +27,23 @@ Aufgabe
 
 Eine Karte mit QGIS Cloud veröffentlichen (Cloud Service)
 
-Es gibt Möglichkeiten Karten zu veröffentlichen, ohne einen ei¬genen Server zu betreiben, ohne tiefere Web-GIS-Kenntnisse zu haben und die einen sehr geringen Aufwand erfordern. 
-Die Schweizer Firma Sourcepole bietet einen Cloud-Dienst an, der für einen geringen Speicherbedarf kostenlos nutzbar ist. Dazu gibt es die Erweiterung „QGIS Cloud“, 
-installieren Sie diese und melden Sie sich an.
+Es gibt die Möglichkeit (ohne einen eigenen Server betreiben zu müssen) Karten zu veröffentlichen Dies hat den Vorteil, dass keine tieferen WebGIS-Kenntnisse erforderlich sind und dies schnell und einfach geht. 
+Die Schweizer Firma Sourcepole bietet einen Cloud-Dienst an, der für einen geringen Speicherbedarf kostenlos nutzbar ist. Dazu gibt es das QGIS-Plugin *QGIS Cloud*.
+
+Nach einer Registrierung können wir eine kleine Webmap über diesen Cloud-Dienst veröffentlichen. Nutzen Sie das ursprüngliche Projekt und speichern Sie es unter einem neuen Namen ab.
 
 
-- `Quickstart - QGIS Cloud <https://qgiscloud.com/de/pages/quickstart>`__
+- Installieren Sie das Plugin *QGIS Cloud*
+- Loggen Sie sich ein (Registrierung dauert ca. 2 min)
+- Folgen Si den Anweisungen des `Quickstart - QGIS Cloud <https://qgiscloud.com/de/pages/quickstart>`__
+- Publishen Sie das Projekt
+- Untersuchen Sie jetzt die Quelle der Layer
 
 .. figure:: img/qgis_cloud.png
    :alt: *qgis cloud* Webmap
    :width: 400
 
    *qgis cloud* Plugin
-
-Wenn Sie sich nicht erneut bei einem Dienst anmelden möchten und diesen in Zukunft nicht verwenden werden, können Sie diesen Teil überspringen.
-Sie arbeiten nun mit den Online-Hilfen der Erweiterung. Sollten Sie Unterstützung benötigen, wenden Sie sich gerne an den Dozierenden.
-Verwenden Sie das ursprüngliche Projekt und speichern Sie es unter einem neuen Namen ab.
-Nehmen Sie die Einstellungen gemäß der Quickstart-Anleitung im Internet vor. Den Link zur Anleitung finden Sie in der Beschreibung des PlugIns in der Erweiterungsverwaltung.
-Nach der Veröffentlichung untersuchen Sie bitte die Quelle der Layer.
-
 
 
 
