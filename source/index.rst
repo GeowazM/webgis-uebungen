@@ -174,4 +174,5 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
     gis-data/geobasisdaten-bw
     gis-data/basemap-de
     gis-data/download-osm-data
+    gis-data/ogc-standards
     gis-data/onegeology
