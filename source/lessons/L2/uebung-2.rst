@@ -27,22 +27,21 @@ Für den Erstkontakt von HTML, CSS & JavaScript nutzen wir die `w3school <https:
    * klicke auf **Run**
 
 - Sytling: Öffne den Link zu `HTML CSS <https://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_fonts>`__
-   * **Verändere** den *Page Title* und den *My first paragraph* und 
+   * **Verändere** die Farbe von ``color: blue;`` zu ``color: green`` und 
+   * die Schriftart von ``font-family: verdana;`` zu ``font-family: arial``
    * klicke auf **Run**
 
 - Öffne den Link zu `HTML JavaScript <https://www.w3schools.com/html/tryit.asp?filename=tryhtml_script_html>`__
    * **Verändere** den *Click Me!* und klicke auf **Run**
    * Passe den Coode wie folgt an und lasse es erneut runnen
 
-.. code-block:: javascript
-  :linenos:
+.. code-block::
 
-   <script>
+    <script>
    function myFunction() {
    document.getElementById("demo").innerHTML = "Hello JavaScript!";
    }
    </script>
-
 
 - Neu
 
