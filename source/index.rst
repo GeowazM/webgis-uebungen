@@ -95,7 +95,6 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
     webgis-info/was-ist-webGIS
     webgis-info/hinweise
 
-
 .. toctree::
     :maxdepth: 2
     :caption: Einen Überblick gewinnen
@@ -108,21 +107,20 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
     :caption: Eine erste interaktive Webmap erstellen
 
     lessons/L1/uebung-1
+    lessons/L1/uebung-1/uebung-1_optional
 
 .. toctree::
     :maxdepth: 2
-    :caption: Eine Karte erstellen
+    :caption: HTML, CSS & JavaScript
 
-    lessons/L2/overview
-    lessons/L1/uebung-2
+    lessons/L2/uebung-2
 
 .. toctree::
     :maxdepth: 2
-    :caption: Mit Attributen arbeiten
+    :caption: Das Masterportal
 
-    lessons/L3/overview
-    lessons/L3/exercise-3-vulcanoes
-    lessons/L3/exercise-3-vulcanoes_additional
+    lessons/L3/exercise-3-vs
+    lessons/L3/exercise-3-masterportal
 
 .. toctree::
     :maxdepth: 2

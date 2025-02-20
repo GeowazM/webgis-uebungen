@@ -35,7 +35,7 @@ Mit dem Plugin *qgis2web* lassen sich schnell und einfach interaktive Webmaps er
 
 .. figure:: img/qgis2web.png
    :alt: QGIS-Plugin *qgis2web*
-   :width: 800px
+   :width: 400px
 
    QGIS-Plugin *qgis2web*
 
@@ -44,7 +44,7 @@ Mit dem Plugin *qgis2web* lassen sich schnell und einfach interaktive Webmaps er
 
 .. figure:: img/qgis2web_logo.png
    :alt: *qgis2web* Logo
-   :width: 150px
+   :width: 75px
 
    Logo *qgis2web*
 
@@ -52,7 +52,7 @@ Mit dem Plugin *qgis2web* lassen sich schnell und einfach interaktive Webmaps er
 
 .. figure:: img/qgis2web_screenshot_ol_v2.PNG
    :alt: *qgis2web* Menü
-   :width: 150px
+   :width: 550px
 
    Menü *qgis2web*
 
@@ -60,7 +60,7 @@ Mit dem Plugin *qgis2web* lassen sich schnell und einfach interaktive Webmaps er
 
 .. figure:: img/export.png
    :alt: *qgis2web* Export
-   :width: 150px
+   :width: 120px
 
    Export *qgis2web*
 
@@ -78,8 +78,26 @@ Mit dem Plugin *qgis2web* lassen sich schnell und einfach interaktive Webmaps er
 
 Gratulation! Deine erste Webmap ist fertig! 
 
-Jetzt gehen wir an die Details
+Finetuning
 --------
+In QGIS können Profile mit speziellen Einstellungen angelegt werden. Beispielsweise können für die Verwendung von Erweiterungen diverse Profile verwendet werden.
+Kopieren Sie das Verzeichnis „Default“ indem Sie im Menü unter „Einstellungen“  - „Benutzerprofile“ auf „Aktuelles Profilverzeichnis öffnen“ klicken. Im neuen Explorer Fenster gehen Sie eine Ebene zurück und kopieren „Default“ in die Zwischenablage.
+Mit STRG + V fügen Sie die Kopie ein. Benennen Sie dieses Profil in „WebGIS“ um.
+In diesem Verzeichnis laden und aktivieren Sie nur die Erweiterungen, die unbedingt erforderlich sind.
+(Sie können auch ein neues Profil mit nur den Standard Erweiterungen anlegen).
+
+Nehmen Sie die in der Abbildung gezeigten Einstellungen für die Layer vor, es kann sein, dass der FFH Layer Probleme macht, da damit ein WMS verknüpft ist.
+Wenn Sie ein eigenes Projekt entworfen haben, dann analog dazu!
+Im Reiter „Appearance“ können weitere Einstellun¬gen vorgenommen werden. Tippen Sie vorab in die Projekteigenschaften eine Zusammenfassung des Projekts (QGIS Projekteigenschaften).
+Sie können mit geöffnetem PlugIn diese Ei¬genschaften oder die Layergestaltung verändern .
+Im Reiter Export stellen Sie ein leeres Ausgabeverzeichnis ein. Für jede neue Veröffentlichung erstellt QGIS2web ein neues Unterverzeichnis.
+Stellen Sie zuerst den Export durch Leaflet ein und setzen Sie den Haken für eine Vorschau. Gefällt Ihnen der erste Entwurf, dann klicken Sie auf Export. Die Daten werden in Ihrem Verzeichnis in einen Unterordner gespeichert und der Browser öffnet einen neuen Tab mit der Karte.
+Experimentieren Sie etwas mit den Einstellungen, ändern Sie das Layout Ihrer Karte und untersuchen Sie im Explorer die Verzeichnisstruktur. Für jede neue Veröffentlichung erstellt QGIS2web ein neues Unterverzeichnis.
+Aktuell funktionieren einige Layer in OpenLayers nicht. Das ist ein bekannter Bug, der sich nicht reproduzieren lässt
+Für MapBox brauchen Sie einen Token. Wenn Sie Interesse haben, besorgen Sie sich einen.
+https://docs.mapbox.com/help/getting-started/access-tokens/
+Sie haben nun eine Vorlage für Ihren Webentwickler erstellt, können das Ganze (das Verzeichnis auf der FP) packen und verschicken.
+Speichern Sie das Projekt unter Ihrem neuen Namen.
 
 
 1. Öffne QGIS und mach dich mit der Nutzeroberfläche vertraut.

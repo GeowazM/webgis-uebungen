@@ -18,6 +18,44 @@
 Aufgaben - HTML, CSS & JavaScript
 --------
 
+
+
+Erstellen Sie nun eine eigene HTML-Datei mit einer Karte Ihrer Wahl.
+Für die Erstellung von Internetseiten brauchen Sie keine spezielle Software. Es reicht ein einfacher Editor, bei Windows ist einer dabei. Besser wäre ein weiter entwickelter Editor, wie NotePad++, der mit Code auch grafisch umgehen kann. Zunächst genügt der Editor von Windows.
+Rechtsklick auf die Datei – Öffnen mit… - Editor
+Die Seite wird nur aus HTML-Code bestehen. Lesen Sie dazu folgende Einstiegsseiten:
+https://wiki.selfhtml.org/wiki/HTML/Tutorials/Einstieg
+
+
+Fertig!
+Das ist die Idee dahinter. Sie müssen natürlich entsprechende Regeln beachten, d.h Sie müssen richtigen HTML-Code schreiben.
+Auf der Seite SelfHTML stehen die Zeilen so, wie Sie vom Browser interpretiert werden kön-nen:
+https://wiki.selfhtml.org/
+https://wiki.selfhtml.org/wiki/HTML/Tutorials/Grundger%C3%BCst#Kopiervorlage_f.C3.BCr_ganz_Ungeduldige
+Erstellen Sie eine einfache Datei mit dem Code für eine Überschrift und mit etwas Text. Die¬se Datei speichern Sie aus dem Editor heraus unter einem Namen der die Endung .html hat.
+Speichern Sie in einem neuen leeren Ordner.
+Dann Doppelklicken Sie im Dateimanager auf diese HTML. Wenn alles richtig ist, öffnet sich eine Internetseite in Ihrem Browser. Falls im Browser nicht das erwartete Ergebnis erscheint, muss eine Fehleranalyse gemacht werden.
+Sie können Ihre Arbeit auch online testen:
+https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro
+Unter dieser Internetadresse finden Sie einen Online Editor, der für kleine Aufgaben hilfreich ist.
+
+
+
+
+
+.. raw:: html
+
+   <iframe width="100%" src="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro">
+
+.. raw:: html
+
+   </iframe>
+
+
+
+old
+---------
+
 Mit dem Plugin *qgis2web* lassen sich schnell und einfach interaktive Webmaps erstellen. Dafür brauchen wir ein QGIS-Projekt mit einigen Layern:
 -	Starte QGIS
 -	Lade dir die Daten `„uebung_1_13.zip“ aus ILIAS <https://lms-ubinfo.uni-tuebingen.de/ilias3/ilias.php?baseClass=ilrepositorygui&ref_id=37653>`__ herunter
@@ -71,49 +109,3 @@ Mit dem Plugin *qgis2web* lassen sich schnell und einfach interaktive Webmaps er
 
 
 Gratulation! Deine erste Webmap ist fertig! 
-
-Jetzt gehen wir an die Details
---------
-
-
-1. Öffne QGIS und mach dich mit der Nutzeroberfläche vertraut.
-2. Öffne die oben angegebenen Dateien in QGIS. Ladet dazu die Vektor-Layer in euer Programm.
-3. Interagiere mit der Karte und erkunde die Datensätze. Verwende hierfür das Zoom-Werkzeug und verschiebe die Karte. Beachte dabei die
-   Statusleiste am unteren Bildschirmrand und wie diese sich verändert. Wie lauten die ungefähren Koordinaten für das Erdbeben in Alaska?
-4. Mache dich mit dem Layer-Fenster (*Layer List*) vertraut. Blende abwechselnd verschiedene Layer ein und aus und verschiebe die Layer
-   in der Hierarchie. Benennt den PB2002_plates sinnvoll um. Beachte, dass letzteres keine Auswirkung auf die Datenquellen (Dateinamen, Speicherort) hat.
-5. Schau dir die **Attributdaten der Layer** an. Schaue dir zu diesem Zweck die Attributtabelle an und mache dich mit der zugehörigen
-   Nutzeroberfläche vertraut. a) Wie viele Features gibt es im PB2002_plates? b) Welche Magnitude hatte das Erdbeben vor der Küste Neuseelands?
-6. Ändere die **Projektion in der Kartenansicht** zu WGS84 UTM32N (EPSG-Code: 32632). **Beachte, dass dies nichts an der Projektion
-   (den Koordinaten) der Dateien ändert, sondern lediglich die Projektion der Kartenansicht beeinflusst.** Überprüfe dies in den Eigenschaften des Punkt-Layers. Welche Projektion ist dort angegeben?
-7. Speichere nun den Plattengrenzen-Layer in der Projektion WGS84 UTM 32N. **Dies ändert die Projektion der Datei.** Überprüft dies in den Eigenschaften des neu erstellten Layers.
-8. Speichere dein Projekt ab.
-
-**So (oder ähnlich) sieht’s am Ende aus**
-
-.. figure:: img/exercise_01b_qgis3_screenshot.PNG
-   :alt: QGIS project with layers
-   :width: 800px
-
-   Layer in QGIS zeigen Platten, Plattengrenzen & Erdbeben
-
-
-Optionale Aufgabe
---------
-
-.. tip::
-
-    Du bist früher fertig als angedacht? Dann versuche die obigen Geodaten selbstständig herunterzuladen.
-
-
-Die aktuellen Erdbebendaten findest du bei `United State Geological Suvey (USGS) <https://earthquake.usgs.gov/earthquakes/map/?extent=3.86425,-135.08789&extent=61.93895,-54.93164>`__
-Die Platten und PLattengrenzen findest du bei `Hugo Ahlenius, Nordpil and Peter Bird (doi: 10.1029/2001GC000252) <https://github.com/fraxen/tectonicplates>`__)
-    
-**Lade die Geodaten selbstständig herunter & importiere diese in dein QGIS Projekt!**.
-
-**So (oder ähnlich) kann es am Ende aussehen**
-
-.. figure:: https://raw.githubusercontent.com/fraxen/tectonicplates/master/example_plates.png
-   :alt: Beispielkarte der Platten und der Plattengrenzen
-
-   Beispielkarte der Platten und der Plattengrenzen nach Hugo Ahlenius, Nordpil and Peter Bird (doi: 10.1029/2001GC000252)
