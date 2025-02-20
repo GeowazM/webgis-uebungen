@@ -1,0 +1,30 @@
+div.admonition.admonition-youtube {
+  border-color: #A11E3B; /* T red */
+  width: 100%;
+  height: auto
+}
+
+div.admonition.admonition-youtube > .admonition-title:before {
+  background-color: #A11E3B;
+  width: 100%;
+  height: auto
+}
+div.admonition.admonition-youtube > .admonition-title:after {
+  color: #A11E3B;
+  width: 100%;
+  height: auto;
+  content: "\f26c"; /* fa-solid fa-tv */
+}
+
+.toggle .header {
+  display: block;
+  clear: both;
+}
+
+.toggle .header:after {
+  content: " ▶";
+}
+
+.toggle .header.open:after {
+  content: " ▼";
+}
