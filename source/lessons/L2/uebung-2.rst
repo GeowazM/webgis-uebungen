@@ -45,7 +45,7 @@ Aufgaben - HTML, CSS & JavaScript
    }
    </script>
 
-   .. code-block:: Neu
+.. code-block:: Neu
 
     <script>
    function myFunction() {
