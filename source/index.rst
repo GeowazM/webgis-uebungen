@@ -92,7 +92,7 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
     :maxdepth: 2
     :caption: Wissenswertes
 
-    webgis-info/was-ist-webGIS
+    webgis-info/was-ist-webgIS
     webgis-info/hinweise
 
 .. toctree::
