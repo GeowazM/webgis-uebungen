@@ -1,4 +1,4 @@
-Exercise 3
+Übung 3
 ==========
 
 .. hint::

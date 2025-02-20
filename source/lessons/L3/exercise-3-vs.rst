@@ -1,4 +1,4 @@
-Exercise 3
+Visual Studio
 ==========
 
 .. hint::

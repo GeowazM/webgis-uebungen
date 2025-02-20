@@ -16,12 +16,38 @@
    
 
 Aufgaben - HTML, CSS & JavaScript
+===========
+
+Die Basics
 --------
 
+Für den Erstkontakt von HTML, CSS & JavaScript nutzen wir die `w3school <https://www.w3schools.com/>`__
+- Grundgerüst: Öffne den Link zu `HTML Intro <https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro>`__
+   * **Verändere** den *Page Title* und den *My first paragraph* und 
+   * klicke auf **Run**
+
+- Sytling: Öffne den Link zu `HTML CSS <https://www.w3schools.com/html/tryit.asp?filename=tryhtml_css_fonts>`__
+   * **Verändere** den *Page Title* und den *My first paragraph* und 
+   * klicke auf **Run**
+
+- Öffne den Link zu `HTML JavaScript <https://www.w3schools.com/html/tryit.asp?filename=tryhtml_script_html>`__
+   * **Verändere** den *Click Me!* und klicke auf **Run**
+   * Passe den Coode wie folgt an und lasse es erneut runnen
+
+.. code-block:: javascript
+  :linenos:
+
+   <script>
+   function myFunction() {
+   document.getElementById("demo").innerHTML = "Hello JavaScript!";
+   }
+   </script>
 
 
-Erstellen Sie nun eine eigene HTML-Datei mit einer Karte Ihrer Wahl.
-Für die Erstellung von Internetseiten brauchen Sie keine spezielle Software. Es reicht ein einfacher Editor, bei Windows ist einer dabei. Besser wäre ein weiter entwickelter Editor, wie NotePad++, der mit Code auch grafisch umgehen kann. Zunächst genügt der Editor von Windows.
+- Neu
+
+Für die Erstellung von Internetseiten brauchen Sie keine spezielle Software. Es reicht ein einfacher Editor, bei Windows ist einer dabei. Besser wäre ein weiter entwickelter Editor, 
+wie NotePad++, der mit Code auch grafisch umgehen kann. Zunächst genügt der Editor von Windows.
 Rechtsklick auf die Datei – Öffnen mit… - Editor
 Die Seite wird nur aus HTML-Code bestehen. Lesen Sie dazu folgende Einstiegsseiten:
 https://wiki.selfhtml.org/wiki/HTML/Tutorials/Einstieg
@@ -39,6 +65,11 @@ Sie können Ihre Arbeit auch online testen:
 https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro
 Unter dieser Internetadresse finden Sie einen Online Editor, der für kleine Aufgaben hilfreich ist.
 
+
+
+.. note::
+
+   Tip: Mit einem Style Sheet (.css) kannst du das Aussehen deiner ganzen Webseite bearbeiten. Alles in nur einer Datei!
 
 
 
