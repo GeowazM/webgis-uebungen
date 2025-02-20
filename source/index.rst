@@ -9,7 +9,7 @@
 Willkommen zum Modul WebGIS 🗺🌐
 ===========================
 
-Informationen finden Sie `hier <https://wissenschaftliche-weiterbildung.info/Veranstaltung/cmx64c779c751049.html>`__  !
+Informationen zur `Weiterbildung Geodatenmanager/-in <https://wissenschaftliche-weiterbildung.info/Veranstaltung/cmx64c779c751049.html>`__ finden Sie `hier <https://wissenschaftliche-weiterbildung.info/Veranstaltung/cmx64c779c751049.html>`__  !
 
 Das Modul behandelt die theoretischen Grundlagen zum Aufbau internetgestützter GIS-Plattformen. Dabei werden neben den grundlegenden Systemanforderungen an die Technik auch mögliche Umsetzungen mit 
 Open Source- wie auch proprietären Softwarepakete vermittelt. Die Teilnehmenden erarbeiten sich in praktischen Übungen erste Kenntnisse zu Aufbau und Verwaltung eines Web-GIS unter Einbeziehung eigener und fremder Datensätzen.
@@ -48,11 +48,11 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
 +-------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Übung | Thema                     | Anwendungen, Tools u.ä.                                                                                                                                         |
 +=======+===========================+=================================================================================================================================================================+
-| 0     | WebGIS & Geoportale       | `Geoportal Stuttgart <https://maps.stuttgart.de/stadtplan/>`__                                                                                                  |
+| 0     | WebGIS & Geoportale       | `Geoportal Hamburg <https://geoportal-hamburg.de/?lng=de>`__, `Geoportal Esslingen <https://stadtplan.esslingen.de/stadtplan/>`__                               |
 +-------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 1     | Erste interaktive Webmaps | `QGIS und qgis2web <https://plugins.qgis.org/plugins/qgis2web/>`__                                                                                              | 
 +-------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 2     | HTML,CSS und JavaScript   | `Eine Karte erstellen <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L2/exercise-2.html>`__                                     |
+| 2     | WebGIS mit Masterportal   | `VS Studio und Live Server <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L2/exercise-2.html>`__                                     |
 +-------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 3     | Vulkanismus weltweit      | `Mit Attributtabellen arbeiten <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L3/exercise-3.html>`__                            |
 +-------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -79,21 +79,15 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
     :maxdepth: 2
     :caption: Wissenswertes
 
-    gis-info/was-ist-gis
-    gis-info/koordinatensysteme
-    gis-info/datenorganisation
-    gis-info/hinweise
-    gis-info/einstellungen
-    gis-info/nutzeroberflaeche
-    gis-info/glossar
+    webgis-info/was-ist-webGIS
+    webgis-info/hinweise
 
 
 .. toctree::
     :maxdepth: 2
-    :caption: Erste Schritte in QGIS
+    :caption: Erste interaktive Webmaps erstellen
 
-    lessons/L0/installation
-    lessons/L0/exercise-0
+    lessons/L0/uebung-0
 
 
 .. toctree::
