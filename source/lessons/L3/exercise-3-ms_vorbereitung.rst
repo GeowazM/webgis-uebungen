@@ -98,7 +98,32 @@ Masterportal herunterladen & einbinden
 
    Masterportal Ordnerstruktur in Visual Studio
 
-6. Öffne (durch einfaches anklciken) die *index.html* Datei
+6. Öffne (durch einfaches anklicken) die *index.html* Datei
+
+   .. raw:: html
+
+      <details>
+
+   .. raw:: html
+
+      <summary>
+
+   Hinweis
+
+   .. raw:: html
+
+      </summary>
+
+   .. raw:: html
+
+      <ul>
+
+   .. raw:: html
+
+      <li>
+
+   Durch einfaches anklicken de *index.html*
+
 7. So (oder so ähnlich) sollte dein Visual Studio Code jetzt aussehen
  
 .. figure:: img/masterportal_index_html.PNG
@@ -108,6 +133,30 @@ Masterportal herunterladen & einbinden
    Masterportal *index.html* in Visual Studio
 
 8. Starte mit der Extension *Live Server* die *index.html* Datei
+
+   .. raw:: html
+
+      <details>
+
+   .. raw:: html
+
+      <summary>
+
+   Hinweis
+
+   .. raw:: html
+
+      </summary>
+
+   .. raw:: html
+
+      <ul>
+
+   .. raw:: html
+
+      <li>
+
+   Rechtsklick in die *index.html* und dann **Open with Live Server** wählen
 
 .. figure:: img/masterportal_vs_live_server.PNG
    :alt: Masterportal in Visual Studio Code
