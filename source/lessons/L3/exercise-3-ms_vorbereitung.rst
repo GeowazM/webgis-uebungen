@@ -38,11 +38,13 @@ Vorbereitung
 
 Installiere dier die Extension *Live Server* (falls noch nicht geschehen)
 
+
 .. figure:: img/vs_code_live_server.PNG
    :alt: Visual Studio Code
    :width: 800px
 
    `Visual Studio Extension *Live Server* <https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer>`__
+
 
 1. `Lade dir die vorbereitenten NUTS-Daten von eurostat via ILIAS herunter <https://bitbucket.org/geowerkstatt-hamburg/masterportal/downloads/>`__
 2. Öffne QGIS
@@ -60,15 +62,15 @@ Installiere dier die Extension *Live Server* (falls noch nicht geschehen)
    QGIS-Projekt mit *Bounding box* oder *Extent* & *Centroid*
 
 
+
 Masterportal herunterladen & einbinden
 -----------
 
-1. `Ladet euch das Masterportal example herunter <https://bitbucket.org/geowerkstatt-hamburg/masterportal/downloads/>`__
-2. Innerhalb des Masterportal_example Ordners findest du einen Ordner *Basic*
-   - Kopiere diesen und bennene ihn passend zu deinem Untersuchungsgebiet um (bspw. uni-tuebingen)
-   - So könnte der kopierte Ordner benannt werden
 
-5. Öffne in Visual Studio Code deinen Masterportal example Ordner
+1. `Ladet euch das Masterportal example herunter <https://bitbucket.org/geowerkstatt-hamburg/masterportal/downloads/>`__
+2. Innerhalb des Masterportal_example Ordners findest du einen Ordner *Basic*. Kopiere diesen und bennene ihn passend zu deinem Untersuchungsgebiet um (bspw. uni-tuebingen).
+
+3. Öffne in Visual Studio Code deinen Masterportal example Ordner
 
    .. raw:: html
 
@@ -100,7 +102,7 @@ Masterportal herunterladen & einbinden
 
    Masterportal Ordnerstruktur in Visual Studio
 
-6. Öffne (durch einfaches anklicken) die *index.html* Datei
+4. Öffne die *index.html* Datei
 
    .. raw:: html
 
@@ -126,7 +128,8 @@ Masterportal herunterladen & einbinden
 
    Durch einfaches anklicken de *index.html*
 
-7. So (oder so ähnlich) sollte dein Visual Studio Code jetzt aussehen
+
+5. So (oder so ähnlich) sollte dein Visual Studio Code jetzt aussehen
  
 .. figure:: img/masterportal_index_html.PNG
    :alt: Masterportal in Visual Studio Code
@@ -134,7 +137,7 @@ Masterportal herunterladen & einbinden
 
    Masterportal *index.html* in Visual Studio
 
-8. Starte mit der Extension *Live Server* die *index.html* Datei
+6. Starte mit dem *Live Server* die *index.html* Datei
 
    .. raw:: html
 
@@ -160,7 +163,7 @@ Masterportal herunterladen & einbinden
 
    Rechtsklick in die *index.html* und dann **Open with Live Server** wählen
 
-.. figure:: img/masterportal_vs_live_server.PNG
+.. figure:: img/masterportal_vs_live_server_v2.PNG
    :alt: Masterportal in Visual Studio Code
    :width: 800px
 
