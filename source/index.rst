@@ -119,8 +119,8 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
     :maxdepth: 2
     :caption: Das Masterportal
 
-    lessons/L3/exercise-3-vs
-    lessons/L3/exercise-3-masterportal
+    lessons/L3/exercise-3-ms_vorbereitung
+    lessons/L3/exercise-3-ms_entwicklung
 
 .. toctree::
     :maxdepth: 2
