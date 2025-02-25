@@ -7,13 +7,6 @@
       * Erste Einblicke in *Visual Studio Code* 
       * Die Extension *Live Server* kennenlernen
 
-.. figure:: img/vs_code.PNG
-   :alt: Visual Studio Code
-   :width: 800px
-
-   `Visual Studio Code <https://code.visualstudio.com/>`__
- 
-
 .. seealso::
 
       *  `Visual Studio Code <https://code.visualstudio.com/>`__
@@ -39,7 +32,7 @@ Schritt für Schritt Richtung eigenes WebGIS
 Um ein eigenes WebGIS mit Masterportal zu erstellen, gehen wir in drei Schritten vor. Zuerst bereiten wir alle Informationen vor, die wir für unser Untersuchungsgebiet benötigen. 
 Im Anschluss bereiten wir unsere Entwicklungsumgebung vor. Dann werden wir die Karte, die Werkzeuge, den Footer und das Logo anpassen. 
 
-I. Vorbereitung
+Vorbereitung
 -----------
 
 Installiere dier die Extension *Live Server* (falls noch nicht geschehen)
@@ -65,7 +58,7 @@ Installiere dier die Extension *Live Server* (falls noch nicht geschehen)
 
    QGIS-Projekt mit *Bounding box* oder *Extent* & *Centroid*
 
-II. Masterportal herunterladen & einbinden
+Masterportal herunterladen & einbinden
 -----------
 
 1. `Ladet euch das Masterportal example herunter <https://bitbucket.org/geowerkstatt-hamburg/masterportal/downloads/>`__
@@ -75,9 +68,33 @@ II. Masterportal herunterladen & einbinden
 
 5. Öffne in Visual Studio Code deinen Masterportal example Ordner
 
+   .. raw:: html
+
+      <details>
+
+   .. raw:: html
+
+      <summary>
+
+   Hinweis
+
+   .. raw:: html
+
+      </summary>
+
+   .. raw:: html
+
+      <ul>
+
+   .. raw:: html
+
+      <li>
+
+   Der Ordner Basic dient als Backup
+
 .. figure:: img/masterportal_folder_order.PNG
    :alt: Masterportal in Visual Studio Code
-   :width: 800px
+   :width: 400px
 
    Masterportal Ordnerstruktur in Visual Studio
 
@@ -92,7 +109,7 @@ II. Masterportal herunterladen & einbinden
 
 8. Starte mit der Extension *Live Server* die *index.html* Datei
 
-.. figure:: img/masterportal_index_html.PNG
+.. figure:: img/masterportal_vs_live_server.PNG
    :alt: Masterportal in Visual Studio Code
    :width: 800px
 
