@@ -197,7 +197,7 @@ Ausdehnung - **"extent"**
 
 .. code-block:: json
 
-{
+   {
   "portalConfig": {
     "map": {
       "controls": {
