@@ -17,22 +17,22 @@
 
 Masterportal konfigurieren
 ===========
-Jetzt haben wir alle Vorbereitungen getroffen und können mit der Entwicklung bzw. Konfiguration unseres Masterportal-Geoviewer starten.
+Jetzt haben wir alle notwendigen Vorbereitungen getroffen und können mit der Entwicklung bzw. Konfiguration unseres Masterportal-Geoviewer starten.
 Ein zentrales Dokument, dass wir für die Konfiguration brauchen ist `die offizielle Dokumentation (Masterportal Docs) <https://www.masterportal.org/mkdocs/doc/v3.7.0/User/About/>`__.
-Das *Masterportal example* befindet sich in Hamburg. Die dort eingesetzten Parameter ändern wir jetzt Schritt für Schritt, um aus dem Beispiel unseren eigeneen Geoviewer zu konfigurieren.
+Das *Masterportal example* befindet sich in Hamburg. Die dort eingesetzten Parameter ändern wir jetzt Schritt für Schritt, um aus dem Example unseren eigenen Geoviewer zu konfigurieren.
 
 Titel & Logo ändern
 -----------
-
-Da wir ohnehin die *index.html* Seite offen haben, können wir direkt den Titel und das Logo des Geoviewers im Browsertab ändern.
 
 .. caution::
 
    Die *index.html* betrifft ausschließlich den Browsertab. Der Masterportal code ist so aufgebaut, dass alles, was innerhalb des Browserfensters passiert, in den *Global-* und *Portal-Settings* definiert ist.
 
+Da wir ohnehin die *index.html* Seite offen haben, können wir direkt den Titel und das Logo des Geoviewers im Browsertab ändern.
+
 1. In der *index.html* kannst du den Titel der Seite ändern 
 2. Füge eine Logo (fiktiv oder dein Eigenes) in den Ordner *resources/img/UT-logo.svg* (siehe Bild)
-3. Füge die Zeile *<link rel="icon" href="./resources/img/UT-logo.svg">* ein und speichere dein Projekt (Strg + S)
+3. Füge die Zeile *<link rel="icon" href="./resources/img/UT-logo.svg">* ein und speichere dein Projekt (Strg+S)
 
 .. figure:: img/masterportal_index_html_title.PNG
    :alt: Angepasster Titel und Logo
@@ -41,7 +41,7 @@ Da wir ohnehin die *index.html* Seite offen haben, können wir direkt den Titel 
    Angepasster Titel und Logo
 
 4. Öffne nun die Datei *config.json* (bspw. *uni-tuebingen/config.json*)
-5. Navigiere zum Abschnitt *portalFooter*. Ändere den URL zu einer Website deiner Wahl. Passe den Alias & den mobilen Alias an.
+5. Navigiere zum Abschnitt **"portalFooter"**. Ändere den URL zu einer Website deiner Wahl. Passe den Alias & den mobilen Alias an. Das kann dann bspw. wie folgt aussehen.
 
 .. code-block:: json
 
@@ -68,9 +68,10 @@ den zentralen Startpunkt definieren (*Centroid* oder *Geoinstitut*) bzw. den  fe
 **"portalConfig"**
 ^^^^^^^^^^^
 
-2. Navigiere zum unten aufgeführten Code Bereich `**portalConfig** <https://www.masterportal.org/mkdocs/doc/v3.7.0/User/Portal-Config/config.json/>`__.
+2. Navigiere zum unten aufgeführten Code Bereich `portalConfig <https://www.masterportal.org/mkdocs/doc/v3.7.0/User/Portal-Config/config.json/>`__.
 
-> Ausgangssituation
+-> Ausgangssituation
+
 .. code-block:: json
 
    {
@@ -98,11 +99,12 @@ den zentralen Startpunkt definieren (*Centroid* oder *Geoinstitut*) bzw. den  fe
       }
     },
 
-**"startCenter"** - zentraler Startpunkt
+Startpunkt - **"startCenter"**
 """""""""""
 
-Jetzt passen wir die einzelnen Bereiche auf unser Untersuchungsgebiet an. Wir starten mit dem `**zentralen Startpunkt** <https://www.masterportal.org/mkdocs/doc/v3.7.0/User/Portal-Config/config.json.de/#datatypescoordinate>`__.
-3. Füge die Koordinaten deines Centroids oder deines zentralen Interessenpunkts (bspw. Geoinstitut) in den Code ein
+Jetzt passen wir die einzelnen Bereiche auf unser Untersuchungsgebiet an. Wir starten mit dem `zentralen Startpunkt <https://www.masterportal.org/mkdocs/doc/v3.7.0/User/Portal-Config/config.json.de/#datatypescoordinate>`__.
+
+3. Füge die Koordinaten deines Centroids oder deines zentralen Interessenpunkts (bspw. Geoinstitut) in den Code ein.
 
    .. raw:: html
 
@@ -126,9 +128,10 @@ Jetzt passen wir die einzelnen Bereiche auf unser Untersuchungsgebiet an. Wir st
 
       <li>
 
-   Siehe **"startCenter"**. Die erste repräsentiert den Rechtswert, die zweite den Hochwert.
+   Siehe **"startCenter"**. Die erste Koordinate repräsentiert den Rechtswert, die zweite den Hochwert.
 
-> Dein Ordner (bspw. uni-tuebingen)
+-> Dein Ordner (bspw. uni-tuebingen)
+
 .. code-block:: json
 
    {
@@ -158,7 +161,7 @@ Jetzt passen wir die einzelnen Bereiche auf unser Untersuchungsgebiet an. Wir st
       }
     },
 
-**"extent"** - geographische Ausdehnung
+Ausdehnung - **"extent"**
 """""""""""
 
 4. Als nächstes definieren wir den geographischen Rahmen (*Extent* oder *Bbox*) unseres Geoviewers
@@ -188,7 +191,9 @@ Jetzt passen wir die einzelnen Bereiche auf unser Untersuchungsgebiet an. Wir st
 
    Ein Extent besteht aus einem Array bestehend aus vier Zahlen. Ein Extent beschreibt einen rechteckigen Gültigkeitsbereich. Dabei wird ein Rechteck aufgespannt, 
    das durch die "linke untere" und die "rechte obere" Ecke definiert wird. Das Schema lautet [Hochwert-Links-Unten, Rechtswert-Links-Unten, Hochwert-Rechts-Oben, 
-   Rechtswert-Rechts-Oben] oder [minx, miny, maxx, maxy].
+   Rechtswert-Rechts-Oben] oder [minx, miny, maxx, maxy]. Quelle: `Masterportal Docs <https://www.masterportal.org/mkdocs/doc/v3.7.0/User/Portal-Config/config.json.de/#datatypesextent>`__.
+
+-> extent 
 
 .. code-block:: json
 
@@ -216,11 +221,13 @@ Jetzt passen wir die einzelnen Bereiche auf unser Untersuchungsgebiet an. Wir st
 
 .. important::
 
-   Achte auf die Projektion, die du benutzt (**"epsg"**). Welche Projektion ist für dich die Richtige?
+   Achte auf die Projektion (EPSG), die du benutzt. Welche Projektion ist für dich die Richtige?
 
-**Speichere dein Projekt und schaue dir die Änderungen in deinem Browserfenster an. Gratulation! Die Karte sollte jetzt angepasst sein**
+**Speichere dein Projekt und schaue dir die Änderungen in deinem Browserfenster an.** 
 
-**"portalFooter"** - Quelle des Geoviewers ändern
+**Gratulation! Die Karte sollte jetzt angepasst sein**
+
+Quelle - **"portalFooter"**
 """""""""""
 
 Im unteren Bereich deines Geoviewers ist eine Quelle zur Kartographie und Gestaltung angegeben. Im Abschnitt **"portalFooter"** kannst du den URL Link und dessen Benennung ändern. 
@@ -245,20 +252,20 @@ Im unteren Bereich deines Geoviewers ist eine Quelle zur Kartographie und Gestal
    QGIS-Projekt mit *Bounding box* oder *Extent* & *Centroid*
 
 
-**"secondaryMenu"** - werkzeuge (tools) anpassen
+Werkzeuge - **"secondaryMenu"**
 """""""""""
  
  sdas
 
 
-**"mainMenu"** - Navigationsfenster links individualisieren
+Navigationsfenster - **"mainMenu"**
+"""""""""""
+ 
+ sdas
+
+
+Überblick *config.json*
 -----------
- 
- sdas
-
-
-Überblick
-"""""""""""
 
 .. figure:: img/masterportal_code_geoviewer_connect.jpg
    :alt: Masterportal code und Geoviewer Überblick
