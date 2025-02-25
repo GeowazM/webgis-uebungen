@@ -32,6 +32,7 @@ Schritt für Schritt Richtung eigenes WebGIS
 Um ein eigenes WebGIS mit Masterportal zu erstellen, gehen wir in drei Schritten vor. Zuerst bereiten wir alle Informationen vor, die wir für unser Untersuchungsgebiet benötigen. 
 Im Anschluss bereiten wir unsere Entwicklungsumgebung vor. Dann werden wir die Karte, die Werkzeuge, den Footer und das Logo anpassen. 
 
+
 Vorbereitung
 -----------
 
@@ -57,6 +58,7 @@ Installiere dier die Extension *Live Server* (falls noch nicht geschehen)
    :width: 800px
 
    QGIS-Projekt mit *Bounding box* oder *Extent* & *Centroid*
+
 
 Masterportal herunterladen & einbinden
 -----------

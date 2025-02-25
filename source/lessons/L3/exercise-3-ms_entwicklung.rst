@@ -5,8 +5,8 @@
 .. hint::
 
    Ziel der Übung
-      * Erste Einblicke in *Visual Studio Code* 
-      * Die Extension *Live Server* kennenlernen
+      * Die Codestruktur des Masterportals kennenlernen 
+      * Einen schlanken Geoviewer individuell zu konfigureren
 
 .. seealso::
 
@@ -24,15 +24,38 @@ Das *Masterportal example* befindet sich in Hamburg. Die dort eingesetzten Param
 Titel & Logo ändern
 -----------
 
-.. caution::
+.. hint::
 
-   Die *index.html* betrifft ausschließlich den Browsertab. Der Masterportal code ist so aufgebaut, dass alles, was innerhalb des Browserfensters passiert, in den *Global-* und *Portal-Settings* definiert ist.
+   Die *index.html* betrifft ausschließlich den Browsertab. Der Masterportal code ist so aufgebaut, dass das meiste, was innerhalb des Browserfensters passiert, in den *Global-* und *Portal-Settings* definiert ist.
 
 Da wir ohnehin die *index.html* Seite offen haben, können wir direkt den Titel und das Logo des Geoviewers im Browsertab ändern.
 
 1. In der *index.html* kannst du den Titel der Seite ändern 
 2. Füge eine Logo (fiktiv oder dein Eigenes) in den Ordner *resources/img/UT-logo.svg* (siehe Bild)
 3. Füge die Zeile *<link rel="icon" href="./resources/img/UT-logo.svg">* ein und speichere dein Projekt (Strg+S)
+
+.. code-block:: html
+
+   <!DOCTYPE html>
+   <html lang="de">
+      <head>
+         <meta charset="utf-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+         <meta name="apple-mobile-web-app-capable" content="yes">
+         <meta name="mobile-web-app-capable" content="yes">
+
+         <title>GDM-Portal</title>                                           <!-- enter your own Portal Title for the website at this -->
+         <link rel="stylesheet" href="../mastercode/3_7_0/css/masterportal.css">
+         <link rel="stylesheet" href="">                                     <!-- Here you can configure your own fonts as url -->
+         <link rel="icon" href="./resources/img/UT-logo.svg">                 <!-- Hier kannst du ein Logo im Browsertab einfügen -->
+
+      </head>
+      <body>
+         <div id="masterportal-root"></div>
+         <script type="text/javascript" src="../mastercode/3_7_0/js/masterportal.js"></script>
+      </body>
+   </html>
 
 .. figure:: img/masterportal_index_html_title.PNG
    :alt: Angepasster Titel und Logo
@@ -57,20 +80,14 @@ Da wir ohnehin die *index.html* Seite offen haben, können wir direkt den Titel 
       ]
     },
 
-Kartenviewer (Map canvas) anpassen
+Geoviewer anpassen
 -----------
 
-Jetzt widmen wir uns dem Kern unseres Geoviewers - dem Kartenview. Dafür müssen wir die geographische Ausdehnung (*Extent*) & 
-den zentralen Startpunkt definieren (*Centroid* oder *Geoinstitut*) bzw. den  festlegen. Dafür nutzen wir die Daten aus der Vorbereitung.
+Jetzt widmen wir uns dem Kern unseres Geoviewers - die Kartenansicht. Dafür müssen wir die geographische Ausdehnung (*Extent*) & 
+den zentralen Startpunkt definieren (*Centroid* oder bspw. das *Geoinstitut*). Dafür nutzen wir die Daten aus der Vorbereitung.
 
 1. Öffne die Datei *config.json* (bspw. *uni-tuebingen/config.json*)
-
-**"portalConfig"**
-^^^^^^^^^^^
-
 2. Navigiere zum unten aufgeführten Code Bereich `portalConfig <https://www.masterportal.org/mkdocs/doc/v3.7.0/User/Portal-Config/config.json/>`__.
-
--> Ausgangssituation
 
 .. code-block:: json
 
@@ -99,10 +116,19 @@ den zentralen Startpunkt definieren (*Centroid* oder *Geoinstitut*) bzw. den  fe
       }
     },
 
+Jetzt passen wir in der *config.json* Datei die einzelnen Parameter auf unser Untersuchungsgebiet an.
+
 Startpunkt - **"startCenter"**
 """""""""""
 
-Jetzt passen wir die einzelnen Bereiche auf unser Untersuchungsgebiet an. Wir starten mit dem `zentralen Startpunkt <https://www.masterportal.org/mkdocs/doc/v3.7.0/User/Portal-Config/config.json.de/#datatypescoordinate>`__.
+Wir starten mit dem `zentralen Startpunkt <https://www.masterportal.org/mkdocs/doc/v3.7.0/User/Portal-Config/config.json.de/#datatypescoordinate>`__.
+Dafür nutzen wir die Koordinaten, die wir in QGIS vorbereitet haben.
+
+.. figure:: img/qgis-projekt_bbox_extent.PNG
+   :alt: QGIS Layer Eigenschaften
+   :width: 800px
+
+   QGIS Layer Eigenschaften mit Extent & EPSG
 
 3. Füge die Koordinaten deines Centroids oder deines zentralen Interessenpunkts (bspw. Geoinstitut) in den Code ein.
 
@@ -130,19 +156,10 @@ Jetzt passen wir die einzelnen Bereiche auf unser Untersuchungsgebiet an. Wir st
 
    Siehe **"startCenter"**. Die erste Koordinate repräsentiert den Rechtswert, die zweite den Hochwert.
 
--> Dein Ordner (bspw. uni-tuebingen)
 
 .. code-block:: json
 
    {
-  "portalConfig": {
-    "map": {
-      "controls": {
-        "zoom": true,
-        "orientation": {
-          "zoomMode": "once"
-        }
-      },
       "mapView": {
         "backgroundImage": "./resources/img/backgroundCanvas.jpeg",
         "startCenter": [
@@ -154,17 +171,16 @@ Jetzt passen wir die einzelnen Bereiche auf unser Untersuchungsgebiet an. Wir st
           5850000.0,
           625000.4,
           6000000.0
-        ],        
-        "StartResolution": 9028,
-        "StartZoomLevel": 1,
-        "epsg": "EPSG:25832"
+        ],
+        "startZoomLevel": 1
       }
     },
+
 
 Ausdehnung - **"extent"**
 """""""""""
 
-4. Als nächstes definieren wir den geographischen Rahmen (*Extent* oder *Bbox*) unseres Geoviewers
+4. Als nächstes definieren wir den geographischen Rahmen (**Extent** bzw. **Bbox**) unseres Geoviewers
 
 
    .. raw:: html
@@ -193,19 +209,10 @@ Ausdehnung - **"extent"**
    das durch die "linke untere" und die "rechte obere" Ecke definiert wird. Das Schema lautet [Hochwert-Links-Unten, Rechtswert-Links-Unten, Hochwert-Rechts-Oben, 
    Rechtswert-Rechts-Oben] oder [minx, miny, maxx, maxy]. Quelle: `Masterportal Docs <https://www.masterportal.org/mkdocs/doc/v3.7.0/User/Portal-Config/config.json.de/#datatypesextent>`__.
 
--> extent 
 
 .. code-block:: json
 
    {
-  "portalConfig": {
-    "map": {
-      "controls": {
-        "zoom": true,
-        "orientation": {
-          "zoomMode": "once"
-        }
-      },
       "mapView": {
         "backgroundImage": "./resources/img/backgroundCanvas.jpeg",
         "startCenter": [
@@ -219,7 +226,7 @@ Ausdehnung - **"extent"**
     },
 
 
-.. important::
+.. hint::
 
    Achte auf die Projektion (EPSG), die du benutzt. Welche Projektion ist für dich die Richtige?
 
@@ -227,48 +234,45 @@ Ausdehnung - **"extent"**
 
 **Gratulation! Die Karte sollte jetzt angepasst sein**
 
-Quelle - **"portalFooter"**
-"""""""""""
-
-Im unteren Bereich deines Geoviewers ist eine Quelle zur Kartographie und Gestaltung angegeben. Im Abschnitt **"portalFooter"** kannst du den URL Link und dessen Benennung ändern. 
-
-.. code-block:: json
-   {
-    "portalFooter": {
-      "urls": [
-        {
-          "bezeichnung": "common:modules.portalFooter.designation",
-          "url": "https://www.geodatenmanagerin-tuebingen.de/termine-anmeldung/",
-          "alias": "Geodatenmanager/-in - Universität Tübingen",
-          "alias_mobil": "GDM"
-        }
-      ]
-   },
-
-.. figure:: img/qgis-projekt_bbox_extent.PNG
-   :alt: QGIS-Projekt mit *Bounding box* oder *Extent* & *Centroid*
-   :width: 800px
-
-   QGIS-Projekt mit *Bounding box* oder *Extent* & *Centroid*
-
-
 Werkzeuge - **"secondaryMenu"**
 """""""""""
  
- sdas
+Das **"secondaryMenu"** ist die Toolbox bzw. Werkzeugkiste des Masterportals. Es bezieht sich auf das Navigationsfenster, dass man im rechten Bereich finden kann.
 
+Als erstes wollen wir Werkzeuge löschen, die wir nicht benötigen. Lösche folgenden Codeabschnitt & speichere dein Projekt.
+
+ .. code-block:: json
+
+          {
+            "type": "bufferAnalysis"
+          },
+
+Durch das Anpassen dieses bereiches kannst du definieren, welche Werkzeuge in deinem Geoviewer zur Verfügung stehen sollen.
 
 Navigationsfenster - **"mainMenu"**
 """""""""""
- 
- sdas
+
+Lösche im Abschnitt **"sections"** folgendes
+
+ .. code-block:: json
+
+          {
+            "type": "openConfig"
+          },
+         {
+            "type": "language"
+          }
+
+Speichere deine Datei und sieh dir die Veränderungen im Geoviewer an. Was hat sich geändert?
 
 
 Überblick *config.json*
 -----------
 
+In der folgenden Abbildung kannst du dir einen Überblick verschaffen, welche Code-Abschnitt der *config.json* für welche bereiche des Geoviewers zuständig sind.
+
 .. figure:: img/masterportal_code_geoviewer_connect.jpg
    :alt: Masterportal code und Geoviewer Überblick
    :width: 800px
 
-   Masterportal code und Geoviewer Überblick
+   Geoviewer und Masterportal *config.json* kombiniert
