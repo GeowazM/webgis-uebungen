@@ -1,22 +1,20 @@
 ==========
-Layer implementieren
+Geodaten implementieren
 ==========
 
 .. hint::
 
    Ziel der Übung
-      * Die Codestruktur des Masterportals kennenlernen 
-      * Einen schlanken Geoviewer individuell zu konfigureren
-      * Einen Layer hinzuzufügen
+      * Erste Einblicke in *Visual Studio Code* 
+      * Die Extension *Live Server* kennenlernen
 
 .. seealso::
 
       *  `Visual Studio Code <https://code.visualstudio.com/>`__
       *  `Live Server <https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer>`__
-      *  `Masterportal Docs <https://www.masterportal.org/mkdocs/doc/v3.7.0/User/About/>`__
 
 
-OGX-Deinste konfigurieren & implementieren
+OGC-Deinste konfigurieren & implementieren
 ===========
 Wir haben jetzt die Vorbereitungen und die individuelle Konfiguration unseres Geoviewers abgeschlossen. Jetzt fehlen noch die passenden Layer, die wir in unserem Geoviewer angezeigt haben möchten.
 Die Dienste und Layer können wir in der Datei *services.json* anpassen. Es wirkt auf den ersten Blick sehr verwirrend, aber wir werden uns Schritt für Schritt dem Aufbau nähern & konfigurieren.

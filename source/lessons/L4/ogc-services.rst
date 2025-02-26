@@ -1,24 +1,17 @@
-Exercise 4
+QGIS-Server
 ==========
 
 .. hint::
 
    Ziel der Übung
-      *  `Geometriefunktionen vertiefen <https://courses.gistools.geog.uni-heidelberg.de/giscience/gis-einfuehrung/wikis/qgis-Geometrieoperationen>`__
-      *  `Vektordaten räumlich verschneiden <https://courses.gistools.geog.uni-heidelberg.de/giscience/gis-einfuehrung/wikis/qgis-Räumliche-Verschneidungen>`__
-      *  `Räumliche Joins durchführen <https://courses.gistools.geog.uni-heidelberg.de/giscience/gis-einfuehrung/wikis/qgis-Räumliche-Joins>`__
-      *  `Tabellenfunktionen nutzen und einfache Statistiken erstellen <https://courses.gistools.geog.uni-heidelberg.de/giscience/gis-einfuehrung/wikis/qgis-Tabellenfunktionen>`__
+      * OGC-Dienste kennenlernen 
+      * Eigene OGC-Dienste mit QGIS-Server erstellen
 
 .. seealso::
 
-   Daten
-   Ladet euch `die Daten herunter <exercise_04_data.zip>`__ und speichert
-   sie auf eurem PC. Legt einen lokalen Ordner an und speichert dort die
-   obigen Daten (.zip Ordner müssen vorher entpackt werden.).
-      * Osnabrück Fluss Hase (Line) (Quelle: `OpenStreetMap <https://www.openstreetmap.org>`__)
-      * Osnabrück Straßennetzwerk (Line) (Quelle: `OpenStreetMap <https://www.openstreetmap.org>`__)
-      * Osnabrück Stadtgrenze (Polygon) (Quelle: `OpenStreetMap <https://www.openstreetmap.org>`__)
-      * Osnabrück Gebäude (Polygon) (Quelle: `OpenStreetMap <https://www.openstreetmap.org>`__)
+      *  `OGC <https://www.ogc.org/de/>`__
+      *  `QGIS Server <https://docs.qgis.org/3.34/en/docs/server_manual/index.html>`__
+
 
 Aufgaben
 --------

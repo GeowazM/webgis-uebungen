@@ -125,19 +125,18 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
 
 .. toctree::
     :maxdepth: 2
-    :caption: Vektorgeometrien verarbeiten
+    :caption: OGC-Dienste erstellen
 
-    lessons/L4/exercise-4
-    lessons/L4/exercise-4_ahrweiler
+    lessons/L4/ogc-services
 
 .. toctree::
     :maxdepth: 2
-    :caption: Geodaten erfassen
+    :caption: Geonode
 
-    lessons/L5/georeferenzieren
-    lessons/L5/exercise-5a_geologie
-    lessons/L5/digitalisieren
-    lessons/L5/exercise-5b-iceland
+    lessons/L5/daten_upload
+    lessons/L5/karte_erstellen
+    lessons/L5/geoserver
+    lessons/L5/datenbank
 
 .. toctree::
     :maxdepth: 2
@@ -153,20 +152,6 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
     lessons/L7/overview
     lessons/L7/exercise-7b
     lessons/L7/exercise-7b_additional
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Vom Punkt zur Fläche
-
-    lessons/L8/overview
-    lessons/L8/exercise-8
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Prozesse automatisieren
-
-    lessons/L9/overview
-    lessons/L9/exercise-9
 
 .. toctree::
     :maxdepth: 2

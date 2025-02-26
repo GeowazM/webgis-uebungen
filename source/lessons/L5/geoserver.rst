@@ -1,4 +1,4 @@
-Georeferenzierung
+Geoserver
 ========
 
    * **Raster >> Georeferenzierung** (ggfs. Erweiterung GDAL-Georeferenzierung installieren)
