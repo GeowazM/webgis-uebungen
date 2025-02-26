@@ -1,5 +1,5 @@
 ==========
-Übung 3 - Konfiguration
+Geoviewer konfigurieren
 ==========
 
 .. hint::

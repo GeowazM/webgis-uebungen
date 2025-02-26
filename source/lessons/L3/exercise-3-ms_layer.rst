@@ -1,5 +1,5 @@
 ==========
-Übung 3 - Konfiguration
+Layer implementieren
 ==========
 
 .. hint::
@@ -16,11 +16,16 @@
       *  `Masterportal Docs <https://www.masterportal.org/mkdocs/doc/v3.7.0/User/About/>`__
 
 
-Deinste und Layer konfigurieren
+OGX-Deinste konfigurieren & implementieren
 ===========
 Wir haben jetzt die Vorbereitungen und die individuelle Konfiguration unseres Geoviewers abgeschlossen. Jetzt fehlen noch die passenden Layer, die wir in unserem Geoviewer angezeigt haben möchten.
 Die Dienste und Layer können wir in der Datei *services.json* anpassen. Es wirkt auf den ersten Blick sehr verwirrend, aber wir werden uns Schritt für Schritt dem Aufbau nähern & konfigurieren.
 Wir können in *services.json* eine ganze Reihe von OGC-Diensten einbinden. Allerdings definieren wir in der *config.json*, welche dieser Layer im Geoviewer angezeigt werden.
+
+.. attention::
+
+   In der *service.json* erstellen wir die Verbindungen zu den OGC-Diensten. Im *config.json* implementieren wir die Layer in den Geoviewer.
+
 
 Hintergrundkarte
 """""""""""
@@ -180,6 +185,34 @@ Layer im Geoviewer aktivieren
 
    Achte auf die Projektion (EPSG), die du benutzt. Welche Projektion ist für dich die Richtige?
 
+
+
+   .. raw:: html
+
+      <details>
+
+   .. raw:: html
+
+      <summary>
+
+   Hinweis
+
+   .. raw:: html
+
+      </summary>
+
+   .. raw:: html
+
+      <ul>
+
+   .. raw:: html
+
+      <li>
+
+   Für Deutschland ist das ETRS89 / UTM 32N bzw. 33N Standard.
+
+
+
 **Speichere dein Projekt und schaue dir die Änderungen in deinem Browserfenster an.** 
 
 **Gratulation! Die Karte sollte jetzt angepasst sein**
@@ -216,13 +249,23 @@ Lösche im Abschnitt **"sections"** folgendes
 Speichere deine Datei und sieh dir die Veränderungen im Geoviewer an. Was hat sich geändert?
 
 
-Überblick *config.json*
+Beispiel
 -----------
 
-In der folgenden Abbildung kannst du dir einen Überblick verschaffen, welche Code-Abschnitt der *config.json* für welche bereiche des Geoviewers zuständig sind.
+So oder do ähnlich kann ein einfacher Geoviewer ausseheb
 
-.. figure:: img/masterportal_code_geoviewer_connect.jpg
-   :alt: Masterportal code und Geoviewer Überblick
+.. figure:: img/masterportal_bsp_scheho.jpg
+   :alt: Geoviewer Schemmerhofen als Beispiel
    :width: 800px
 
-   Geoviewer und Masterportal *config.json* kombiniert
+   Geoviewer Schemmerhofen als Beispiel
+
+
+
+Geoportal Hamburg
+"""""""""""
+
+.. hint::
+
+      Die Stadt Hamburg zeigt in ihrem Geoportal eine breite Palette an Werkzeugen und Möglichkeiten, die das Masterportal bietet. -> `Geoportal Hamburg <https://geoportal-hamburg.de/?lng=de#>`__
+
