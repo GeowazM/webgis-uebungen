@@ -42,14 +42,16 @@ Suchen Sie zusätzlich einen WMS, den Sie schon kennen.
 
 .. hint::
 
-      Was läuft da im Hintergrund ab? QGIS verwaltet ein Projekt in der QGS/QGZ Datei, in der Vektor- und Rasterdaten sowie Dienste enthalten sein können. 
-      In den Properties / Eigenschaften ist eingestellt, dass das Projekt als OWS veröffentlicht werden soll. Änderungen im Projekt (*.qgz) müssen unter gleichem Namen gespeichert werden.
+      Was läuft da im Hintergrund ab? 
+      - QGIS verwaltet ein Projekt in der QGS/QGZ Datei, in der Vektor- und Rasterdaten sowie Dienste enthalten sein können. 
+      - In den Properties / Eigenschaften ist eingestellt, dass das Projekt als OWS veröffentlicht werden soll. Änderungen im Projekt (*.qgz) müssen unter gleichem Namen gespeichert werden.
       Die Veröffentlichung übernimmt der installierte QGIS Server zusammen mit dem QWC2 Client, sobald der Aufruf durch den Browser auf die URL stattfindet (request). Das machen Sie, indem Sie die vorher aufgerufene Seite im Browser aktualisieren.
       Der Browser stellt daraufhin die geändert Karte dar.
       Der Client ist auf dieses Projekt eingerichtet, deshalb können andere Projekte aus QGIS nicht im Browser als Karte dargestellt werden. Der QGIS Server würde dann als Antwort (response) eine XML Datei liefern.
 
 
 .. hint::
+
       Innerhalb dieser VM OSGEO live existiert ein komplettes System von Desktop-Programmen, Servern und Clients, die aufeinander abgestimmt sind. Es handelt sich um ein lokales System, in dem die Server-Client Beziehung simuliert wird.
       In einer echten Remote Situation muss ein entfernter Server (oder mehrere) existieren, auf dem mindestens ein GIS Server läuft. Auf diesen Server wird von einer Benutzer:in eine Anfrage geschickt, von irgendwo (mit Internetverbindung natürlich). Der Server liefert dann eine Antwort zurück, die im Browser interpretiert wird.
       Ohne einen zusätzlichen GIS Client (serverseitig) kann nur die XML Datei im Browser angezeigt werden.
@@ -67,7 +69,7 @@ QGIS & QGIS-Server
 
 .. hint::
    
-   Jeder einzelne Layer eines WebGIS Projektes "sollte" in den Eigenschaften Angaben zu den Metadaten aufweisen. Metadaten können alternativ über eine URL angeben werden.
+   Jeder einzelne Layer eines WebGIS Projektes "sollte" in den Eigenschaften Angaben zu den Metadaten aufweisen. Metadaten können alternativ über eine URL angeben werden (ISO-Meta oder Dublin Core).
    Um die Layer eindeutig zu identifizieren, befüllen Sie „QGIS-Server“ den Kurznamen, den Titel und die Zusammenfassung (Kurz und prägnant).
 
 2. QGIS-Server vorbereiten
@@ -78,7 +80,7 @@ QGIS & QGIS-Server
 
 .. hint::
 
-   Vom Kleinen zum Großen. Kleine WMS-Layer entwickeln, testen, weiterentwickeln, testen usw. So schonen wir unsere Nerven und erhöhen die Wahrscheinlichkeiten auf einen erfolgreichen WMS-Layer.
+   Vom Kleinen zum Großen. Kleine WMS-Layer entwickeln, testen, weiterentwickeln, testen usw. So schonen wir unsere Nerven und erhöhen die Wahrscheinlichkeiten auf eine erfolgreiche Veröffentlichgung.
 
 
 3. Testen Sie Ihre Einstellungen und korrigieren Sie gegebenenfalls.
@@ -162,20 +164,34 @@ http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/home/user/world.qgz&SERVICE=WMS&
 Ändern Sie den Aufruf (angepasst auf Ihren Ordner):
 http://localhost/cgi-bin/qgis_mapserv.fcgi?map=/home/user/GIS/WEB_GIS/Dateiname.qgz&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
 	map=/home/user/GIS/WEB_GIS/Dateiname.qgz
+
 Dieser Teil des „Request“ muss mit Ihrem Pfad ersetzt werden.
 Mit diesem Request liefert der Browser eine XML Datei zurück. Das bedeutet der QGIS Server läuft und das Projekt wird gefunden.
 Da QGIS Desktop ein Fat Client ist kann er diesen Aufruf als Karte darstellen. Fügen Sie diesen Dienst in QGIS als WMS hinzu.
 Sie bekommen dadurch eine „Kopie“ Ihrer Layer, aber als WMS Layer.
+
 Anmerkung:
 Aktuell findet der QGIS Server das Projekt nicht, in der OSGEO Live 14 jedoch geht es. Vermutlich wurde bei der Entwicklung etwas vergessen!?
 Da wir derzeit den QWC2 Client nicht verwenden, sondern später LizMap kennenlernen, wird dieser Prozess des Servertest dort durchgeführt.
 Hier sollte nun soweit vorbereitet werden, dass jedes Projekt veröffentlicht werden kann. Dazu müssen vermutlich irgendwelche Config Dateien editiert werden:
 https://gis.stackexchange.com/questions/438114/configuring-qwc2-web-client-in-production-environment-and-displaying-custom-map
+
 2.5 	Fazit
 Wenn Sie Ihre Daten nur innerhalb eines Spezialisten Teams veröffentlichen möchten, bei der alle ein Desktop-GIS verwenden, dann wären Sie zunächst mal fertig. Natürlich kann noch Vieles verfeinert werden. Auch das werden wir an diesem Wochenende noch üben.
 Vermutlich soll dieser Dienst aber auch im Browser aufgerufen werden. Deshalb muss noch ein Client installiert werden, der das erledigt.
 Damit beschäftigen wir uns in der  Übung zu LizMap.
 Sie haben erste Schritte in einem UBUNTU Linux System als Virtuelle Maschine kennengelernt und kurz den QGIS Server mit QWC2 Client getestet.
+
+OGC-Dienste lesen lernen
+----------------
+URL decodieren
+Gibts eine Anleitung?
+WMS Dienste
+
+dann WMTS Dienste -> Unterschiede Vorteile?
+
+WFS-Dienste inkl. Filterung
+
 
 
 So (oder ähnlich) sieht’s am Ende aus
