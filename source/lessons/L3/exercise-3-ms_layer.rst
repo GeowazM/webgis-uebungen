@@ -215,44 +215,13 @@ Layer im Geoviewer aktivieren
 
 **Gratulation! Die Karte sollte jetzt angepasst sein**
 
-Werkzeuge - **"secondaryMenu"**
-"""""""""""
- 
-Das **"secondaryMenu"** ist die Toolbox bzw. Werkzeugkiste des Masterportals. Es bezieht sich auf das Navigationsfenster, dass man im rechten Bereich finden kann.
-
-Als erstes wollen wir Werkzeuge löschen, die wir nicht benötigen. Lösche folgenden Codeabschnitt & speichere dein Projekt.
-
- .. code-block:: json
-
-          {
-            "type": "bufferAnalysis"
-          },
-
-Durch das Anpassen dieses bereiches kannst du definieren, welche Werkzeuge in deinem Geoviewer zur Verfügung stehen sollen.
-
-Navigationsfenster - **"mainMenu"**
-"""""""""""
-
-Lösche im Abschnitt **"sections"** folgendes
-
- .. code-block:: json
-
-          {
-            "type": "openConfig"
-          },
-         {
-            "type": "language"
-          }
-
-Speichere deine Datei und sieh dir die Veränderungen im Geoviewer an. Was hat sich geändert?
-
 
 Beispiel
 -----------
 
 So oder do ähnlich kann ein einfacher Geoviewer ausseheb
 
-.. figure:: img/masterportal_bsp_scheho.jpg
+.. figure:: img/masterportal_bsp_scheho.PNG
    :alt: Geoviewer Schemmerhofen als Beispiel
    :width: 800px
 

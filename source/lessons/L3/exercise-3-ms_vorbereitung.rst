@@ -34,7 +34,7 @@ Im Anschluss bereiten wir unsere Entwicklungsumgebung vor. Dann werden wir die K
 
 
 Vorbereitung
------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 Installiere dier die Extension *Live Server* (falls noch nicht geschehen)
 
@@ -65,7 +65,7 @@ Installiere dier die Extension *Live Server* (falls noch nicht geschehen)
 
 
 Masterportal herunterladen & einbinden
------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 
 1. `Ladet euch das Masterportal example herunter <https://bitbucket.org/geowerkstatt-hamburg/masterportal/downloads/>`__
