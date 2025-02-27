@@ -32,6 +32,12 @@ Diese Standards haben die Zusammenarbeit und den Austausch von Geodaten weltweit
 Enthält KI generierte Inhalte; Quelle: `OGC Web Services Context Document (OWS Context) <https://www.ogc.org/de/publications/standard/owc/>`__
 
 
+.. admonition:: What is the OGC?
+    :class: admonition-youtube
+
+    ..  youtube:: V9zS6hotY2w
+
+    `opengeospatial on Youtube <https://www.youtube.com/watch?v=V9zS6hotY2w>`_.
 
 
 
@@ -79,109 +85,3 @@ dargestellt. Um mit den Daten weiterarbeiten zu können, z.B. in QGIS,
 könnt ihr sie über die Export-Funktion in verschiedenen Formaten
 herunterladen. In den meisten Fällen lässt es sich in QGIS am
 einfachsten mit GeoJSON arbeiten.
-
-Und wie lade ich jetzt **nur die von mir gemappten Objekte** herunter?
-
-.. raw:: html
-
-   <details>
-
-.. raw:: html
-
-   <summary>
-
-Hier versteckt sich eine Anleitung
-
-.. raw:: html
-
-   </summary>
-
-Daten eines bestimmten Nutzers anfragen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Um nur die Daten eines bestimmten Nutzers herunterzuladen, kann man
-entweder das Argument ``user:"<euer Nutzername>"`` oder das Argument
-``uid:<eure Nutzer ID>`` zu einer Anfrage hinzufügen.
-
-Wenn man einfach alle von diesem User gemappten Objekte innherhalb der
-bbox haben will, fügt man sonst keine Argumente hinzu:
-
-::
-
-   [out:json][timeout:25];
-   // gather results
-   (
-     node(uid:<die ID des Nutzer>)({{bbox}});
-     way(uid:<die ID des Nutzer>)({{bbox}});
-     relation(uid:<die ID des Nutzer>)({{bbox}});
-   );
-   // print results
-   out body;
-   >;
-   out skel qt;
-
-Wenn man aber nur z.B. alle von diesem User gemappten Straßen haben
-möchte, hängt man das ``user`` oder ``uid`` Argument einfach hinten an
-die Anfrage für highways dran:
-
-::
-
-   [out:json][timeout:25];
-   // gather results
-   (
-     // query part for: “highway=*”
-     node["highway"](user:"<Nutzername>")({{bbox}});
-     way["highway"](user:"<Nutzername>")({{bbox}});
-     relation["highway"](user:"<Nutzername>")({{bbox}});
-   );
-   // print results
-   out body;
-   >;
-   out skel qt;
-
-Mehr dazu könnt ihr auch unter
-https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_user_(user,_uid)
-oder https://wiki.openstreetmap.org/wiki/Overpass_API#User lesen.
-
-.. raw:: html
-
-   </details>
-
-QuickOSM
---------
-
-QuickOSM ist ein Plugin für QGIS mit der man Anfragen (queries) an die
-Overpass API senden kann.
-
-Ihr installiert QuickOSM wie gewohnt über Erweiterungen > Erweiterungen
-verwalten und installieren…
-
-.. raw:: html
-
-   <video width="100%" controls src="https://courses.gistools.geog.uni-heidelberg.de/giscience/qgis-book/-/raw/main/uploads/OSM/videos/install-quickosm.mp4">
-
-.. raw:: html
-
-   </video>
-
-.. _anfragen-stellen-1:
-
-Anfragen stellen
-~~~~~~~~~~~~~~~~
-
-Für QuickOSM gelten die gleichen Anfrage-Prinzipien wie für overpass
-turbo.
-
-.. raw:: html
-
-   <video width="100%" controls src="https://courses.gistools.geog.uni-heidelberg.de/giscience/qgis-book/-/raw/main/uploads/OSM/videos/use-quickosm.mp4">
-
-.. raw:: html
-
-   </video>
-
-Die zurückgegebenen Daten sind Vektorobjekte, die direkt in QGIS
-angezeigt werden. Diese neuen Layer sind erst mal nur temporär und
-müssen per Rechtsklick auf das Layer > Export > Objekte speichern als…
-auf eurem Computer gespeichert werden, wenn ihr Sie über die offene
-Sitzung hinaus behalten wollt.
