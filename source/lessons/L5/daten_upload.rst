@@ -5,6 +5,7 @@ Die in GeoNode integrierten Datenverwaltungstools ermöglichen die Erstellung vo
 anderen konfigurierten GeoNode-Apps. Jede Ressource im System kann öffentlich geteilt oder eingeschränkt werden, um den Zugriff nur bestimmten Benutzern zu ermöglichen. 
 Soziale Funktionen wie Benutzerprofile sowie Kommentar- und Bewertungssysteme ermöglichen die Entwicklung von Gemeinschaften rund um jede Plattform, um die Nutzung, 
 Verwaltung und Qualitätskontrolle der in der GeoNode-Instanz enthaltenen Daten zu erleichtern.
+
 .. hint::
 
    Ziel der Übung
@@ -20,25 +21,34 @@ Verwaltung und Qualitätskontrolle der in der GeoNode-Instanz enthaltenen Daten 
 
       Es gibt fünf Haupttypen von Ressourcen, die GeoNode verwalten kann:
 
-         - Datensätze
-         - Karten
-         - Dokumente
-         - GeoStories
-         - Dashboards
+      - Datensätze
+      - Karten
+      - Dokumente
+      - GeoStories
+      - Dashboards
 
-         Jeder Ressourcentyp hat sein eigenes Menü und kann über die Schaltflächen Datensätze, Karten, Dokumente, GeoStories und Dashboards in der Navigationsleiste erreicht werden.
+      Jeder Ressourcentyp hat sein eigenes Menü und kann über die Schaltflächen Datensätze, Karten, Dokumente, GeoStories und Dashboards in der Navigationsleiste erreicht werden.
 
 
 Aufgabe
 --------
-Wir wollen erste Geodaten hochladen. Das machen wir zu Beginn über die GeoNode-Plattform selbst.
+
+Wir wollen erste Geodaten hochladen. Das machen wir über die GeoNode-Plattform selbst.
+
+Geodaten hochladen
+^^^^^^^^^^^^^^
+
+.. figure:: img/geonode_upload.PNG
+   :alt: GeoNode Datensatz hochladen
+
+   Überblick *Alle ressourcen*
 
 1. Gehe auf das Feld *Alle Ressourcen* (links oben)
 
 .. figure:: img/geonode_upload_ressourcen.PNG
    :alt: GeoNode Datensatz hochladen
 
-   Quelle: Eigene Erhebung
+   *Ressource hinzufügen*
 
 2. Nutze das Symbol *Ressource hinzufügen*
 3. Wähle *Datensatz hochladen*
@@ -46,19 +56,77 @@ Wir wollen erste Geodaten hochladen. Das machen wir zu Beginn über die GeoNode-
 .. figure:: img/geonode_upload_datensatz.PNG
    :alt: GeoNode Datensatz hochladen
 
-   Quelle: Eigene Erhebung
+   Quelle: Upload Fenster
 
+4. Nach erfolgreichem Upload klicken Sie auf *anzeigen*
 
-
-
-
-.. figure:: img/geonode_upload.PNG
+.. figure:: img/geonode_upload_gebauede-tuebingen.PNG
    :alt: GeoNode Datensatz hochladen
 
-   Quelle: Eigene Erhebung
+   Geodaten wurden erfolgreich hochgeladen
 
-Datentypen
---------------
+.. hint::
+
+   Gratulation...du hast die Geodaten (erfolgreich) in GeoNode hochgeladen! Jetzt bearbeiten wir den Style, die Metadanten, die Nutzerrechte unseres Geodatensatzes.
+
+5. Füge jetzt einen weiteren Datensatz hinzu. Dieses mal nutzen wir einen externen WMS-Dienst hinzuziehen. Klicke unter *Alle ressourcen* auf *Ressource hinzufügen* und wähle *Remote-Dienste* aus.
+Wir nutzen einen  `WMS-Dienst <https://ows.terrestris.de/osm/service?VERSION=1.1.1&>`__ der `Firma "Terrestris" <https://www.terrestris.de/de/openstreetmap-wms/>`__ , die eine Auswahl an WMS-Layern anbietet. 
+"Über *Ressourcen importieren* kommst du auf die Layerauswahl des WMS-Dienstes. Hier wollen wir den "OSM-Overlay-WMS" & den "Dark" Layer hinzufügen. Mit einem erneuten Klick auf 
+*Ressource importieren* haben Sie die WMS-Layer erfogreich hinzugefügt. Werfe einen Blick in den Reiter *Alle ressourcen*. Hat sich was geändert?
+
+
+
+Geodaten bearbeiten
+--------
+
+Wir können Bereiche des Geodatensatzes bearbeiten:
+
+- die Daten (Geometrie & Attribute)
+- den Stil
+- die Metadaten
+
+Darüber hinaus können wir einen Stil bspw. als .sld und Metadaten als .xml importieren (*Hochladen*).
+
+.. figure:: img/geonode_bearbeiten.PNG
+   :alt: GeoNode Datensatz hochladen
+
+   Geodaten bearbeiten
+
+Style bearbeiten
+^^^^^^^^^^^^^^
+
+Starten wir mit dem Style oder Stil!
+
+.. hint::
+
+   Der Style lässt sich lokal (als .sld) oder online als Geodatensatz und in der Karte ändern. Speichere dir in QGIS den Stlye deines Layers.
+   Damit umgehst du das regelmäßige Anpassen des Stils an verschiedenen Stellen.
+
+Speichere dir in QGIS-Layer > Eigenschaften (Properties) > Symbologie deinen Stlye als .sld Datei.
+
+
+Daten bearbeiten
+^^^^^^^^^^^^^^
+
+Rufe *Daten bearbeiten* auf. Ändere 
+
+.. figure:: img/geonode_bearbeiten.PNG
+   :alt: GeoNode Datensatz hochladen
+
+   Geodaten bearbeiten
+
+
+
+Metadaten bearbeiten
+^^^^^^^^^^^^^^
+
+`Mehr Informationen findest du hier <https://docs.geonode.org/en/master/usage/data/data_types.html>`__
+
+
+
+
+Zusätzliche Informationen zu Datentypen
+========
 
 Die Willkommensseite von GeoNode zeigt eine Vielzahl von Informationen über die aktuelle GeoNode-Instanz. Du kannst die vorhandenen Daten mit vielen Suchwerkzeugen und Filtern 
 durchsuchen oder über die Links in der Navigationsleiste oben auf der Seite. Es gibt fünf Haupttypen von Ressourcen, die GeoNode verwalten kann:
