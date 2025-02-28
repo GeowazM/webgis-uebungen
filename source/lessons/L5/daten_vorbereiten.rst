@@ -1,14 +1,12 @@
 Die Vorbeitung
 ========
 
-Für unsere Geodatenfrastruktur in GeoNode nutzen wir die Geodaten der vorigen Aufgaben, aber fügen noch weitere hinzu.
-
-
+Für unsere Geodatenfrastruktur in GeoNode nutzen wir die Geodaten der vorigen Aufgaben, aber fügen noch weitere hinzu. 
 Beziehe dir aus den ALKIS Daten die Gebäude. Aus diesen entfernen wir Gartenhäuser, Garagen, Treibhäuser, Parkhäuser, Wasserbehälter & Umformer.
 Jetzt berechne den Mittelpunkt der übrig gebliebenen Gebäude. 
 
-Oder lade dir die Daten via ILAS herunter. Es ist eine Simulation von Hauskorrdinaten, bei denen ein Glasfaserausbau noch aussteht. Als weiterer Datensatz nehmen wir die Bahngleise
-der Gemeinde Tübingen hinzu.
+Oder lade dir die Daten via ILAS herunter. Es ist eine Simulation von Hauskorrdinaten, bei denen ein Glasfaserausbau noch aussteht. 
+Als weiterer Datensatz nehmen wir die Bahngleise der Gemeinde Tübingen hinzu.
 
 .. figure:: img/qgis_vorbereitung.PNG
    :alt: Geonode map

@@ -1,155 +1,102 @@
 Daten hochladen
 ========
 
-   * **Raster >> Georeferenzierung** (ggfs. Erweiterung GDAL-Georeferenzierung installieren)
+Die in GeoNode integrierten Datenverwaltungstools ermöglichen die Erstellung von Ressourcen wie Datensätzen, Dokumenten, Links zu externen Dokumenten, Kartenvisualisierungen und 
+anderen konfigurierten GeoNode-Apps. Jede Ressource im System kann öffentlich geteilt oder eingeschränkt werden, um den Zugriff nur bestimmten Benutzern zu ermöglichen. 
+Soziale Funktionen wie Benutzerprofile sowie Kommentar- und Bewertungssysteme ermöglichen die Entwicklung von Gemeinschaften rund um jede Plattform, um die Nutzung, 
+Verwaltung und Qualitätskontrolle der in der GeoNode-Instanz enthaltenen Daten zu erleichtern.
 
-Wichtiges zur Georeferenzierung
--------------------------------
+Datentypen
+--------------
 
-Ziel der Georeferenzierung ist es, einen Geodatensatz ohne Realwelt-Koordinaten anhand von Referenzdaten mit Realweltkoordinaten so
-zu übersetzten, dass danach ein räumlicher Bezug hergestellt ist. Dabei wird das Koordinatensystem des zu georeferenzierenden Geodatensatzes
-anhand von Passpunkten modifiziert: mithilfe von Rotation(Drehung), Translation(Verschiebung) und Skalierung(Dehnung/Stauchung) und ggf. Entzerrung wird der Geodatensatz räumlich verortet.
+Die Willkommensseite von GeoNode zeigt eine Vielzahl von Informationen über die aktuelle GeoNode-Instanz. Du kannst die vorhandenen Daten mit vielen Suchwerkzeugen und Filtern 
+durchsuchen oder über die Links in der Navigationsleiste oben auf der Seite. Es gibt fünf Haupttypen von Ressourcen, die GeoNode verwalten kann:
 
-Wichtig für die Übung sind zwei Methoden: 
-   1. Georeferenzieren auf Grundlage einer analogen Karte: 
- 
-      * Boordinatenbezugssystem (KBS) muss bekannt sein
-      * Mindestens 4 Koordinatenpunkte müssen bekannt sein
-      * Pixelwerte müssen auf Meterangaben skaliert werden
-      * als Passpunkte werden die Schnittpunkte vom Gitternetz des zugrundeliegenes KNE verwendet
-      * Vorteil: Schnittpunkte genau in Karte ablesbar und damit Passpunkte präzise setzbar 
-   2. Georeferenzieren auf Grundlage eines Luftbilds: 
-      
-      * Passpunkte wählen anhand von gut verortbaren Orten in den beiden Datensätzen Zentral für die Georeferenzierung sind Passpunkte, anhand derer von QGIS
-         eine Regression vorgenommen wird. Die Genauigkeit der Georeferenzierung steht und fällt daher mit der Genauigkeit der Passpunkte. 
-         Die gewählten Passpunkte sollten daher drei Eigenschaften erfüllen – sie sollten
+   * Datensätze
+   * Karten
+   * Dokumente
+   * GeoStories
+   * Dashboards
 
-      * ausreichend viele sein (→ Mindestanzahl der Passpunkte erfüllen → RMS-Fehler bestimmbar)
-      * gut verteilt sein (→ je näher zusammen, desto weniger aussagekräftig der RMS-Fehler für Genauigkeit der Georeferenzierung)
-      * möglichst gut zu verorten sein (→ exaktere Übereinstimmung der Passpunkte)
-   
-Je nachdem, wie gut diese Eigenschaften erfüllt sind, wirkt sich dies auf die Genauigkeit der Übersetzung aus. Diese wird von QGIS durch den
-RMS-Fehler berechnet – je niedriger dieser ist, desto genauer die Georeferenzierung, sofern die obigen Bedingungen erfüllt sind.
+Jeder Ressourcentyp hat sein eigenes Menü und kann über die Schaltflächen Datensätze, Karten, Dokumente, GeoStories und Dashboards in der Navigationsleiste erreicht werden.
 
-Vorgehen in QGIS
-----------------
+Datensätze
+^^^^^^^^^^^^^^
 
-Reihenfolge in der Regel:
+Datensätze sind ein Hauptbestandteil von GeoNode. Datensätze sind veröffentlichbare Ressourcen, die eine Raster- oder Vektorraumbasisdatenquelle darstellen. 
+Datensätze können auch mit Metadaten, Bewertungen und Kommentaren verknüpft werden. Durch Klicken auf den Link Datensätze erhältst du eine Liste aller veröffentlichten Datensätze. 
+Wenn du als Administrator angemeldet bist, siehst du in derselben Liste auch die unveröffentlichten Datensätze. GeoNode ermöglicht es dem Benutzer, Vektor- und Rasterdaten in 
+ihren ursprünglichen Projektionen über ein Webformular hochzuladen. Vektordaten können in vielen verschiedenen Formaten hochgeladen werden (ESRI Shapefile, KML usw.). 
+Satellitenbilder und andere Arten von Rasterdaten können als GeoTIFFs hochgeladen werden.
 
-   1. `nicht-georeferenziertes Bild öffnen </content/gis/06_georef-digitalize/qgis-Georeferenzierung.md#bild-oeffnen-und-zielprojektion-festlegen>`__
-   2. `Zielprojektion festlegen </content/gis/06_georef-digitalize/qgis-Georeferenzierung.md#bild-oeffnen-und-zielprojektion-festlegen>`__
-   3. `Transformationseinstellungen wählen </content/gis/06_georef-digitalize/qgis-Georeferenzierung.md#transformationseinstellungen>`__
-   4. `Passpunkte setzen </content/gis/06_georef-digitalize/qgis-Georeferenzierung.md#passpunkte-setzen-und-speichern>`__
-   5. `Passpunkte speichern </content/gis/06_georef-digitalize/qgis-Georeferenzierung.md#passpunkte-setzen-und-speichern>`__
-   6. `Georeferenziertes Bild speichern </content/gis/06_georef-digitalize/qgis-Georeferenzierung.md#georeferenziertes-bild-speichern>`__
-   7. Georeferenzierung überprüfen
+Karten 
+^^^^^^^^^^^^^^
 
--  `Weitere Ressourcen </content/gis/06_georef-digitalize/qgis-Georeferenzierung.md#weitere-ressourcen>`__
--  `Allgemeine Fehlerhinweise </content/gis/06_georef-digitalize/qgis-Georeferenzierung.md#allgemeine-fehlerhinweise>`__
+Karten sind ein Hauptbestandteil von GeoNode. Karten bestehen aus verschiedenen Datensätzen und deren Stilen. Datensätze können sowohl lokale Datensätze in GeoNode als auch 
+entfernte Datensätze sein, die entweder von anderen WMS-Servern oder von Webdienst-Datensätzen wie Google oder MapQuest bereitgestellt werden. 
+GeoNode-Karten enthalten auch andere Informationen wie Kartenzoom und -ausdehnung, Datensatzreihenfolge und Stil.
 
-Bild öffnen und Zielprojektion festlegen
------------------------------------------
+Du kannst eine Karte basierend auf hochgeladenen Datensätzen erstellen, sie mit einigen vorhandenen Datensätzen und einem entfernten Webdienst-Datensatz kombinieren und die 
+resultierende Karte zur öffentlichen Ansicht freigeben. Sobald die Daten hochgeladen wurden, ermöglicht GeoNode dem Benutzer, sie geografisch oder über Schlüsselwörter zu suchen 
+und Karten zu erstellen. Alle Datensätze werden automatisch in Web Mercator für die Kartendarstellung reprojiziert, wodurch es möglich ist, beliebte Basiskarten wie OpenStreetMap zu verwenden.
 
--  Raster einladen und auf Nachfrage die Zielprojektion festlegen
+Dokumente
+^^^^^^^^^^^^^^
 
-.. raw:: html
+GeoNode ermöglicht das Veröffentlichen von tabellarischen und Textdaten sowie das Verwalten von Metadaten und zugehörigen Dokumenten. Dokumente können direkt von deiner 
+Festplatte hochgeladen werden (siehe Hochladen/Hinzufügen von Dokumenten für weitere Informationen). Die folgenden Dokumenttypen sind erlaubt: 
+txt, .log, .doc, .docx, .ods, .odt, .sld, .qml, .xls, .xlsx, .xml, .bm, .bmp, .dwg, .dxf, .fif, .gif, .jpg, .jpe, .jpeg, .png, .tif, .tiff, .pbm, .odp, .ppt, .pptx, .pdf, .tar, .tgz, .rar, .gz, .7z, .zip, .aif, .aifc, .aiff, .au, .mp3, .mpga, .wav, .afl, .avi, .avs, .fli, .mp2, .mp4, .mpg, .ogg, .webm, .3gp, .flv, .vdo, .glb, .pcd, .gltf. Über die Detailseite des Dokuments ist es möglich, ein Dokument anzuzeigen, herunterzuladen und zu verwalten.
 
-   <video width="100%" controls src="https://courses.gistools.geog.uni-heidelberg.de/giscience/qgis-book/-/raw/main/uploads/QGIS/videos/qgis_georeference_set_projection.mp4">
+GeoStories 
+^^^^^^^^^^^^^^
 
-.. raw:: html
+GeoStory ist ein in GeoNode integriertes MapStore-Tool, das dem Benutzer eine Möglichkeit bietet, inspirierende und immersive Geschichten zu erstellen, indem Text, 
+interaktive Karten und andere multimediale Inhalte wie Bilder und Videos oder andere Inhalte von Drittanbietern kombiniert werden. Mit diesem Tool kannst du einfach deine 
+Geschichten im Web erzählen und sie dann mit verschiedenen Gruppen von GeoNode-Benutzern teilen oder sie der ganzen Welt öffentlich zugänglich machen.
 
-   </video>
+Dashboard 
+^^^^^^^^^^^^^^
 
-**Hinweis:** Wenn das Programm die Zielprojektion nicht von alleine abfragt, müssen die Einstellungen zu den KBS geändert werden. Das
-funktioniert unter *Einstellungen/Settings* in den Toolbars, *Optionen/Options* und dann unter dem Reiter *KBS/CRS*. In diesem muss
-unter *KBS für neue Layer/CRS for new layers* die Option *KBS abfragen/Prompt for CRS* gewählt werden.
+Dashboard ist ein in GeoNode integriertes MapStore-Tool, das dem Benutzer einen Raum bietet, um viele Widgets hinzuzufügen, wie Diagramme, Karten, Tabellen, Texte und Zähler und 
+Verbindungen zwischen ihnen zu erstellen, um 
 
-|Einstellungen_KBS-abfragen|\ |Einstellungen_KBS-abfragen_01|
+- einen Überblick zu bieten, 
+- um einen spezifischen Datenkontext besser zu visualisieren
+- Räumlich und analytisch mit den Daten zu interagieren, indem Verbindungen zwischen Widgets erstellt werden
+- Analysen an den beteiligten Daten/Schichten durchzuführen
 
-Transformationseinstellungen
-----------------------------
+`Mehr Informationen findest du hier <https://docs.geonode.org/en/master/usage/data/data_types.html>`__
 
--  Koordinatentransformation wählen
--  Resampling Methode wählen
--  Output-Pfad wählen
+Daten finden
+--------------
 
-.. raw:: html
+Dieser Abschnitt führt dich durch die Navigation in GeoNode, um Datensätze, Karten, Dokumente und andere Ressourcentypen mithilfe verschiedener Routen, 
+Filter und Suchfunktionen zu finden. Auf jeder Seite findest du ein schnelles Suchwerkzeug. Das Suchfeld in der Navigationsleiste (siehe Bild unten) ermöglicht es dir, 
+einen Text einzugeben und alle Ressourcen zu finden, die mit diesem Text zu tun haben.
 
-   <video width="100%" controls src="https://courses.gistools.geog.uni-heidelberg.de/giscience/qgis-book/-/raw/main/uploads/QGIS/videos/qgis_georeference_transformation_settings.mp4">
+.. figure:: https://docs.geonode.org/en/master/_images/search_tool.png
+   :alt: GeoNode Suchtool
 
-.. raw:: html
+   Quelle: `Suchtool <https://docs.geonode.org/en/master/usage/accounts_user_profile/new_account/index.html>`__
+Wenn du eine Suche startest, wirst du zur Suchseite weitergeleitet, die dir das Suchergebnis für alle Datentypen anzeigt.
 
-   </video>
+.. figure:: https://docs.geonode.org/en/master/_images/search_page.png
+   :alt: GeoNode Seite
 
-**Praktische Hinweise:** 
-   * wenn das Raster nur gedreht, skaliert und verschoben werden muss *Polynom 1. Grades*
-   * wenn das Raster gekrümmt oder gebeugt werden muss *Polynom 2. oder 3. Grades*
-   * Für die Zahl der Passpunkte gilt: 
-      * Min. Zahl Passpunkte 𝑚=(((𝑡+1)(𝑡+2)))/2 (t = Grad d. Transformation)
-      * Das mathematisch „beste“ Modell wird erreicht, wenn exakt die erforderliche Zahl m verwendet wird (RMS-Fehler = 0)
-      * Geographisch bessere Ergebnisse werden erzielt, wenn leicht mehr Punkte gesetzt werden (Grund: Punkte werden nicht perfekt gesetzt).
+   Quelle: `Die Seite zum Suchen <https://docs.geonode.org/en/master/usage/accounts_user_profile/new_account/index.html>`__
 
-Passpunkte setzen und speichern
--------------------------------
+Diese Seite enthält eine Fülle von Optionen zur Anpassung einer Suche nach verschiedenen Informationen auf GeoNode. Dieses Suchformular ermöglicht feinere Suchvorgänge als das 
+einfache Suchfeld, das oben auf jeder Seite verfügbar ist. Es ist möglich, Daten nach Text, Typen, Kategorien, Schlüsselwörtern, Eigentümern, Regionen, Gruppen, Einschränkungen 
+des öffentlichen Zugriffs, Datum und Ausdehnung zu suchen und zu filtern. Versuche, einige Filter einzustellen, und sieh, wie sich die resultierende Datenliste entsprechend ändert. Ein interessanter Filtertyp ist AUSDEHNUNG: Du kannst einen räumlichen Filter anwenden, indem du eine Karte innerhalb eines Feldes verschiebst oder zoomst, wie im Bild unten gezeigt.
 
--  Passpunkte sollten gleichmäßig verteilt sein, da sonst eine lokal    fehlerhafte Transformation droht
--  Passpunkte sollten so präzise wie möglich platziert werden
--  Lieber mäßig viele gute Punkte, als viele schlecht platzierte!
+.. figure:: https://docs.geonode.org/en/master/_images/search_filter_by_extent.png
+   :alt: GeoNode Ausdehnung
 
-.. raw:: html
+   Quelle: `Über die Ausdehnung filtern <https://docs.geonode.org/en/master/usage/accounts_user_profile/new_account/index.html>`_
 
-   <video width="100%" controls src="https://courses.gistools.geog.uni-heidelberg.de/giscience/qgis-book/-/raw/main/uploads/QGIS/videos/qgis_georeference_set_points_grid.mp4">
+Daten können nach Neueste, Älteste, Name und Beliebtheit geordnet werden.
 
-.. raw:: html
+.. figure:: https://docs.geonode.org/en/master/_images/ordering_data.png
+   :alt: GeoNode Sortieren
 
-   </video>
-
--  Passpunktkoordinaten im Kartengrid ablesen und eintragen
-
-.. raw:: html
-
-   <video width="100%" controls src="https://courses.gistools.geog.uni-heidelberg.de/giscience/qgis-book/-/raw/main/uploads/QGIS/videos/qgis_georeference_set_points_from_layer.mp4">
-
-.. raw:: html
-
-   </video>
-
--  Passpunktkoordinaten anhand eines anderen Layers wählen
-
-Georeferenziertes Bild speichern
---------------------------------
-
--  Bild speichern
--  Datei öffnen und Georeferenzierung überprüfen
--  in unserem Beispiel zeigt das Ergebnis eine unterschiedliche Güte für
-   verschiedene Regionen (z.B. relativ gut im zentralen Teil, weniger
-   gut in Nord- und Südamerika)
-
-.. raw:: html
-
-   <video width="100%" controls src="https://courses.gistools.geog.uni-heidelberg.de/giscience/qgis-book/-/raw/main/uploads/QGIS/videos/qgis_georeference_save.mp4">
-
-.. raw:: html
-
-   </video>
-
-Weitere Ressourcen:
--------------------
-
--  `Digital Geography Tutorial: wie georeferenziere ich eine gescannte
-   Karte in
-   QGIS? <http://de.digital-geography.com/QGIS-tutorial-teil-1-wie-georeferenziere-ich-eine-gescannte-karte-mit-QGIS/>`__
-
-Allgemeine Fehlerhinweise
--------------------------
-
-Fehler können unter anderem zu Stande kommen durch:
-   * fehlerhaftes Ablesen der Koordinaten (beim Ablesen von Passpunktkoordinaten im Kartengrid) 
-   * eine fehlende Übereinstimmung zwischen Projekt-KBS, KBS des georeferenzierten Layers und übrigen Layern vor Beginn des Georeferenzieren
-
-.. admonition:: QGIS Georeferenzierung
-    :class: admonition-youtube
-
-    ..  youtube:: qZUQ_keQnAc
-
-    Bonn Center for Digital Humanities @ `Geo-Python channel on Youtube <https://www.youtube.com/watch?v=qZUQ_keQnAc>`_.
+   Quelle: `Sortieren <https://docs.geonode.org/en/master/usage/accounts_user_profile/new_account/index.html>`__
