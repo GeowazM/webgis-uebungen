@@ -134,6 +134,8 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
     :maxdepth: 2
     :caption: Geonode
 
+    lessons/L5/geonode_intro
+    lessons/L5/daten_vorbereiten
     lessons/L5/daten_upload
     lessons/L5/karte_erstellen
     lessons/L5/geoserver
