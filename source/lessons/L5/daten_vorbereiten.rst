@@ -1,155 +1,109 @@
-Daten vorbeiten
+Die Vorbeitung
 ========
 
+Für unsere Geodatenfrastruktur in GeoNode nutzen wir die Geodaten der vorigen Aufgaben, aber fügen noch weitere hinzu.
 
 
-Wichtiges zur Georeferenzierung
--------------------------------
+Beziehe dir aus den ALKIS Daten die Gebäude. Aus diesen entfernen wir Gartenhäuser, Garagen, Treibhäuser, Parkhäuser, Wasserbehälter & Umformer.
+Jetzt berechne den Mittelpunkt der übrig gebliebenen Gebäude. 
 
-Ziel der Georeferenzierung ist es, einen Geodatensatz ohne Realwelt-Koordinaten anhand von Referenzdaten mit Realweltkoordinaten so
-zu übersetzten, dass danach ein räumlicher Bezug hergestellt ist. Dabei wird das Koordinatensystem des zu georeferenzierenden Geodatensatzes
-anhand von Passpunkten modifiziert: mithilfe von Rotation(Drehung), Translation(Verschiebung) und Skalierung(Dehnung/Stauchung) und ggf. Entzerrung wird der Geodatensatz räumlich verortet.
+Oder lade dir die Daten via ILAS herunter. Es ist eine Simulation von Hauskorrdinaten, bei denen ein Glasfaserausbau noch aussteht. Als weiterer Datensatz nehmen wir die Bahngleise
+der Gemeinde Tübingen hinzu.
 
-Wichtig für die Übung sind zwei Methoden: 
-   1. Georeferenzieren auf Grundlage einer analogen Karte: 
- 
-      * Boordinatenbezugssystem (KBS) muss bekannt sein
-      * Mindestens 4 Koordinatenpunkte müssen bekannt sein
-      * Pixelwerte müssen auf Meterangaben skaliert werden
-      * als Passpunkte werden die Schnittpunkte vom Gitternetz des zugrundeliegenes KNE verwendet
-      * Vorteil: Schnittpunkte genau in Karte ablesbar und damit Passpunkte präzise setzbar 
-   2. Georeferenzieren auf Grundlage eines Luftbilds: 
-      
-      * Passpunkte wählen anhand von gut verortbaren Orten in den beiden Datensätzen Zentral für die Georeferenzierung sind Passpunkte, anhand derer von QGIS
-         eine Regression vorgenommen wird. Die Genauigkeit der Georeferenzierung steht und fällt daher mit der Genauigkeit der Passpunkte. 
-         Die gewählten Passpunkte sollten daher drei Eigenschaften erfüllen – sie sollten
+.. figure:: img/qgis_vorbereitung.PNG
+   :alt: Geonode map
 
-      * ausreichend viele sein (→ Mindestanzahl der Passpunkte erfüllen → RMS-Fehler bestimmbar)
-      * gut verteilt sein (→ je näher zusammen, desto weniger aussagekräftig der RMS-Fehler für Genauigkeit der Georeferenzierung)
-      * möglichst gut zu verorten sein (→ exaktere Übereinstimmung der Passpunkte)
-   
-Je nachdem, wie gut diese Eigenschaften erfüllt sind, wirkt sich dies auf die Genauigkeit der Übersetzung aus. Diese wird von QGIS durch den
-RMS-Fehler berechnet – je niedriger dieser ist, desto genauer die Georeferenzierung, sofern die obigen Bedingungen erfüllt sind.
+   Quelle: `GeoSolutions <https://www.geosolutionsgroup.com/technologies/geonode/>`__
 
-Vorgehen in QGIS
-----------------
 
-Reihenfolge in der Regel:
 
-   1. `nicht-georeferenziertes Bild öffnen </content/gis/06_georef-digitalize/qgis-Georeferenzierung.md#bild-oeffnen-und-zielprojektion-festlegen>`__
-   2. `Zielprojektion festlegen </content/gis/06_georef-digitalize/qgis-Georeferenzierung.md#bild-oeffnen-und-zielprojektion-festlegen>`__
-   3. `Transformationseinstellungen wählen </content/gis/06_georef-digitalize/qgis-Georeferenzierung.md#transformationseinstellungen>`__
-   4. `Passpunkte setzen </content/gis/06_georef-digitalize/qgis-Georeferenzierung.md#passpunkte-setzen-und-speichern>`__
-   5. `Passpunkte speichern </content/gis/06_georef-digitalize/qgis-Georeferenzierung.md#passpunkte-setzen-und-speichern>`__
-   6. `Georeferenziertes Bild speichern </content/gis/06_georef-digitalize/qgis-Georeferenzierung.md#georeferenziertes-bild-speichern>`__
-   7. Georeferenzierung überprüfen
+GeoNode
+========
 
--  `Weitere Ressourcen </content/gis/06_georef-digitalize/qgis-Georeferenzierung.md#weitere-ressourcen>`__
--  `Allgemeine Fehlerhinweise </content/gis/06_georef-digitalize/qgis-Georeferenzierung.md#allgemeine-fehlerhinweise>`__
+Account und Nutzer/innen
+------------
 
-Bild öffnen und Zielprojektion festlegen
------------------------------------------
+Wir müssen uns einmal in der Plattform registrieren. Die Plattform läuft auf internen Server. Zugänge und Links erhälst du im Modul.
 
--  Raster einladen und auf Nachfrage die Zielprojektion festlegen
+Um alle Funktionen von GeoNode voll auszuschöpfen, benötigst du ein Benutzerkonto. Folge diesen Schritten, um ein neues Konto zu erstellen:
 
-.. raw:: html
+1. Auf jeder Seite der Weboberfläche siehst du einen Link zur Registrierung. Klicke auf diesen Link, und das Registrierungsformular wird angezeigt.
 
-   <video width="100%" controls src="https://courses.gistools.geog.uni-heidelberg.de/giscience/qgis-book/-/raw/main/uploads/QGIS/videos/qgis_georeference_set_projection.mp4">
+.. hint::
 
-.. raw:: html
+      Die Registrierungen in GeoNode müssen offen sein. Falls du den Registrierungslink nicht siehst, ist es nicht möglich, sich zu registrieren, es sei denn, 
+      der Administrator der Seite übernimmt dies für dich.
 
-   </video>
+.. figure:: https://docs.geonode.org/en/master/_images/register_button.png
+   :alt: GeoNode Registrierung
 
-**Hinweis:** Wenn das Programm die Zielprojektion nicht von alleine abfragt, müssen die Einstellungen zu den KBS geändert werden. Das
-funktioniert unter *Einstellungen/Settings* in den Toolbars, *Optionen/Options* und dann unter dem Reiter *KBS/CRS*. In diesem muss
-unter *KBS für neue Layer/CRS for new layers* die Option *KBS abfragen/Prompt for CRS* gewählt werden.
+   Quelle: `GeoNode Registrierung <https://docs.geonode.org/en/master/usage/accounts_user_profile/new_account/index.html>`__
 
-|Einstellungen_KBS-abfragen|\ |Einstellungen_KBS-abfragen_01|
+2. Auf der nächsten Seite fülle das Formular aus. Gib einen Benutzernamen und ein Passwort in die Felder ein. Gib auch deine E-Mail-Adresse zur Verifizierung ein.
 
-Transformationseinstellungen
-----------------------------
+.. figure:: https://docs.geonode.org/en/master/_images/register_form.png
+   :alt: GeoNode Registrierung
 
--  Koordinatentransformation wählen
--  Resampling Methode wählen
--  Output-Pfad wählen
+   Quelle: `Registrierung für einen neuen Nutzer/in <https://docs.geonode.org/en/master/usage/accounts_user_profile/new_account/index.html>`__
 
-.. raw:: html
+3. Du wirst automatisch eingeloggt und zur Profilseite weitergeleitet. Eine E-Mail wird gesendet, die bestätigt, dass du dich angemeldet hast. Wenn während der Registrierung 
+keine Fehler auftreten, werden die folgenden Benachrichtigungen auf dem Bildschirm angezeigt:
 
-   <video width="100%" controls src="https://courses.gistools.geog.uni-heidelberg.de/giscience/qgis-book/-/raw/main/uploads/QGIS/videos/qgis_georeference_transformation_settings.mp4">
+.. figure:: https://docs.geonode.org/en/master/_images/register_alerts.png
+   :alt: GeoNode Bestätigung
 
-.. raw:: html
+   Quelle: `GeoNode - Registrierungsbestätigung <https://docs.geonode.org/en/master/usage/accounts_user_profile/new_account/index.html>`__
 
-   </video>
+4. Um dich abzumelden, klicke auf den Abmelden-Link im Benutzermenü
 
-**Praktische Hinweise:** 
-   * wenn das Raster nur gedreht, skaliert und verschoben werden muss *Polynom 1. Grades*
-   * wenn das Raster gekrümmt oder gebeugt werden muss *Polynom 2. oder 3. Grades*
-   * Für die Zahl der Passpunkte gilt: 
-      * Min. Zahl Passpunkte 𝑚=(((𝑡+1)(𝑡+2)))/2 (t = Grad d. Transformation)
-      * Das mathematisch „beste“ Modell wird erreicht, wenn exakt die erforderliche Zahl m verwendet wird (RMS-Fehler = 0)
-      * Geographisch bessere Ergebnisse werden erzielt, wenn leicht mehr Punkte gesetzt werden (Grund: Punkte werden nicht perfekt gesetzt).
+.. figure:: https://docs.geonode.org/en/master/_images/register_alerts.png
+   :alt: GeoNode Abmeldung
 
-Passpunkte setzen und speichern
--------------------------------
+   Quelle: `GeoNode - Abmeldung <https://docs.geonode.org/en/master/usage/accounts_user_profile/new_account/index.html>`__
 
--  Passpunkte sollten gleichmäßig verteilt sein, da sonst eine lokal    fehlerhafte Transformation droht
--  Passpunkte sollten so präzise wie möglich platziert werden
--  Lieber mäßig viele gute Punkte, als viele schlecht platzierte!
+5. Sobald du ein Konto hast, kannst du dein Profil mit Informationen anreichern. Du kannst auch bestehende Informationen bearbeiten oder löschen. 
+Du kannst das Konto mit sozialen Netzwerk verbinden, E-Mail-Adressen verknüpfen und Benachrichtigungseinstellungen verwalten.
+Du kannst diese Informationen im Nutzermenü von deiner Profilseite aus aktualisieren. Klicke auf dein Profilbild oben rechts auf dem Bildschirm. Es wird eine Dropdown-Liste angezeigt. Klicke auf Profil, um die Profileinstellungen aufzurufen.
 
-.. raw:: html
+.. figure:: https://docs.geonode.org/en/master/_images/profile_link.png
+   :alt: Link zum Profil
 
-   <video width="100%" controls src="https://courses.gistools.geog.uni-heidelberg.de/giscience/qgis-book/-/raw/main/uploads/QGIS/videos/qgis_georeference_set_points_grid.mp4">
+   Quelle: `Link zum Profil <https://docs.geonode.org/en/master/usage/accounts_user_profile/new_account/index.html>`__
 
-.. raw:: html
+6. So (oder so ähnlich) wird deine Profilseite aussehen.
 
-   </video>
+.. figure:: https://docs.geonode.org/en/master/_images/user_profile_page.jpg
+   :alt: Profil Seite
 
--  Passpunktkoordinaten im Kartengrid ablesen und eintragen
+   Quelle: `GeoNode - Profil Seite <https://docs.geonode.org/en/master/usage/accounts_user_profile/new_account/index.html>`__
 
-.. raw:: html
+7. Deine persönlichen Informationen werden unter dem Benutzernamen angezeigt. Am unteren Rand der Seite sind Ressourcen aufgelistet, die deinem Profil zugeordnet sind. 
+Du kannst entscheiden, nur Datensätze, Karten, Dokumente, Dashboards oder Geostories anzeigen zu lassen. Über den Link User datasets WMS GetCapabilities kannst du ein 
+XML-Dokument mit der Liste der verfügbaren Datensätze abrufen. Auf der rechten Seite der Seite gibt es viele Links, um persönliche Informationen zu bearbeiten, 
+deine Profileinstellungen zu aktualisieren und mit anderen GeoNode-Benutzern in Kontakt zu treten. Der Link *Meine Aktivitäten* ermöglicht es, deine kürzlichen Aktivitäten auf 
+GeoNode zu sehen.
 
-   <video width="100%" controls src="https://courses.gistools.geog.uni-heidelberg.de/giscience/qgis-book/-/raw/main/uploads/QGIS/videos/qgis_georeference_set_points_from_layer.mp4">
+.. figure:: https://docs.geonode.org/en/master/_images/user_activities.jpg
+   :alt: Aktivtät des Nutzers
 
-.. raw:: html
+   Quelle: `GeoNode - Profil Aktivitäten <https://docs.geonode.org/en/master/usage/accounts_user_profile/new_account/index.html>`__
 
-   </video>
 
--  Passpunktkoordinaten anhand eines anderen Layers wählen
+QGIS Plugin
+------------
 
-Georeferenziertes Bild speichern
---------------------------------
+Es gibt seit Januar 2025 eine neue Version des GeoNode-Plugins für QGIS! Das Plugin ermöglicht es Ressourcen aus einem GeoNode-Katalog in QGIS zu suchen, zu filtern und zu laden. 
+Es unterstützt authentifizierten Zugriff auf die Ressourcen über WMS, WFS und WCS und nutzt die GeoNode REST API. 
+Authentifizierte Benutzer können den Stil und die Daten (nur für Vektordaten) der Ressourcen bearbeiten und neue Datensätze zu GeoNode hochladen. 
+Grundlegende Metadateninformationen können ebenfalls direkt aus QGIS bearbeitet werden.
 
--  Bild speichern
--  Datei öffnen und Georeferenzierung überprüfen
--  in unserem Beispiel zeigt das Ergebnis eine unterschiedliche Güte für
-   verschiedene Regionen (z.B. relativ gut im zentralen Teil, weniger
-   gut in Nord- und Südamerika)
 
-.. raw:: html
+**Verbindung herstellen**
 
-   <video width="100%" controls src="https://courses.gistools.geog.uni-heidelberg.de/giscience/qgis-book/-/raw/main/uploads/QGIS/videos/qgis_georeference_save.mp4">
+Passwörter und Nutzernamen erhälst du im Modul. Jetzt wollen wir eine Verbindun herstellen.
 
-.. raw:: html
 
-   </video>
+.. figure:: https://geosolutionsgroup.com/wp-content/uploads/2025/01/qgisgeonode.jpg?x67834
+   :alt: QGIS-plugin für Geonode
 
-Weitere Ressourcen:
--------------------
-
--  `Digital Geography Tutorial: wie georeferenziere ich eine gescannte
-   Karte in
-   QGIS? <http://de.digital-geography.com/QGIS-tutorial-teil-1-wie-georeferenziere-ich-eine-gescannte-karte-mit-QGIS/>`__
-
-Allgemeine Fehlerhinweise
--------------------------
-
-Fehler können unter anderem zu Stande kommen durch:
-   * fehlerhaftes Ablesen der Koordinaten (beim Ablesen von Passpunktkoordinaten im Kartengrid) 
-   * eine fehlende Übereinstimmung zwischen Projekt-KBS, KBS des georeferenzierten Layers und übrigen Layern vor Beginn des Georeferenzieren
-
-.. admonition:: QGIS Georeferenzierung
-    :class: admonition-youtube
-
-    ..  youtube:: qZUQ_keQnAc
-
-    Bonn Center for Digital Humanities @ `Geo-Python channel on Youtube <https://www.youtube.com/watch?v=qZUQ_keQnAc>`_.
+   Quelle: `QGIS-plugin für Geonode <https://www.geosolutionsgroup.com/blog/geonode-4-4/>`__
