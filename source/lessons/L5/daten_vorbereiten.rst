@@ -8,6 +8,9 @@ Jetzt berechne den Mittelpunkt der übrig gebliebenen Gebäude.
 Oder lade dir die Daten via ILAS herunter. Es ist eine Simulation von Hauskorrdinaten, bei denen ein Glasfaserausbau noch aussteht. 
 Als weiterer Datensatz nehmen wir die Bahngleise der Gemeinde Tübingen hinzu.
 
+QGIS
+------------
+
 .. figure:: img/qgis_vorbereitung.PNG
    :alt: Geonode map
 

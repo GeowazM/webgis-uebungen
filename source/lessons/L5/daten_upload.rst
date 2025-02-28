@@ -5,6 +5,57 @@ Die in GeoNode integrierten Datenverwaltungstools ermöglichen die Erstellung vo
 anderen konfigurierten GeoNode-Apps. Jede Ressource im System kann öffentlich geteilt oder eingeschränkt werden, um den Zugriff nur bestimmten Benutzern zu ermöglichen. 
 Soziale Funktionen wie Benutzerprofile sowie Kommentar- und Bewertungssysteme ermöglichen die Entwicklung von Gemeinschaften rund um jede Plattform, um die Nutzung, 
 Verwaltung und Qualitätskontrolle der in der GeoNode-Instanz enthaltenen Daten zu erleichtern.
+.. hint::
+
+   Ziel der Übung
+      * GeoNode kennenlernen 
+      * Eigene Daten hochladen
+
+.. seealso::
+
+      *  `GeoNode - Datensätze organisieren <https://docs.geonode.org/en/master/usage/managing_datasets/using_remote_services.html>`__
+
+
+.. hint::
+
+      Es gibt fünf Haupttypen von Ressourcen, die GeoNode verwalten kann:
+
+         - Datensätze
+         - Karten
+         - Dokumente
+         - GeoStories
+         - Dashboards
+
+         Jeder Ressourcentyp hat sein eigenes Menü und kann über die Schaltflächen Datensätze, Karten, Dokumente, GeoStories und Dashboards in der Navigationsleiste erreicht werden.
+
+
+Aufgabe
+--------
+Wir wollen erste Geodaten hochladen. Das machen wir zu Beginn über die GeoNode-Plattform selbst.
+
+1. Gehe auf das Feld *Alle Ressourcen* (links oben)
+
+.. figure:: img/geonode_upload_ressourcen.PNG
+   :alt: GeoNode Datensatz hochladen
+
+   Quelle: Eigene Erhebung
+
+2. Nutze das Symbol *Ressource hinzufügen*
+3. Wähle *Datensatz hochladen*
+
+.. figure:: img/geonode_upload_datensatz.PNG
+   :alt: GeoNode Datensatz hochladen
+
+   Quelle: Eigene Erhebung
+
+
+
+
+
+.. figure:: img/geonode_upload.PNG
+   :alt: GeoNode Datensatz hochladen
+
+   Quelle: Eigene Erhebung
 
 Datentypen
 --------------
@@ -12,11 +63,11 @@ Datentypen
 Die Willkommensseite von GeoNode zeigt eine Vielzahl von Informationen über die aktuelle GeoNode-Instanz. Du kannst die vorhandenen Daten mit vielen Suchwerkzeugen und Filtern 
 durchsuchen oder über die Links in der Navigationsleiste oben auf der Seite. Es gibt fünf Haupttypen von Ressourcen, die GeoNode verwalten kann:
 
-   * Datensätze
-   * Karten
-   * Dokumente
-   * GeoStories
-   * Dashboards
+- Datensätze
+- Karten
+- Dokumente
+- GeoStories
+- Dashboards
 
 Jeder Ressourcentyp hat sein eigenes Menü und kann über die Schaltflächen Datensätze, Karten, Dokumente, GeoStories und Dashboards in der Navigationsleiste erreicht werden.
 
@@ -78,6 +129,7 @@ einen Text einzugeben und alle Ressourcen zu finden, die mit diesem Text zu tun 
    :alt: GeoNode Suchtool
 
    Quelle: `Suchtool <https://docs.geonode.org/en/master/usage/accounts_user_profile/new_account/index.html>`__
+
 Wenn du eine Suche startest, wirst du zur Suchseite weitergeleitet, die dir das Suchergebnis für alle Datentypen anzeigt.
 
 .. figure:: https://docs.geonode.org/en/master/_images/search_page.png
