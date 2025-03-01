@@ -1,50 +1,31 @@
-Ziel
+WebMapping
 ===============
 
-Ziel der Übung
+.. hint::
+
+   **Für diese Übung in diesem Kapitel nutzen wir folgende Tools**
+      *  `QGIS <https://qgis.org/>`__
+      *  `Plugin *qgis2web* <https://plugins.qgis.org/plugins/qgis2web/>`__
+      *  `OpenLayers <https://openlayers.org/>`__
+      *  `Leaflet <https://leafletjs.com/>`__
+
+
+OpenLayers
 --------------
 
--  Die ersten Schritte wagen.
--  Die Benutzeroberfläche verstehen und das Layer-Konzept kennenlernen.
--  Vektor-Daten in einem GIS anzeigen und die Attributdaten einsehen.
--  Vektor-Daten umprojizieren (d.h. die Projektion der Daten ändern).
+.. admonition:: FOSSGIS 2024 OpenLayers - mehr als nur Karten im Web
+    :class: admonition-youtube
 
+    ..  youtube:: Bl5-ubTBOZY
 
-Wiki:
------
+    `FOSSGIS on Youtube <https://www.youtube.com/watch?v=lPgXhcpRk3Q>`_.
 
--  `Interface <https://courses.gistools.geog.uni-heidelberg.de/giscience/gis-einfuehrung/wikis/qgis-Interface>`__
--  `Layer-Konzept <https://courses.gistools.geog.uni-heidelberg.de/giscience/gis-einfuehrung/wikis/qgis-Layer-Konzept>`__
--  `Attributdaten <https://courses.gistools.geog.uni-heidelberg.de/giscience/gis-einfuehrung/wikis/qgis-Attributdaten>`__
--  `Projektionen <https://courses.gistools.geog.uni-heidelberg.de/giscience/gis-einfuehrung/wikis/qgis-Projektionen>`__
-
-Layer kennen lernen
+Leaflet
 --------------
 
--  Durchsuche folgende Karte
--  Finde die stärksten Erdbeben (Tipp: Alaska, Chile, Japan oder Indonesion). Hier findest du verlinkte Videos. Wenn du magst, dann werfe einen Blick in die Auswirkungen dieser starken Erdbeben.
--  Vektor-Daten in einem GIS anzeigen und die Attributdaten einsehen.
--  Vektor-Daten umprojizieren (d.h. die Projektion der Daten ändern).
+.. admonition:: FOSSGIS 2024 Leaflet – die Webmapping-Bibliothek, die fast alles kann
+    :class: admonition-youtube
 
-hello ARD 2
----------------
+    ..  youtube:: tUjKSa_iuQw
 
-.. raw:: html
-
-    <embed>
-
-        <iframe src="https://www.tagesschau.de/ausland/asien/erdbeben-tibet-102.html" width="auto">hi</iframe>
-        
-    </embed>
-
-
-hello WebMap
----------------
-
-.. raw:: html
-
-    <embed>
-
-        <iframe src="http://earthquakes.terragis.space" width="512" height="288"></iframe>
-
-    </embed>
+    `FOSSGIS on Youtube <https://www.youtube.com/watch?v=tUjKSa_iuQw>`_.

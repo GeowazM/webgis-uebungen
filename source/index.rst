@@ -106,6 +106,7 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
     :maxdepth: 2
     :caption: Eine erste interaktive Webmap erstellen
 
+    lessons/L1/overview
     lessons/L1/uebung-1
     lessons/L1/uebung-1/uebung-1_optional
 
@@ -128,6 +129,7 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
     :caption: OGC-Dienste erstellen
 
     gis-data/ogc-standards
+    lessons/L4/qgis-server_intro
     lessons/L4/qgis-server
 
 .. toctree::
