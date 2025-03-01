@@ -291,3 +291,19 @@ Du kannst den Kartendienst mit Informationen anreichern, die interaktiv vom Kons
 &I=250
 
 &J=250
+
+
+GetLegendGraphic
+~~~~~~~~~~~~~~~~~
+
+Als letztes WMS-Dienst Element schauen wir uns die Legende an.
+
+SERVICE=WMS
+
+&REQUEST=GetLegendGraphic
+
+&LAYERS=countries,airports
+
+&BBOX=43.20,-2.93,49.35,8.32
+
+&CRS=EPSG:4326
