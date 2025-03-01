@@ -115,11 +115,11 @@ Der Kurzname verwendet werden, um diese Elemente bei der Interaktion mit dem QGI
 GetMap
 ~~~~~~~~~~~~~~~~~
 
-2. Gehen wir zum Kartendienst. Öffne folgenden Link
+Gehen wir zum Kartendienst. Öffne folgenden Link
    
    * /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=800&HEIGHT=400&LAYERS=airports,countries,countries_shapeburst,places&CRS=EPSG:4326&BBOX=-90,-180,90,180
 
-   - Ändere die Parameter *&WIDTH* auf "1200" und *&HEIGHT* auf "780". Was verändert sich?
+Ändere die Parameter *&WIDTH* auf "1200" und *&HEIGHT* auf "780". Was verändert sich?
 
    .. raw:: html
 
@@ -146,7 +146,7 @@ GetMap
    * /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=1200&HEIGHT=780&LAYERS=airports,countries,countries_shapeburst,places&CRS=EPSG:4326&BBOX=-90,-180,90,180
 
 
-   - Ändere den Parameter *&CRS* zu "3857". Was verändert sich?
+Ändere den Parameter *&CRS* zu "3857". Was verändert sich?
 
    .. raw:: html
 
@@ -175,7 +175,7 @@ GetMap
    Wir sehen, dass wir nichts sehen. Unser Beispiel WMS-Dienst bietet den Dienst nur im EPSG:4326 an
 
 
-   - Ändere den Parameter *&WBBOX* von "-90" auf "0". Was verändert sich?
+Ändere den Parameter *&WBBOX* von "-90" auf "0". Was verändert sich?
 
   .. raw:: html
 
@@ -204,7 +204,7 @@ GetMap
    Die Bbox (eng. bounding box) ist der Extent, also die räumliche Ausdehnung unseres REQUEST. So können wir einen WMS-Dienst auf den von uns interessierte Gebiet zuschneiden.
 
 
-   - Ändere den Parameter *&LAYERS* von "airports,countries,countries_shapeburst,places" zu "countries_shapeburst,places". Was verändert sich?
+ Ändere den Parameter *&LAYERS* von "airports,countries,countries_shapeburst,places" zu "countries_shapeburst,places". Was verändert sich?
 
   .. raw:: html
 
