@@ -123,27 +123,27 @@ Gehen wir zum Kartendienst. Öffne folgenden Link
 
 .. raw:: html
 
-      <details>
+   <details>
 
-   .. raw:: html
+.. raw:: html
 
-      <summary>
+   <summary>
 
-   Lösung
+Lösung
 
-   .. raw:: html
+.. raw:: html
 
-      </summary>
+   </summary>
 
-   .. raw:: html
+.. raw:: html
 
-      <ul>
+   <ul>
 
-   .. raw:: html
+.. raw:: html
 
-      <li>
+   <li>
 
-   * /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=1200&HEIGHT=780&LAYERS=airports,countries,countries_shapeburst,places&CRS=EPSG:4326&BBOX=-90,-180,90,180
+* /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=1200&HEIGHT=780&LAYERS=airports,countries,countries_shapeburst,places&CRS=EPSG:4326&BBOX=-90,-180,90,180
 
 
 Ändere den Parameter *&CRS* zu "3857". Was verändert sich?
