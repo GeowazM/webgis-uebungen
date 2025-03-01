@@ -121,6 +121,12 @@ GetMap
    
    - Ändere die Parameter *&WIDTH=* und *&HEIGHT*. Was verändert sich?
 
+3. Öffne folgenden Link in einem neuen Reiter
+
+   * /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=800&HEIGHT=400&LAYERS=countries_shapeburst&CRS=EPSG:4326&BBOX=-90,-180,90,180
+
+   - Was verändert sich? Visuell und im Link? Füge dem Link in "Layers" zusätzlich "places" hinzu und aktualisiere deine Seite.
+
 .. codeblock::
 
    /cgi-bin/qgis_mapserv.fcgi?  <!-- unser QGIS-Server -->

@@ -14,19 +14,6 @@ WMS-Dienst erstellen
       *  `OGC-Dienste - Basics <https://docs.qgis.org/3.40/en/docs/server_manual/services/basics.html>`__
 
 
-Hintergrund
---------
-
-Du willst den Austausch von Geodaten mit internen & externen Partnern effizienter gestalten. Deine Geodaten sollen als Schaufenster für
-andere Abteilungen zur Verfügung stehen, damit diese bessere Entscheidungen finden können. Externe Ingenieurbüros sollen eine Möglichkeit erhalten, eure Geodaten anzuzapfen, 
-um beidseitig Arbeit zu sparen. In solchen Fällen ploppt oft das Stichwort Interoperabilität auf, dass seit Jahrzenten Thema der Geodaten-Community ist. Für eine bessere
-Interoperabilität bzw. Austauschbarkeit von Geodaten wurden die OGC-Standards wie bspw. WMS-& WFS-Layer entwickelt. Mit solchen OGC-Diensten haben wir schon gearbeitet.
-Wir haben zum Beispiel die OpenStreetMap Hintergrundkarte (als Konsumenten)  in ArcGIS Pro und QGIS eingebunden. Mit dem QGIS-Server können wir (zum Produzenten werden und) eigene WMS/WFS-Dienste erstellen. 
-Diese eigenen Dienste können wir wiederrum internen & externen Partnern über einen Link zur Verfügung stellen. Neben QGIS-Server gibt es weitere räumlichen Server wie GeoServer und MapServer, die solche Dienste 
-ebenfalls bereitstellen können. Da der QGIS-Server in QGIS Desktop nutzerfreundlich integierbar ist, nutzen wir ihn in dieser Übung. Aus früheren Kursen existiert eine Übung mit GeoServer, 
-die zur Verfügung gestellt werden kann, falls Sie diesen Server kennenlernen möchten.
-
-
 .. hint::
 
    Hier ist die Seite der `Firma Terrestris <https://www.terrestris.de/de/openstreetmap-wms/>`__, die mehrere eigene WMS-Dienste anbieten. So kann die Bereitstellung deiner OGC-Dienste irgendwann auch aussehen. 
@@ -55,7 +42,7 @@ Den Link zum WMS-Layer, den wir für dich vorbereitet haben, bekommt ihr im Kurs
 
 Der Link:
 
-   * /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&LAYERS=airports,countries,countries_shapeburst,places&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&CRS=EPSG:4326&WIDTH=800&HEIGHT=400&BBOX=-90,-180,90,180
+/cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&LAYERS=airports,countries,countries_shapeburst,places&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&CRS=EPSG:4326&WIDTH=800&HEIGHT=400&BBOX=-90,-180,90,180
 
 .. hint::
 
@@ -83,7 +70,7 @@ GetCapabilities
 
 1. Öffne den folgenden Link. Was für ein Format öffnet sich?
    
-   * /cgi-bin/qgis_mapserv.fcgi?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
+/cgi-bin/qgis_mapserv.fcgi?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
    
    - Welches CRS und welche EPSG ist hier hinterlegt?
    - Finde den Layer *countries* (Suchen via Strg + F)
@@ -108,7 +95,7 @@ Der Kurzname verwendet werden, um diese Elemente bei der Interaktion mit dem QGI
 .. figure:: https://docs.qgis.org/3.40/en/_images/set_group_wms_data.png
    :alt: Set group WMS data
 
-   Der "Short name" kann in QGIS - QGIS-Server Plugin definiert werden. Quelle: `QGIS Dokumentation <https://docs.qgis.org/3.40/en/docs/server_manual/services/basics.html>`__
+   Der "Short name" kann im QGIS-Server Plugin definiert werden. Quelle: `QGIS Dokumentation <https://docs.qgis.org/3.40/en/docs/server_manual/services/basics.html>`__
 
 
 
@@ -117,22 +104,21 @@ GetMap
 
 2. Gehen wir zum Kartendienst. Öffne folgenden Link
    
-   * /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=800&HEIGHT=400&LAYERS=airports,countries,countries_shapeburst,places&CRS=EPSG:4326&BBOX=-90,-180,90,180
+/cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=800&HEIGHT=400&LAYERS=airports,countries,countries_shapeburst,places&CRS=EPSG:4326&BBOX=-90,-180,90,180
    
    - Ändere die Parameter *&WIDTH=* und *&HEIGHT*. Was verändert sich?
 
-.. codeblock::
 
-   /cgi-bin/qgis_mapserv.fcgi?  <!-- unser QGIS-Server -->
-   MAP=/home/qgis/projects/world.qgs <!-- navigation -->
-   &SERVICE=WMS
-   &VERSION=1.3.0
-   &REQUEST=GetMap
-   &WIDTH=800
-   &HEIGHT=400
-   &LAYERS=airports,countries,countries_shapeburst,places
-   &CRS=EPSG:4326
-   &BBOX=-90,-180,90,180
+-   /cgi-bin/qgis_mapserv.fcgi?  
+-   MAP=/home/qgis/projects/world.qgs
+-   &SERVICE=WMS
+-   &VERSION=1.3.0
+-   &REQUEST=GetMap
+-   &WIDTH=800
+-   &HEIGHT=400
+-   &LAYERS=airports,countries,countries_shapeburst,places
+-   &CRS=EPSG:4326
+-   &BBOX=-90,-180,90,180
 
 
 Layer selektion & Filter
@@ -140,29 +126,16 @@ Layer selektion & Filter
 
 3. Du kannst den existierenden Kartendienst nach deinen Wünschen anpassen, indem du nur einzelne Layer auswählst oder die Layer filterst.
 
-.. codeblock::
-
-   /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs
-
-   &REQUEST=GetMap
-
-   &SERVICE=WMS
-
-   &VERSION=1.3.0
-
-   &WIDTH=400
-
-   &HEIGHT=300
-
-   &CRS=EPSG:4326
-
-   &BBOX=41,-6,52,10
-
-   &LAYERS=countries_shapeburst,countries,places
-
-   &FILTER=countries_shapeburst,countries:"name" = 'France';places: "name" = 'Paris'
-
-
+-   /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs
+-   &REQUEST=GetMap
+-   &SERVICE=WMS
+-   &VERSION=1.3.0
+-   &WIDTH=400
+-   &HEIGHT=300
+-   &CRS=EPSG:4326
+-   &BBOX=41,-6,52,10
+-   &LAYERS=countries_shapeburst,countries,places
+-   &FILTER=countries_shapeburst,countries:"name" = 'France';places: "name" = 'Paris'
 
 .. hint::
 

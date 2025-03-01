@@ -14,19 +14,6 @@ WMS-Dienst erstellen
       *  `OGC-Dienste - Basics <https://docs.qgis.org/3.40/en/docs/server_manual/services/basics.html>`__
 
 
-Hintergrund
---------
-
-Du willst den Austausch von Geodaten mit internen & externen Partnern effizienter gestalten. Deine Geodaten sollen als Schaufenster für
-andere Abteilungen zur Verfügung stehen, damit diese bessere Entscheidungen finden können. Externe Ingenieurbüros sollen eine Möglichkeit erhalten, eure Geodaten anzuzapfen, 
-um beidseitig Arbeit zu sparen. In solchen Fällen ploppt oft das Stichwort Interoperabilität auf, dass seit Jahrzenten Thema der Geodaten-Community ist. Für eine bessere
-Interoperabilität bzw. Austauschbarkeit von Geodaten wurden die OGC-Standards wie bspw. WMS-& WFS-Layer entwickelt. Mit solchen OGC-Diensten haben wir schon gearbeitet.
-Wir haben zum Beispiel die OpenStreetMap Hintergrundkarte (als Konsumenten)  in ArcGIS Pro und QGIS eingebunden. Mit dem QGIS-Server können wir (zum Produzenten werden und) eigene WMS/WFS-Dienste erstellen. 
-Diese eigenen Dienste können wir wiederrum internen & externen Partnern über einen Link zur Verfügung stellen. Neben QGIS-Server gibt es weitere räumlichen Server wie GeoServer und MapServer, die solche Dienste 
-ebenfalls bereitstellen können. Da der QGIS-Server in QGIS Desktop nutzerfreundlich integierbar ist, nutzen wir ihn in dieser Übung. Aus früheren Kursen existiert eine Übung mit GeoServer, 
-die zur Verfügung gestellt werden kann, falls Sie diesen Server kennenlernen möchten.
-
-
 .. hint::
 
    Hier ist die Seite der `Firma Terrestris <https://www.terrestris.de/de/openstreetmap-wms/>`__, die mehrere eigene WMS-Dienste anbieten. So kann die Bereitstellung deiner OGC-Dienste irgendwann auch aussehen. 

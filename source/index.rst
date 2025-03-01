@@ -128,9 +128,12 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
     :maxdepth: 2
     :caption: OGC-Dienste erstellen
 
-    gis-data/ogc-standards
     lessons/L4/qgis-server_intro
+    gis-data/ogc-standards
     lessons/L4/qgis-server
+    lessons/L4/qgis-server_v2
+    lessons/L4/qgis-server_v3
+
 
 .. toctree::
     :maxdepth: 2
