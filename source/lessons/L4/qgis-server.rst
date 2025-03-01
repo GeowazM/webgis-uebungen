@@ -172,7 +172,7 @@ Gehen wir zum Kartendienst. Öffne folgenden Link
 
    * /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=1200&HEIGHT=780&LAYERS=airports,countries,countries_shapeburst,places&CRS=EPSG:3857&BBOX=-90,-180,90,180
    
-   Wir sehen, dass wir nichts sehen. Unser Beispiel WMS-Dienst bietet den Dienst nur im EPSG:4326 an
+Wir sehen, dass wir nichts sehen. Unser Beispiel WMS-Dienst bietet den Dienst nur im EPSG:4326 an.
 
 
 Ändere den Parameter *&BBOX* von "-90" auf "0". Was verändert sich?
@@ -277,6 +277,17 @@ Du kannst den existierenden Kartendienst nach deinen Wünschen anpassen, indem d
 GetFeatureInfo
 ~~~~~~~~~~~~~~~~~
 
+Du kannst den Kartendienst mit Informationen anreichern, die interaktiv vom Konsumenten abfragbar sind. 
 
-kjh
 
+&INFO_FORMAT=text/xml
+
+&TRANSPARENT=TRUE
+
+&QUERY_LAYERS=mylayer1
+
+&FEATURE_COUNT=3
+
+&I=250
+
+&J=250
