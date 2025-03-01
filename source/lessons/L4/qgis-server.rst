@@ -121,7 +121,7 @@ Gehen wir zum Kartendienst. Öffne folgenden Link
 
 Ändere die Parameter *&WIDTH* auf "1200" und *&HEIGHT* auf "780". Was verändert sich?
 
-   .. raw:: html
+.. raw:: html
 
       <details>
 
@@ -148,7 +148,7 @@ Gehen wir zum Kartendienst. Öffne folgenden Link
 
 Ändere den Parameter *&CRS* zu "3857". Was verändert sich?
 
-   .. raw:: html
+.. raw:: html
 
       <details>
 
@@ -175,9 +175,9 @@ Gehen wir zum Kartendienst. Öffne folgenden Link
    Wir sehen, dass wir nichts sehen. Unser Beispiel WMS-Dienst bietet den Dienst nur im EPSG:4326 an
 
 
-Ändere den Parameter *&WBBOX* von "-90" auf "0". Was verändert sich?
+Ändere den Parameter *&BBOX* von "-90" auf "0". Was verändert sich?
 
-  .. raw:: html
+.. raw:: html
 
       <details>
 
@@ -201,12 +201,13 @@ Gehen wir zum Kartendienst. Öffne folgenden Link
 
    * /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=1200&HEIGHT=780&LAYERS=airports,countries,countries_shapeburst,places&CRS=EPSG:4326&BBOX=0,-180,90,180
    
-   Die Bbox (eng. bounding box) ist der Extent, also die räumliche Ausdehnung unseres REQUEST. So können wir einen WMS-Dienst auf den von uns interessierte Gebiet zuschneiden.
+
+Die Bbox (eng. bounding box) ist der Extent, also die räumliche Ausdehnung unseres REQUEST. So können wir einen WMS-Dienst auf den von uns interessierte Gebiet zuschneiden.
 
 
- Ändere den Parameter *&LAYERS* von "airports,countries,countries_shapeburst,places" zu "countries_shapeburst,places". Was verändert sich?
+Ändere den Parameter *&LAYERS* von "airports,countries,countries_shapeburst,places" zu "countries_shapeburst,places". Was verändert sich?
 
-  .. raw:: html
+.. raw:: html
 
       <details>
 
@@ -230,45 +231,37 @@ Gehen wir zum Kartendienst. Öffne folgenden Link
 
    * /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=1200&HEIGHT=780&LAYERS=countries_shapeburst,places&CRS=EPSG:4326&BBOX=-90,-180,90,180
    
-   Mit LAYERS können wir einzelne Layer eines WMS-Dienst individuell anpassen.
+Mit LAYERS können wir einzelne Layer eines WMS-Dienst individuell anpassen.
 
 
 
 .. hint::
 
    /cgi-bin/qgis_mapserv.fcgi?  <!-- unser QGIS-Server -->
+
    MAP=/home/qgis/projects/world.qgs <!-- navigation -->
-   &SERVICE=WMS
-   &VERSION=1.3.0
-   &REQUEST=GetMap
-   &WIDTH=800
-   &HEIGHT=400
-   &LAYERS=airports,countries,countries_shapeburst,places
-   &CRS=EPSG:4326
-   &BBOX=-90,-180,90,180
+
+   &SERVICE=WMS     <!-- OGC-Dienst -->
+
+   &VERSION=1.3.0   <!-- Version des Dienstes -->
+
+   &REQUEST=GetMap  <!-- Karte -->
+
+   &WIDTH=800       <!-- Darstellung im Browser -->
+
+   &HEIGHT=400      <!-- Darstellung im Browser -->
+
+   &LAYERS=airports,countries,countries_shapeburst,places   <!-- Layerauswahl -->
+
+   &CRS=EPSG:4326         <!-- Koordinatenbezugssystem -->
+
+   &BBOX=-90,-180,90,180  <!-- Räumliche Ausdehnung -->
 
 
 Layer selektion & Filter
 ~~~~~~~~~~~~~~~~~
 
-3. Du kannst den existierenden Kartendienst nach deinen Wünschen anpassen, indem du nur einzelne Layer auswählst oder die Layer filterst.
-
-
-/cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs
-
-&REQUEST=GetMap
-
-&SERVICE=WMS
-
-&VERSION=1.3.0
-
-&WIDTH=400
-
-&HEIGHT=300
-
-&CRS=EPSG:4326
-
-&BBOX=41,-6,52,10
+Du kannst den existierenden Kartendienst nach deinen Wünschen anpassen, indem du nur einzelne Layer auswählst oder die Layer filterst.
 
 &LAYERS=countries_shapeburst,countries,places
 
