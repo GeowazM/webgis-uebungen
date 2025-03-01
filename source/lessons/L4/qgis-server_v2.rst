@@ -1,4 +1,4 @@
-WMS-Dienst erstellen
+WMS erstellen
 ==========
 
 .. hint::
@@ -44,7 +44,7 @@ Eigenen WMS-Dienst definieren
 Im WMS-Tab können Sie die Optionen für die WMS-Fähigkeiten definieren.
 
 
-.. figure:: https://docs.qgis.org/3.40/en/_images/ows_server_definition.png
+.. figure:: https://docs.qgis.org/3.40/en/_images/ows_server_wms.png
    :alt: QGIS-Server Plugin - WMS
 
    *WMS* definieren, Quelle: `QGIS Dokumentation <https://docs.qgis.org/3.40/en/docs/server_manual/getting_started.html#serve-a-project>`__
@@ -75,33 +75,39 @@ Layer- und Feature-Optionen
 
 Sie können die angeforderten GetFeatureInfo-Daten als Klartext, XML und GML erhalten. Der Standard ist XML.
 
-Wenn Sie das Kontrollkästchen Layer-IDs als Namen verwenden aktivieren, werden Layer-IDs verwendet, um Layer in der GetCapabilities-Antwort oder im GetMap LAYERS-Parameter zu referenzieren. Andernfalls wird der Layername oder der Kurzname, falls definiert (siehe QGIS Server-Eigenschaften), verwendet.
+Wenn Sie das Kontrollkästchen Layer-IDs als Namen verwenden aktivieren, werden Layer-IDs verwendet, um Layer in der GetCapabilities-Antwort oder im GetMap LAYERS-Parameter zu referenzieren. 
+Andernfalls wird der Layername oder der Kurzname, falls definiert (siehe QGIS Server-Eigenschaften), verwendet.
 
-Wenn Sie möchten, können Sie das Kontrollkästchen Geometrie zur Feature-Antwort hinzufügen aktivieren. Dies wird die Begrenzungsbox für jedes Feature in der GetFeatureInfo-Antwort enthalten. Siehe auch den WITH_GEOMETRY-Parameter.
+Wenn Sie möchten, können Sie das Kontrollkästchen Geometrie zur Feature-Antwort hinzufügen aktivieren. Dies wird den Extent für jedes Feature in der GetFeatureInfo-Antwort enthalten. 
+Siehe auch den WITH_GEOMETRY-Parameter.
 
-Da viele Webclients keine Kreisbögen in Geometrien anzeigen können, haben Sie die Möglichkeit, die Geometrie vor dem Senden an den Client in einer GetFeatureInfo-Antwort zu segmentieren. Dies ermöglicht es solchen Clients, die Geometrie eines Features dennoch anzuzeigen (z.B. zum Hervorheben des Features). Sie müssen das Kontrollkästchen Geometrie der Feature-Info segmentieren aktivieren, um die Option zu aktivieren.
+Da viele Webclients keine Kreisbögen in Geometrien anzeigen können, haben Sie die Möglichkeit, die Geometrie vor dem Senden an den Client in einer GetFeatureInfo-Antwort zu segmentieren. 
+Dies ermöglicht es solchen Clients, die Geometrie eines Features dennoch anzuzeigen (z.B. zum Hervorheben des Features). Sie müssen das Kontrollkästchen Geometrie der Feature-Info segmentieren aktivieren, 
+um die Option zu aktivieren.
 
 Sie können auch die Option GetFeatureInfo-Geometriepräzision verwenden, um die Präzision der GetFeatureInfo-Geometrie festzulegen. Dies ermöglicht es Ihnen, Bandbreite zu sparen, wenn Sie nicht die volle Präzision benötigen.
 
 Wenn eine Ihrer Ebenen die Map Tip-Anzeige verwendet (d.h. um Text mit Ausdrücken anzuzeigen), wird dies im GetFeatureInfo-Ausgang aufgelistet. Wenn die Ebene eine Wertkarte für eines ihrer Attribute verwendet, wird diese Information ebenfalls im GetFeatureInfo-Ausgang angezeigt.
 
-Wenn Sie möchten, dass QGIS Server spezifische Anforderungs-URLs in der WMS GetCapabilities-Antwort bewirbt, geben Sie die entsprechende URL im Feld Beworbene URL ein.
+Wenn Sie möchten, dass QGIS-Server spezifische Anforderungs-URLs in der WMS GetCapabilities-Antwort bewirbt, geben Sie die entsprechende URL im Feld Beworbene URL ein.
 
-Karten- und Legendenoptionen
 
-Wenn eine Layergruppe an die GetLegendGraphic-Anfrage übergeben wird, werden alle ihre Blattebenen dem Legendenbild hinzugefügt (jedoch ohne die Gruppenbeschriftungen). Aktivieren Sie das Kontrollkästchen Layergruppen in GetLegendGraphic hinzufügen, wenn Sie auch die Namen der Layergruppen (und Untergruppen) in den Layerbaum einfügen möchten, genau wie in der QGIS Desktop-Legende.
+Legende
+^^^^^^
 
-Wenn das QGIS-Projekt Layergruppen enthält, werden diese im WMS-Fähigkeitsdokument zusammen mit den Layern aufgelistet. Wenn eine Gruppe (ihr Name wie in den Fähigkeiten aufgelistet) im WMS GetMap LAYERS-Parameter zusammen mit den Namen der Layer in dieser Gruppe enthalten ist, würde QGIS die Layer duplizieren: einmal für die Gruppe und einmal für die spezifische Ebene. Wenn Sie das Kontrollkästchen Namen-Attribut für Gruppen überspringen aktivieren, wird GetCapabilities nur das Titelattribut für die Gruppe zurückgeben, aber nicht ihr Namen-Attribut, was es unmöglich macht, Gruppen in die Liste der Layer der GetMap-Anfrage aufzunehmen.
+Wenn eine Layergruppe an die GetLegendGraphic-Anfrage übergeben wird, werden alle ihre Blattebenen dem Legendenbild hinzugefügt. Aktivieren Sie das Kontrollkästchen Layergruppen in 
+GetLegendGraphic hinzufügen, wenn Sie auch die Namen der Layergruppen (und Untergruppen) in den Layerbaum einfügen möchten, genau wie in der QGIS Desktop-Legende.
 
-Darüber hinaus können Sie die maximale Größe der Karten, die von den Anfragen zurückgegeben werden, einschränken, indem Sie die maximale Breite und Höhe in die entsprechenden Felder unter Maximale Bildgröße für GetMap- und GetLegendGraphic-Anfragen eingeben.
+Darüber hinaus können Sie die maximale Größe der Karten, die von den Anfragen zurückgegeben werden, einschränken, indem Sie die maximale Breite und Höhe in die entsprechenden 
+Felder unter Maximale Bildgröße für GetMap- und GetLegendGraphic-Anfragen eingeben.
 
-Sie können den Qualitätsfaktor für JPEG- und WebP-Bilder ändern. Der Qualitätsfaktor muss im Bereich von 0 bis 100 liegen. Geben Sie 0 für maximale Kompression und 100 für keine Kompression an.
+Sie können den Qualitätsfaktor für JPEG- und WebP-Bilder ändern. Der Qualitätsfaktor muss im Bereich von 0 bis 100 liegen. 
+Geben Sie 0 für maximale Kompression und 100 für keine Kompression an.
 
-Sie können das Limit für Atlas-Features, die in einer Anfrage gedruckt werden sollen, ändern, indem Sie das Feld Maximale Features für Atlas-Druckanfragen festlegen.
+.. hint::
 
-Wenn QGIS Server im Kachelmodus verwendet wird (siehe TILED-Parameter), können Sie den Kachelpuffer in Pixeln festlegen. Der empfohlene Wert ist die Größe des größten Symbols oder der Linienbreite in Ihrem QGIS-Projekt.
-
-Je nachdem, ob die Karte ein projiziertes CRS oder ein geografisches CRS verwendet und ob keine Informationen zur Bewertung der Karteneinheitengröße vorliegen, können Sie eine Referenz für die Größe entweder durch eine Standardskala für die Legende oder durch Standardkarteneinheiten pro mm in der Legende angeben.
+   Je nachdem, ob die Karte ein projiziertes CRS oder ein geografisches CRS verwendet und ob keine Informationen zur Bewertung der Karteneinheitengröße vorliegen, 
+   können Sie eine Referenz für die Größe entweder durch eine Standardskala für die Legende oder durch Standardkarteneinheiten pro mm in der Legende angeben.
 
 
 

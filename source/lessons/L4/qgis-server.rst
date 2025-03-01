@@ -1,4 +1,4 @@
-WMS-Dienst auslesen
+WMS auslesen
 ==========
 
 .. hint::
@@ -118,16 +118,123 @@ GetMap
 2. Gehen wir zum Kartendienst. Öffne folgenden Link
    
    * /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=800&HEIGHT=400&LAYERS=airports,countries,countries_shapeburst,places&CRS=EPSG:4326&BBOX=-90,-180,90,180
+
+   - Ändere die Parameter *&WIDTH* auf "1200" und *&HEIGHT* auf "780". Was verändert sich?
+
+   .. raw:: html
+
+      <details>
+
+   .. raw:: html
+
+      <summary>
+
+   Lösung
+
+   .. raw:: html
+
+      </summary>
+
+   .. raw:: html
+
+      <ul>
+
+   .. raw:: html
+
+      <li>
+
+   * /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=1200&HEIGHT=780&LAYERS=airports,countries,countries_shapeburst,places&CRS=EPSG:4326&BBOX=-90,-180,90,180
+
+
+   - Ändere den Parameter *&CRS* zu "3857". Was verändert sich?
+
+   .. raw:: html
+
+      <details>
+
+   .. raw:: html
+
+      <summary>
+
+   Lösung
+
+   .. raw:: html
+
+      </summary>
+
+   .. raw:: html
+
+      <ul>
+
+   .. raw:: html
+
+      <li>
+
+   * /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=1200&HEIGHT=780&LAYERS=airports,countries,countries_shapeburst,places&CRS=EPSG:3857&BBOX=-90,-180,90,180
    
-   - Ändere die Parameter *&WIDTH=* und *&HEIGHT*. Was verändert sich?
+   Wir sehen, dass wir nichts sehen. Unser Beispiel WMS-Dienst bietet den Dienst nur im EPSG:4326 an
 
-3. Öffne folgenden Link in einem neuen Reiter
 
-   * /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=800&HEIGHT=400&LAYERS=countries_shapeburst&CRS=EPSG:4326&BBOX=-90,-180,90,180
+   - Ändere den Parameter *&WBBOX* von "-90" auf "0". Was verändert sich?
 
-   - Was verändert sich? Visuell und im Link? Füge dem Link in "Layers" zusätzlich "places" hinzu und aktualisiere deine Seite.
+  .. raw:: html
 
-.. codeblock::
+      <details>
+
+   .. raw:: html
+
+      <summary>
+
+   Lösung
+
+   .. raw:: html
+
+      </summary>
+
+   .. raw:: html
+
+      <ul>
+
+   .. raw:: html
+
+      <li>
+
+   * /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=1200&HEIGHT=780&LAYERS=airports,countries,countries_shapeburst,places&CRS=EPSG:4326&BBOX=0,-180,90,180
+   
+   Die Bbox (eng. bounding box) ist der Extent, also die räumliche Ausdehnung unseres REQUEST. So können wir einen WMS-Dienst auf den von uns interessierte Gebiet zuschneiden.
+
+
+   - Ändere den Parameter *&LAYERS* von "airports,countries,countries_shapeburst,places" zu "countries_shapeburst,places". Was verändert sich?
+
+  .. raw:: html
+
+      <details>
+
+   .. raw:: html
+
+      <summary>
+
+   Hinweis
+
+   .. raw:: html
+
+      </summary>
+
+   .. raw:: html
+
+      <ul>
+
+   .. raw:: html
+
+      <li>
+
+   * /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=1200&HEIGHT=780&LAYERS=countries_shapeburst,places&CRS=EPSG:4326&BBOX=-90,-180,90,180
+   
+   Mit LAYERS können wir einzelne Layer eines WMS-Dienst individuell anpassen.
+
+
+
+.. hint::
 
    /cgi-bin/qgis_mapserv.fcgi?  <!-- unser QGIS-Server -->
    MAP=/home/qgis/projects/world.qgs <!-- navigation -->
@@ -146,27 +253,26 @@ Layer selektion & Filter
 
 3. Du kannst den existierenden Kartendienst nach deinen Wünschen anpassen, indem du nur einzelne Layer auswählst oder die Layer filterst.
 
-.. codeblock::
 
-   /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs
+/cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs
 
-   &REQUEST=GetMap
+&REQUEST=GetMap
 
-   &SERVICE=WMS
+&SERVICE=WMS
 
-   &VERSION=1.3.0
+&VERSION=1.3.0
 
-   &WIDTH=400
+&WIDTH=400
 
-   &HEIGHT=300
+&HEIGHT=300
 
-   &CRS=EPSG:4326
+&CRS=EPSG:4326
 
-   &BBOX=41,-6,52,10
+&BBOX=41,-6,52,10
 
-   &LAYERS=countries_shapeburst,countries,places
+&LAYERS=countries_shapeburst,countries,places
 
-   &FILTER=countries_shapeburst,countries:"name" = 'France';places: "name" = 'Paris'
+&FILTER=countries_shapeburst,countries:"name" = 'France';places: "name" = 'Paris'
 
 
 

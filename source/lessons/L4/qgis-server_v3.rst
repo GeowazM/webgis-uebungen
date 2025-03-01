@@ -1,4 +1,4 @@
-WMS-Dienst erstellen
+WMS publizieren
 ==========
 
 .. hint::
