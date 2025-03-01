@@ -1,4 +1,4 @@
-OWS
+Open Web Servers
 ==========
 
 .. hint::
@@ -29,12 +29,18 @@ QGIS Server und Python.
 
 .. hint::
 
-   Die bekanntesten räumlichen Open Web Services (OWS) sind GeoServer, MapServer & QGIS Server.
+   Die bekanntesten **räumlichen Open Web Services (OWS)** sind **GeoServer, MapServer & QGIS Server**.
 
 .. hint::
 
-   MapProxy
+   MapProxy - coming soon
 
+Der grundlegende Funktion eines räumlichen Webservers (unabhängig von der Software) funktioniert ähnlich. Hier eine Übersicht am Beispiel von GeoServer:
+
+.. figure:: https://techtalk.intersec.com/2021/10/open-source-map-server-with-geoserver-and-qgis/schema-gis.png
+   :alt: Open-source map server with Geoserver and QGIS
+
+   Quelle: `intersec TeckTalk <https://techtalk.intersec.com/2021/10/open-source-map-server-with-geoserver-and-qgis/>`__
 
 .. admonition:: 2019 - Vergleich QGIS-Server, Geoserver und MapServer
     :class: admonition-youtube

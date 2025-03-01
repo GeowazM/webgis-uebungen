@@ -29,17 +29,10 @@ bereitstellen können. Da der QGIS-Server in QGIS Desktop nutzerfreundlich integ
 
    Aus früheren Kursen existiert eine Übung mit GeoServer, die zur Verfügung gestellt werden kann, falls Sie diesen Server kennenlernen möchten.
 
-Der grundlegende Funktion eines räumlichen Webservers (unabhängig von der Software) funktioniert ähnlich. Hier eine Übersicht:
-
-.. figure:: https://techtalk.intersec.com/2021/10/open-source-map-server-with-geoserver-and-qgis/schema-gis.png
-   :alt: Open-source map server with Geoserver and QGIS
-
-   Quelle: `intersec TeckTalk <https://techtalk.intersec.com/2021/10/open-source-map-server-with-geoserver-and-qgis/>`__
-
 
 .. hint::
 
-   Hier ist die Seite der `Firma Terrestris <https://www.terrestris.de/de/openstreetmap-wms/>`__, die mehrere eigene WMS-Dienste anbieten. So kannst du deine OGC-Dienste, die du in dieser Übung erstellst, ebenfalls bereitstellen. 
+   Hier ist die Seite der `Firma Terrestris <https://www.terrestris.de/de/openstreetmap-wms/>`__, die mehrere eigene WMS-Dienste anbieten. So kann die Bereitstellung deiner OGC-Dienste irgendwann auch aussehen. 
 
 
 
@@ -49,25 +42,143 @@ Der grundlegende Funktion eines räumlichen Webservers (unabhängig von der Soft
 
 QGIS-Server WMS-Dienst kennenlernen
 ~~~~~~~~~~~~~~~~~
-Den Link zum WMS-Layer, den wir für dich vorbereitet haben, bekommt ihr im Kurs. 
+Den Link zum WMS-Layer, den wir für dich vorbereitet haben, bekommt ihr im Kurs. Wir werden wie folgt vorgehen:
+
+- WMS-Layer Link & deren funktionsweise näher kennenlernen
+- WMS-Layer in QGIS vorbereiten
+- Eigenen WMS-Layer veröffentlichen
 
 .. important::
 
-   Wir haben auf unserem Server **`QGIS-Server <https://docs.qgis.org/3.40/en/docs/server_manual/getting_started.html>`__** installiert und ein QGIS-Projekt mit dem 
+   Wir haben auf unserem Server `QGIS-Server <https://docs.qgis.org/3.40/en/docs/server_manual/getting_started.html>`__ installiert und ein QGIS-Projekt mit dem 
    Namen **world.qgs** in den Ordner **/home/qgis/projects** kopiert.
    Der QGIS-Server erkennt die Konfigurationen, die wir in QGIS vorher definiert haben und liefert oder **served** uns das Projekt als Web Mapping Service (WMS).
+   Das werden wir am Ende der Übung ebenfalls mit unseren eigenem Projekt machen.
+
+.. codeblock::
 
    /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&LAYERS=airports,countries,countries_shapeburst,places&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap
    &CRS=EPSG:4326&WIDTH=800&HEIGHT=400&BBOX=-90,-180,90,180
 
-Der WMS-Dienst
+.. hint::
+
+   Alternative 1: 
+   Du kannst dir OGC-Dienste von Geoportalen anzeigen lassen, indem du mit der *rechten Maustaste* (irgendwo) klickst und *Untersuchen* auswählst. Hier kannst du unter dem WLAN-Logo, 
+   dass für Netzwerk steht, die OWS-Dienste der Website anschauen. Durch das Auswählen eines bspw. Service=WMS&... unter *Name* erscheint dann im *Header* Bereich die Anforderungs-URL,
+   die dem GetCapabilities Link des OGC-Dienstes entspricht. DIesen kannst du kopieren und in QGIS virtualisieren. Hier befinden sich i.d.R. auch Informationen, welches WebMapping/WebGIS Tool genutzt wird.
+
+   Alternative 2:
+   Der QGIS-Server Demo Link- http://qgis.demo/qgisserver?MAP=/home/qgis/projects/world.qgs&LAYERS=countries&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&CRS=EPSG:4326&WIDTH=400&HEIGHT=200&BBOX=-90,-180,90,180
+
+
+
+Gehen wir den Link bzw. den WMS-Dienst Schritt für Schritt durch und lernen seine funktionsweise kennen. Der WMS-Dienst kann über den genannten Link gesteuert werden.
+
+Die Grundlagen
+~~~~~~~~~~~~~~~~~
+
+Dieser Abschnitt beschreibt Konzepte und Parameter, die von Diensten gemeinsam genutzt werden. Einige davon sind standardisiert und in den OGC-Spezifikationen definiert, 
+während andere sehr spezifisch für QGIS Server sind.
+
+Standardparameter:
+
++---------+---------------------------+-----------------------------+
+| Konzept | Beschreibung              | Beispiel                    |
++=========+===========================+=============================+
+| SERVICE | Name des Dienstes         | SERVICE=WMS                 |
++---------+---------------------------+-----------------------------+
+| REQUEST | Name der Anfrage          | REQUEST=GetCapabilities     | 
++---------+---------------------------+-----------------------------+
+
+Anwenderparameter
+
++-----------+----------------------------------------+-------------------------------------+
+| Konzept   | Beschreibung                           | Beispiel                            |
++===========+========================================+=====================================+
+| MAP       | QGIS-Projektdatei                      | MAP=/home/qgis/projects/world.qgs   |
++-----------+----------------------------------------+-------------------------------------+
+| Short name| Definition des Kurznamens              | LAYERS=countries                    | 
++-----------+----------------------------------------+-------------------------------------+
 
 
 .. hint::
 
-   Du kannst OGC-Dienste von Geoportalen anschauen, indem du mit der *rechten Maustaste* klickst und *untersuchen* auswählst. Hier kannst du unter dem WLAN-Logo, 
-   dass für Netzwerk steht, die OWS-Dienste der Website anschauen. Durch das Auswählen eines bspw. Service=WMS&... unter *Name* erscheint dann im *Header* Bereich die Anforderungs-URL,
-   die dem GetCapabilities Link des OGC-Dienstes entspricht. DIesen kannst du kopieren und in QGIS virtualisieren. Hier befinden sich i.d.R. auch Informationen, welches WebMapping/WebGIS Tool genutzt wird.
+   Dieser Anbieterparameter ermöglicht es, die zu verwendende QGIS-Projektdatei zu definieren. Es kann sich um einen absoluten Pfad oder einen Pfad relativ 
+   zum Speicherort der Serverausführungsdatei qgis_mapserv.fcgi handeln. MAP ist standardmäßig obligatorisch, da eine Anfrage ein QGIS-Projekt benötigt, um tatsächlich zu funktionieren. 
+
+
+Der Kurzname verwendet werden, um diese Elemente bei der Interaktion mit dem QGIS Server zu identifizieren. Zum Beispiel mit dem Standardparameter LAYERS
+
+.. figure:: https://docs.qgis.org/3.40/en/_images/set_group_wms_data.png
+   :alt: Set group WMS data
+
+   Der "Short name" kann in QGIS - QGIS-Server Plugin definiert werden. Quelle: `QGIS Dokumentation <https://docs.qgis.org/3.40/en/docs/server_manual/services/basics.html>`__
+
+GetCapabilities
+~~~~~~~~~~~~~~~~~
+
+1. Öffne den folgenden Link. Was für ein Format öffnet sich?
+   - /cgi-bin/qgis_mapserv.fcgi?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
+   - Welches CRS und welche EPSG ist hier hinterlegt?
+   - Finde den Layer *countries* (Suchen via Strg + F)
+
+GetMap
+~~~~~~~~~~~~~~~~~
+
+2. Gehen wir zum Kartendienst. Öffne folgenden Link
+   - /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=800&HEIGHT=400&LAYERS=airports,countries,countries_shapeburst,places&CRS=EPSG:4326&BBOX=-90,-180,90,180
+   - Ändere die Parameter *&WIDTH=* und *&HEIGHT*. Was verändert sich?
+
+
+
+.. codeblock:: html
+
+   /cgi-bin/qgis_mapserv.fcgi?  <!-- unser QGIS-Server -->
+   MAP=/home/qgis/projects/world.qgs <!-- navigation -->
+   &SERVICE=WMS
+   &VERSION=1.3.0
+   &REQUEST=GetMap
+   &WIDTH=800
+   &HEIGHT=400
+   &LAYERS=airports,countries,countries_shapeburst,places
+   &CRS=EPSG:4326
+   &BBOX=-90,-180,90,180
+
+
+Filter & Selection
+~~~~~~~~~~~~~~~~~
+
+3. Du kannst den existierenden Kartendienst nach deinen Wünschen anpassen, indem du nur einzelne Layer auswählst oder die Layer filterst.
+
+.. codeblock::
+
+/cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs
+
+   &REQUEST=GetMap
+   &SERVICE=WMS
+   &VERSION=1.3.0
+   &WIDTH=400
+   &HEIGHT=300
+   &CRS=EPSG:4326
+   &BBOX=41,-6,52,10
+   &LAYERS=countries_shapeburst,countries,places
+   &FILTER=countries_shapeburst,countries:"name" = 'France';places: "name" = 'Paris'
+
+
+
+.. hint::
+
+   Weitere Möglichketien WMS-Dienste zu konfigurieren findest du in der `QGIS Dokumentation (englisch) <https://docs.qgis.org/3.40/en/docs/server_manual/services/wms.html#getmap>`__
+
+
+GetFeatureInfo
+~~~~~~~~~~~~~~~~~
+
+
+kjh
+
+
+
 
 
 Vorbereitung des eigenen WMS-Layers
@@ -79,6 +190,7 @@ Suchen Sie zusätzlich einen WMS, den Sie schon kennen.
 .. hint::
 
       Was läuft da im Hintergrund ab? 
+
       - QGIS verwaltet ein Projekt in der QGS/QGZ Datei, in der Vektor- und Rasterdaten sowie Dienste enthalten sein können. 
       - In den Properties / Eigenschaften ist eingestellt, dass das Projekt als OWS veröffentlicht werden soll. Änderungen im Projekt (*.qgz) müssen unter gleichem Namen gespeichert werden.
 
