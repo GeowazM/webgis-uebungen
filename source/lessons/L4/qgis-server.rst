@@ -78,16 +78,6 @@ Standardparameter
 | REQUEST | Name der Anfrage          | REQUEST=GetCapabilities     | 
 +---------+---------------------------+-----------------------------+
 
-GetCapabilities
-~~~~~~~~~~~~~~~~~
-
-1. Öffne den folgenden Link. Was für ein Format öffnet sich?
-   
-   * /cgi-bin/qgis_mapserv.fcgi?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
-   
-   - Welches CRS und welche EPSG ist hier hinterlegt?
-   - Finde den Layer *countries* (Suchen via Strg + F)
-
 
 Anwenderparameter
 
@@ -110,7 +100,15 @@ Der Kurzname verwendet werden, um diese Elemente bei der Interaktion mit dem QGI
 
    Der "Short name" kann in QGIS - QGIS-Server Plugin definiert werden. Quelle: `QGIS Dokumentation <https://docs.qgis.org/3.40/en/docs/server_manual/services/basics.html>`__
 
+GetCapabilities
+~~~~~~~~~~~~~~~~~
 
+1. Öffne den folgenden Link. Was für ein Format öffnet sich?
+   
+   * /cgi-bin/qgis_mapserv.fcgi?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
+   
+   - Welches CRS und welche EPSG ist hier hinterlegt?
+   - Finde den Layer *countries* (Suchen via Strg + F)
 
 GetMap
 ~~~~~~~~~~~~~~~~~
