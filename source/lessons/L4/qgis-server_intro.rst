@@ -14,6 +14,12 @@ Open Web Servers
       *  `OGC-Dienste - Basics <https://docs.qgis.org/3.40/en/docs/server_manual/services/basics.html>`__
 
 
+Demolink official:
+
+http://qgis.demo/cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&LAYERS=countries&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&CRS=EPSG:4326&WIDTH=400&HEIGHT=200&BBOX=-90,-180,90,180
+
+
+
 Hintergrund
 --------
 
@@ -33,7 +39,7 @@ QGIS Server und Python.
 
 .. hint::
 
-   MapProxy - coming soon
+   `MapProxy <https://www.mapproxy.org/>`__ - coming soon
 
 Der grundlegende Funktion eines räumlichen Webservers (unabhängig von der Software) funktioniert ähnlich. Hier eine Übersicht am Beispiel von GeoServer:
 
