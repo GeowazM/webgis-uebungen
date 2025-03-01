@@ -304,9 +304,9 @@ Layer selektion & Filter
 
 Du kannst den existierenden Kartendienst nach deinen Wünschen anpassen, indem du nur einzelne Layer auswählst oder die Layer filterst.
 
-&LAYERS=countries_shapeburst,countries,places
+- &LAYERS=countries_shapeburst,countries,places
 
-&FILTER=countries_shapeburst,countries:"name" = 'France';places: "name" = 'Paris'
+- &FILTER=countries_shapeburst,countries:"name" = 'France';places: "name" = 'Paris'
 
 
 
