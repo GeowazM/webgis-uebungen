@@ -143,93 +143,100 @@ Lösung
 
    <li>
 
-* /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=1200&HEIGHT=780&LAYERS=airports,countries,countries_shapeburst,places&CRS=EPSG:4326&BBOX=-90,-180,90,180
+/cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=1200&HEIGHT=780&LAYERS=airports,countries,countries_shapeburst,places&CRS=EPSG:4326&BBOX=-90,-180,90,180
+
+
 
 
 Ändere den Parameter *&CRS* zu "3857". Was verändert sich?
 
 .. raw:: html
 
-      <details>
+   <details>
 
-   .. raw:: html
+.. raw:: html
 
-      <summary>
+   <summary>
 
-   Lösung
+Lösung
 
-   .. raw:: html
+.. raw:: html
 
-      </summary>
+   </summary>
 
-   .. raw:: html
+.. raw:: html
 
-      <ul>
+   <ul>
 
-   .. raw:: html
+.. raw:: html
 
-      <li>
+   <li>
 
-   * /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=1200&HEIGHT=780&LAYERS=airports,countries,countries_shapeburst,places&CRS=EPSG:3857&BBOX=-90,-180,90,180
+/cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=1200&HEIGHT=780&LAYERS=airports,countries,countries_shapeburst,places&CRS=EPSG:3857&BBOX=-90,-180,90,180
    
 Wir sehen, dass wir nichts sehen. Unser Beispiel WMS-Dienst bietet den Dienst nur im EPSG:4326 an.
+
+
+
+
 
 
 Ändere den Parameter *&BBOX* von "-90" auf "0". Was verändert sich?
 
 .. raw:: html
 
-      <details>
+   <details>
 
-   .. raw:: html
+.. raw:: html
 
-      <summary>
+   <summary>
 
-   Lösung
+Lösung
 
-   .. raw:: html
+.. raw:: html
 
-      </summary>
+   </summary>
 
-   .. raw:: html
+.. raw:: html
 
-      <ul>
+   <ul>
 
-   .. raw:: html
+.. raw:: html
 
-      <li>
+   <li>
 
-   * /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=1200&HEIGHT=780&LAYERS=airports,countries,countries_shapeburst,places&CRS=EPSG:4326&BBOX=0,-180,90,180
+/cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=1200&HEIGHT=780&LAYERS=airports,countries,countries_shapeburst,places&CRS=EPSG:4326&BBOX=0,-180,90,180
    
 
 Die Bbox (eng. bounding box) ist der Extent, also die räumliche Ausdehnung unseres REQUEST. So können wir einen WMS-Dienst auf den von uns interessierte Gebiet zuschneiden.
+
 
 
 Ändere den Parameter *&LAYERS* von "airports,countries,countries_shapeburst,places" zu "countries_shapeburst,places". Was verändert sich?
 
 .. raw:: html
 
-      <details>
+   <details>
 
-   .. raw:: html
+.. raw:: html
 
-      <summary>
+   <summary>
 
-   Hinweis
+Lösung
 
-   .. raw:: html
+.. raw:: html
 
-      </summary>
+   </summary>
 
-   .. raw:: html
+.. raw:: html
 
-      <ul>
+   <ul>
 
-   .. raw:: html
+.. raw:: html
 
-      <li>
+   <li>
 
-   * /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=1200&HEIGHT=780&LAYERS=countries_shapeburst,places&CRS=EPSG:4326&BBOX=-90,-180,90,180
+/cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&WIDTH=1200&HEIGHT=780&LAYERS=countries_shapeburst,places&CRS=EPSG:4326&BBOX=-90,-180,90,180
    
 Mit LAYERS können wir einzelne Layer eines WMS-Dienst individuell anpassen.
 
