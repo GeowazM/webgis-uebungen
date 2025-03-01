@@ -108,17 +108,3 @@ Geben Sie 0 für maximale Kompression und 100 für keine Kompression an.
 
    Je nachdem, ob die Karte ein projiziertes CRS oder ein geografisches CRS verwendet und ob keine Informationen zur Bewertung der Karteneinheitengröße vorliegen, 
    können Sie eine Referenz für die Größe entweder durch eine Standardskala für die Legende oder durch Standardkarteneinheiten pro mm in der Legende angeben.
-
-
-
-
-Standardparameter
-
-+---------+---------------------------+-----------------------------+
-| Konzept | Beschreibung              | Beispiel                    |
-+=========+===========================+=============================+
-| SERVICE | Name des Dienstes         | SERVICE=WMS                 |
-+---------+---------------------------+-----------------------------+
-| REQUEST | Name der Anfrage          | REQUEST=GetCapabilities     | 
-+---------+---------------------------+-----------------------------+
-
