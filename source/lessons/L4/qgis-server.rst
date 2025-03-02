@@ -17,14 +17,21 @@ WMS auslesen
 Hintergrund
 --------
 
-Du willst den Austausch von Geodaten mit internen & externen Partnern effizienter gestalten. Deine Geodaten sollen als Schaufenster für
-andere Abteilungen zur Verfügung stehen, damit diese bessere Entscheidungen finden können. Externe Ingenieurbüros sollen eine Möglichkeit erhalten, eure Geodaten anzuzapfen, 
-um beidseitig Arbeit zu sparen. In solchen Fällen ploppt oft das Stichwort Interoperabilität auf, dass seit Jahrzenten Thema der Geodaten-Community ist. Für eine bessere
+Du willst den **Austausch von Geodaten** mit internen & externen Partnern effizienter gestalten?
+
+Deine Geodaten sollen als Schaufenster für andere Abteilungen zur Verfügung stehen, damit diese bessere Entscheidungen finden können? 
+
+Externe Ingenieurbüros sollen eine Möglichkeit erhalten, eure Geodaten anzuzapfen, um beidseitig Arbeit zu sparen? 
+
+In solchen Fällen ploppt oft das Stichwort **Interoperabilität** auf, dass seit Jahrzenten Thema der Geodaten-Community ist. Für eine bessere
 Interoperabilität bzw. Austauschbarkeit von Geodaten wurden die OGC-Standards wie bspw. WMS-& WFS-Layer entwickelt. Mit solchen OGC-Diensten haben wir schon gearbeitet.
-Wir haben zum Beispiel die OpenStreetMap Hintergrundkarte (als Konsumenten)  in ArcGIS Pro und QGIS eingebunden. Mit dem QGIS-Server können wir (zum Produzenten werden und) eigene WMS/WFS-Dienste erstellen. 
-Diese eigenen Dienste können wir wiederrum internen & externen Partnern über einen Link zur Verfügung stellen. Neben QGIS-Server gibt es weitere räumlichen Server wie GeoServer und MapServer, die solche Dienste 
-ebenfalls bereitstellen können. Da der QGIS-Server in QGIS Desktop nutzerfreundlich integierbar ist, nutzen wir ihn in dieser Übung. Aus früheren Kursen existiert eine Übung mit GeoServer, 
-die zur Verfügung gestellt werden kann, falls Sie diesen Server kennenlernen möchten.
+Wir haben zum Beispiel die OpenStreetMap Hintergrundkarte (als Konsumenten)  in ArcGIS Pro und QGIS eingebunden. 
+
+Mit räumlichen Servern wie dem **QGIS-Server** können wir (zum Produzenten werden und) eigene WMS/WFS-Dienste erstellen. 
+Diese eigenen Dienste können wir wiederrum internen & externen Partnern über einen Link zur Verfügung stellen. Neben QGIS-Server gibt es weitere 
+räumlichen Server wie GeoServer, MapServer oder ArcGIS Server, die OGC-Dienste ebenfalls bereitstellen können. 
+Da der QGIS-Server in QGIS Desktop nutzerfreundlich integierbar ist, nutzen wir ihn in dieser Übung. Aus früheren Kursen existiert eine Übung mit 
+GeoServer, die zur Verfügung gestellt werden kann, falls Sie diesen Server kennenlernen möchten.
 
 
 .. hint::
@@ -34,7 +41,7 @@ die zur Verfügung gestellt werden kann, falls Sie diesen Server kennenlernen m�
 
 
 
-**Starten wir mit dem WMS-Layer!**
+**Starten wir mit dem näheren kennenlernen des WMS-Layers!**
 
 
 WMS-Dienst die mit QGIS-Server erstellt wurden kennenlernen
@@ -53,13 +60,13 @@ Den Link zum WMS-Layer, den wir für dich vorbereitet haben, bekommt ihr im Kurs
    Der QGIS-Server erkennt die Konfigurationen, die wir in QGIS vorher definiert haben und liefert (**served**) uns das Projekt als Web Mapping Service (WMS).
    Das werden wir am Ende der Übung ebenfalls mit unseren eigenem Projekt machen.
 
-Der Link:
+Der Link (aus Sicherheitsgründen nur ein Teil davon) zu unserem WMS-Dienst:
 
    * /cgi-bin/qgis_mapserv.fcgi?MAP=/home/qgis/projects/world.qgs&LAYERS=airports,countries,countries_shapeburst,places&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&CRS=EPSG:4326&WIDTH=800&HEIGHT=400&BBOX=-90,-180,90,180
 
 .. hint::
 
-   Du kannst dir OGC-Dienste von Geoportalen anzeigen lassen, indem du mit der *rechten Maustaste* (irgendwo) klickst und *Untersuchen* auswählst. Hier kannst du unter dem WLAN-Logo, 
+   Du kannst den Link von OGC-Diensten, die von Geoportalen anzeigt werden, dir im Browser anzeigen lassen, indem du mit der *rechten Maustaste* (irgendwo) klickst und *Untersuchen* auswählst. Hier kannst du unter dem WLAN-Logo, 
    dass für Netzwerk steht, die OWS-Dienste der Website anschauen. Durch das Auswählen eines bspw. Service=WMS&... unter *Name* erscheint dann im *Header* Bereich die Anforderungs-URL,
    die dem GetCapabilities Link des OGC-Dienstes entspricht. Diesen kannst du kopieren und in QGIS virtualisieren. Hier befinden sich i.d.R. auch Informationen, welches WebMapping/WebGIS Tool genutzt wird.
    Versuche es aus!
@@ -90,10 +97,10 @@ Anwenderparameter
 +-----------+----------------------------------------+-------------------------------------+
 
 Die Anbieterparameter ermöglichen es, die zu verwendende QGIS-Projektdatei zu definieren. Es kann sich um einen absoluten Pfad oder einen Pfad relativ 
-zum Speicherort der Serverausführungsdatei qgis_mapserv.fcgi handeln. MAP ist standardmäßig obligatorisch, da eine Anfrage ein QGIS-Projekt benötigt, um tatsächlich zu funktionieren. 
+zum Speicherort der Serverausführungsdatei qgis_mapserv.fcgi handeln. **MAP** ist standardmäßig obligatorisch, da eine **Anfrage ein QGIS-Projekt** benötigt, um tatsächlich zu funktionieren. 
 
 
-Der Kurzname verwendet werden, um diese Elemente bei der Interaktion mit dem QGIS Server zu identifizieren. Zum Beispiel mit dem Standardparameter LAYERS
+Der Kurzname (Short name) identifiziert einzelne Elemente bei der Interaktion mit dem QGIS-Server. Zum Beispiel mit dem Parameter LAYERS.
 
 .. figure:: https://docs.qgis.org/3.40/en/_images/set_group_wms_data.png
    :alt: Set group WMS data
@@ -107,7 +114,7 @@ GetCapabilities
    
    * /cgi-bin/qgis_mapserv.fcgi?&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
    
-   - Welches CRS und welche EPSG ist hier hinterlegt?
+   - Welches CRS und welches EPSG ist hier hinterlegt?
    - Finde den Layer *countries* (Suchen via Strg + F)
 
 GetMap
@@ -268,6 +275,8 @@ Mit LAYERS können wir einzelne Layer eines WMS-Dienst individuell anpassen.
 
 .. hint::
 
+   Hier eine Übersicht über die einzelnen Parameter und deren Funktion
+   
    /cgi-bin/qgis_mapserv.fcgi?  --> unser QGIS-Server
 
    MAP=/home/qgis/projects/world.qgs --> navigation 
@@ -315,7 +324,7 @@ Du kannst den Kartendienst mit Informationen anreichern, die interaktiv vom Kons
 
 - &TRANSPARENT=TRUE
 
-- &QUERY_LAYERS=mylayer1
+- &QUERY_LAYERS=countries
 
 - &FEATURE_COUNT=3
 

@@ -16,12 +16,6 @@ WMS publizieren
       *  `FileZilla <https://filezilla-project.org/>`__
 
 
-.. hint::
-
-   Hier ist die Seite der `Firma Terrestris <https://www.terrestris.de/de/openstreetmap-wms/>`__, die mehrere eigene WMS-Dienste anbieten. So kann die Bereitstellung deiner OGC-Dienste irgendwann auch aussehen. 
-
-
-
 
 More Information
 --------

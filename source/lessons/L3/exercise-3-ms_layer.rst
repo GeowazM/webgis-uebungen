@@ -18,7 +18,8 @@ OGC-Deinste konfigurieren & implementieren
 ===========
 Wir haben jetzt die Vorbereitungen und die individuelle Konfiguration unseres Geoviewers abgeschlossen. Jetzt fehlen noch die passenden Layer, die wir in unserem Geoviewer angezeigt haben möchten.
 Die Dienste und Layer können wir in der Datei *services.json* anpassen. Es wirkt auf den ersten Blick sehr verwirrend, aber wir werden uns Schritt für Schritt dem Aufbau nähern & konfigurieren.
-Wir können in *services.json* eine ganze Reihe von OGC-Diensten einbinden. Allerdings definieren wir in der *config.json*, welche dieser Layer im Geoviewer angezeigt werden.
+Wir können in *services.json* eine ganze Reihe von OGC-Diensten einbinden. Allerdings müssen wir dies im Anschluss wieder auf in der *config.json* verlinken, 
+damit dieser Layer im Geoviewer angezeigt wird.
 
 .. attention::
 

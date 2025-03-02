@@ -108,8 +108,8 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
 
     lessons/L1/overview
     lessons/L1/uebung-1
-    lessons/L1/uebung-1/uebung-1_optional
-
+    lessons/L1/uebung-1_optional
+    
 .. toctree::
     :maxdepth: 2
     :caption: HTML, CSS & JavaScript

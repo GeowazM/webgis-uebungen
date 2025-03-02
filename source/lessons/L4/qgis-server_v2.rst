@@ -14,19 +14,12 @@ WMS erstellen
       *  `OGC-Dienste - Basics <https://docs.qgis.org/3.40/en/docs/server_manual/services/basics.html>`__
 
 
-.. hint::
-
-   Hier ist die Seite der `Firma Terrestris <https://www.terrestris.de/de/openstreetmap-wms/>`__, die mehrere eigene WMS-Dienste anbieten. So kann die Bereitstellung deiner OGC-Dienste irgendwann auch aussehen. 
-
-
-
-
 Eigenen OGC-Dienst konfigurieren
 -----------
 
-Um einen neuen QGIS Server WMS, WFS, OAPIF oder WCS bereitzustellen, müssen Sie eine QGIS-Projektdatei mit einigen Daten erstellen oder eines Ihrer aktuellen Projekte verwenden. 
+Um einen neuen QGIS-Server WMS, WMTS oder WFS bereitzustellen, müssen Sie eine QGIS-Projektdatei mit einigen Daten erstellen oder eines Ihrer aktuellen Projekte verwenden. 
 Definieren Sie die Farben und Stile der Layer in QGIS und das Projekt-CRS, falls noch nicht definiert. Gehen Sie dann zum *QGIS-Server* Menü im Dialogfeld *Projekt ► Eigenschaften…* und geben 
-Sie im Tab *Service Capabilities* einige Informationen über den OWS an.
+Sie im Tab *Service Capabilities* einige Informationen an, die der Konfiguration des QGIS-Servers dienen.
 
 
 .. figure:: https://docs.qgis.org/3.40/en/_images/ows_server_definition.png
@@ -35,13 +28,12 @@ Sie im Tab *Service Capabilities* einige Informationen über den OWS an.
    *Service Capabilities* definieren, Quelle: `QGIS Dokumentation <https://docs.qgis.org/3.40/en/docs/server_manual/getting_started.html#serve-a-project>`__
 
 
-Sie müssen zuerst die *Service Capabilities* aktivieren, falls sie deaktiviert sind. Dies wird in der GetCapabilities-Antwort des WMS, WFS oder WCS erscheinen. Wenn Sie das Kontrollkästchen 
-Dienstfähigkeiten aktivieren nicht aktivieren, verwendet QGIS Server die Informationen aus der Datei wms_metadata.xml im cgi-bin-Ordner.
+Falls die *Service Capabilities* deaktiviert ist, müssen Sie diese aktivieren. Dies wird in der GetCapabilities-Antwort des WMS oder WFS erscheinen. Wenn Sie das Kontrollkästchen 
 
 
 Eigenen WMS-Dienst definieren
 -----------
-Im WMS-Tab können Sie die Optionen für die WMS-Fähigkeiten definieren.
+Im WMS-Tab können Sie die Optionen für die WMS-Fähigkeiten definieren. Definieren Sie die Parameter entsprechent Ihrem Projekt!
 
 
 .. figure:: https://docs.qgis.org/3.40/en/_images/ows_server_wms.png
@@ -53,13 +45,13 @@ Im WMS-Tab können Sie die Optionen für die WMS-Fähigkeiten definieren.
 Extent (Bbox)
 ^^^^^^^^
 
-Aktivieren Sie *Extent*, um die räumliche Ausdehnung (eng. bounding box oder bbox) zu definieren, der in der WMS GetCapabilities-Antwort angegeben wird. Das räumliche Auswahl-Widget hilft Ihnen, 
-die Ausdehnung (*Extent*) als xmin, xmax, ymin, ymax Text einzugeben oder ihn aus der Kartenansicht, Layern, Lesezeichen usw. auszuwählen.
+Aktivieren Sie den *Extent*, um die räumliche Ausdehnung (eng. bounding box oder bbox) zu definieren, der in der WMS GetCapabilities-Antwort angegeben wird. Das räumliche Auswahl-Widget hilft Ihnen, 
+die Ausdehnung (*Extent*) als xmin, xmax, ymin, ymax als Text einzugeben oder ihn aus der Kartenansicht oder den Layern zu beziehen.
 
 CRS
 ^^^^
 
-Durch Aktivieren des Kontrollkästchens CRS-Einschränkungen können Sie einschränken, in welchen Koordinatenreferenzsystemen (CRS) QGIS-Server Karten rendern wird. 
+Durch das Aktivieren des Kontrollkästchens CRS-Einschränkungen können Sie die Anzahl der Koordinatenreferenzsysteme (CRS) limitieren, in denen QGIS-Server Karten rendert. 
 Es wird empfohlen, die angebotenen CRS einzuschränken, da dies die Größe der WMS GetCapabilities-Antwort reduziert. Verwenden Sie die Schaltfläche Symbologie hinzufügen unten, 
 um diese CRS aus dem Koordinatenreferenzsystem-Auswahlfenster auszuwählen, oder klicken Sie auf Verwendet, um die im QGIS-Projekt verwendeten CRS zur Liste hinzuzufügen.
 

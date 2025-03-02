@@ -83,37 +83,51 @@ Finetuning
 --------
 
 Jetzt können wir noch zahlreiche Details mit Hilfe des Plugins festlegen.
+
 - Titel im Browser-Tab
 - Titel in der Webmap
 - Zusammenfassung in der Webmap
 - Messwerkzeug & Suchfunktion
 
 
-Weitere Anpassungen wie Quellenangabe, Browsertab, Farbe, Style der Layer gehen wir in Übung 3 an.
+Weitere Anpassungen wie Quellenangabe, Browsertab, Farbe, Style der Layer gehen wir in Übung 2 an.
 
 
 In QGIS können Profile mit speziellen Einstellungen angelegt werden. Beispielsweise können für die Verwendung von Erweiterungen diverse Profile verwendet werden.
 
-Kopieren Sie das Verzeichnis „Default“ indem Sie im Menü unter „Einstellungen“  - „Benutzerprofile“ auf „Aktuelles Profilverzeichnis öffnen“ klicken. Im neuen Explorer Fenster gehen Sie eine Ebene zurück und kopieren „Default“ in die Zwischenablage.
+
+QGIS Benutzerprofil
+^^^^^^^^
+
+Kopieren Sie das Verzeichnis „Default“ indem Sie im Menü unter „Einstellungen“  - „Benutzerprofile“ auf „Aktuelles Profilverzeichnis öffnen“ klicken. 
+Im neuen Explorer Fenster gehen Sie eine Ebene zurück und kopieren „Default“ in die Zwischenablage.
 
 Mit STRG + V fügen Sie die Kopie ein. Benennen Sie dieses Profil in *Webmap* um.
 
-In diesem Verzeichnis laden und aktivieren Sie nur die Erweiterungen, die unbedingt erforderlich sind. (Sie können auch ein neues Profil mit nur den Standard Erweiterungen anlegen).
+In diesem Verzeichnis laden und aktivieren Sie nur die Erweiterungen, die unbedingt erforderlich sind. 
+(Sie können auch ein neues Profil mit nur den Standard Erweiterungen anlegen).
 
-Nehmen Sie die in der Abbildung gezeigten Einstellungen für die Layer vor, es kann sein, dass der FFH Layer Probleme macht, da damit ein WMS verknüpft ist.
-Wenn Sie ein eigenes Projekt entworfen haben, dann analog dazu!
+Popup Information
+^^^^^^
+
+In den Layer Properties (oder Eigenschaften) können Sie unter Fields den Attributen Alias Namen vergeben. So können die Fieldnamen (oder Spaltennamen)
+gleich bleiben uns gleichzeitig in der WebMap ansprechend bzw. menschenlesbar angezeigt werden. Versuchen Sie es!
+
+
+WebMap Appearance
+^^^^^^
 
 Im Reiter „Appearance“ können weitere Einstellun¬gen vorgenommen werden. Tippen Sie vorab in die Projekteigenschaften eine Zusammenfassung des Projekts (QGIS Projekteigenschaften).
-Sie können mit geöffnetem PlugIn diese Ei¬genschaften oder die Layergestaltung verändern.
+Sie können mit geöffnetem PlugIn diese Eigenschaften oder die Layergestaltung verändern.
 
 Im Reiter Export stellen Sie ein leeres Ausgabeverzeichnis ein. Für jede neue Veröffentlichung erstellt QGIS2web ein neues Unterverzeichnis.
 
-Stellen Sie zuerst den Export durch Leaflet ein und setzen Sie den Haken für eine Vorschau. Gefällt Ihnen der erste Entwurf, dann klicken Sie auf Export. Die Daten werden in Ihrem Verzeichnis in einen Unterordner gespeichert und der Browser öffnet einen neuen Tab mit der Karte.
-Experimentieren Sie etwas mit den Einstellungen, ändern Sie das Layout Ihrer Karte und untersuchen Sie im Explorer die Verzeichnisstruktur. Für jede neue Veröffentlichung erstellt QGIS2web ein neues Unterverzeichnis.
-Aktuell funktionieren einige Layer in OpenLayers nicht. Das ist ein bekannter Bug, der sich nicht reproduzieren lässt.
-Für MapBox brauchen Sie einen Token. Wenn Sie Interesse haben, besorgen Sie sich einen. https://docs.mapbox.com/help/getting-started/access-tokens/
+Stellen Sie zuerst den Export durch Leaflet ein und setzen Sie den Haken für eine Vorschau. Gefällt Ihnen der erste Entwurf, dann klicken Sie auf Export. 
+Die Daten werden in Ihrem Verzeichnis in einen Unterordner gespeichert und der Browser öffnet einen neuen Tab mit der Karte.
+Experimentieren Sie etwas mit den Einstellungen, ändern Sie das Layout Ihrer Karte und untersuchen Sie im Explorer die Verzeichnisstruktur. 
+Für jede neue Veröffentlichung erstellt QGIS2web ein neues Unterverzeichnis.
 
-Sie haben nun eine Vorlage für Ihren Webentwickler erstellt, können das Ganze (das Verzeichnis auf der FP) packen und verschicken.
+Sie haben nun eine Vorlage für Ihren Webentwickler erstellt, können das Ganze zippen und verschicken.
 Speichern Sie das Projekt unter Ihrem neuen Namen.
 
 **So (oder ähnlich) sieht’s am Ende aus**

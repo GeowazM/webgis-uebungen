@@ -31,8 +31,9 @@ Titel & Logo ändern
 Da wir ohnehin die *index.html* Seite offen haben, können wir direkt den Titel und das Logo des Geoviewers im Browsertab ändern.
 
 1. In der *index.html* kannst du den Titel der Seite ändern 
-2. Füge eine Logo (fiktiv oder dein Eigenes) in den Ordner *resources/img/UT-logo.svg* (siehe Bild)
-3. Füge die Zeile *<link rel="icon" href="./resources/img/UT-logo.svg">* ein und speichere dein Projekt (Strg+S)
+2. Füge eine Logo (fiktiv oder dein Eigenes) in den Ordner *resources/img/logo.svg* (siehe Bild)
+3. Füge die Zeile *<link rel="icon" href="./resources/img/logo.svg">* ein und speichere dein Projekt (Strg+S)
+4. Das Logo der Universit Tübingen darf aussschließlich von Mitarbeitern verwendet werden. Nutzt einen Dummy: such beu Pixabay oder Google Material Icon. 
 
 .. code-block:: html
 
@@ -83,7 +84,7 @@ Da wir ohnehin die *index.html* Seite offen haben, können wir direkt den Titel 
 Geoviewer anpassen
 -----------
 
-Jetzt widmen wir uns dem Kern unseres Geoviewers - die Kartenansicht. Dafür müssen wir die geographische Ausdehnung (*Extent*) & 
+Jetzt widmen wir uns dem Kern unseres Geoviewers - der Kartenansicht (engl. Map canvas). Dafür müssen wir die geographische Ausdehnung (*Extent*) & 
 den zentralen Startpunkt definieren (*Centroid* oder bspw. das *Geoinstitut*). Dafür nutzen wir die Daten aus der Vorbereitung.
 
 1. Öffne die Datei *config.json* (bspw. *uni-tuebingen/config.json*)
@@ -269,7 +270,7 @@ Speichere deine Datei und sieh dir die Veränderungen im Geoviewer an. Was hat s
 Überblick *config.json*
 -----------
 
-In der folgenden Abbildung kannst du dir einen Überblick verschaffen, welche Code-Abschnitt der *config.json* für welche bereiche des Geoviewers zuständig sind.
+In der folgenden Abbildung kannst du dir einen Überblick verschaffen, welche Code-Abschnitt der *config.json* für welche Bereiche des Geoviewers zuständig sind.
 
 .. figure:: img/masterportal_code_geoviewer_connect.jpg
    :alt: Masterportal code und Geoviewer Überblick
