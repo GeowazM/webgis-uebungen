@@ -146,26 +146,3 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
     lessons/L5/geoserver
     lessons/L5/datenbank
 
-.. toctree::
-    :maxdepth: 2
-    :caption: Rasterdaten verarbeiten
-
-    lessons/L6/overview
-    lessons/L6/exercise-6a
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Digitale Geländemodelle nutzen
-    
-    lessons/L7/overview
-    lessons/L7/exercise-7b
-    lessons/L7/exercise-7b_additional
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Geodaten
-
-    gis-data/geobasisdaten-bw
-    gis-data/basemap-de
-    gis-data/download-osm-data
-    gis-data/onegeology
