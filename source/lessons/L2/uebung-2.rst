@@ -26,7 +26,7 @@ Später werdem wir `Visual Studio Code <https://code.visualstudio.com/>`__ als I
 
 - Das HTML Grundgerüst 
    * Öffne den Link zu `HTML Intro <https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro>`__
-   * Verändere den *Page Title* und den *My first paragraph* und 
+   * Verändere den *My First Heading* und den *My first paragraph* und 
    * klicke auf **Run**
 
 .. hint::
