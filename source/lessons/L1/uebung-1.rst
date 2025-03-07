@@ -27,7 +27,7 @@ Aufgaben
 Mit dem Plugin *qgis2web* lassen sich schnell und einfach interaktive Webmaps erstellen. Dafür brauchen wir ein QGIS-Projekt mit einigen Layern
 
 -	Starte QGIS
--	Lade dir die Daten `„uebung_1_13.zip“ aus ILIAS <https://lms-ubinfo.uni-tuebingen.de/ilias3/ilias.php?baseClass=ilrepositorygui&ref_id=37653>`__ herunter
+-	Lade dir die Daten `„Daten_fuer_WebGIS_Uebungen“ aus ILIAS <https://lms-ubinfo.uni-tuebingen.de/ilias3/ilias.php?baseClass=ilrepositorygui&cmd=view&ref_id=37669>`__ herunter
 -	Öffne das QGIS-Projekt
       *	Füge mind. einen WMS oder WMTS-Layer hinzu
       *	OpenStreetMap 
