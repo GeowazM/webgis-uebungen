@@ -84,12 +84,6 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
 
 .. toctree::
     :maxdepth: 2
-    :caption: Kursinhalte
-
-    modul-info/info
-
-.. toctree::
-    :maxdepth: 2
     :caption: Wissenswertes
 
     webgis-info/was-ist-webgIS
