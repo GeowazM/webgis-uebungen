@@ -4,8 +4,8 @@
 .. hint::
 
    Ziel der Übung
-      * Die ersten Schritte zum Webmapping
-      * Die Benutzeroberfläche von qgis2web kennenlernen
+      * Die ersten Schritte zum WEbMapping
+      * HTML, CSS, JavaScript & Visual Studio Code kennenlernen
 
 .. figure:: img/code-1076536_1280.jpg
    :alt: Code 
