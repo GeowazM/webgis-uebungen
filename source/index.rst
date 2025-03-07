@@ -65,9 +65,7 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
 +-------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 1     | Erste interaktive Webmaps | `QGIS und qgis2web <https://plugins.qgis.org/plugins/qgis2web/>`__                                                                                              | 
 +-------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 2     | WebGIS mit Masterportal   | `VS Studio und Live Server <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L2/exercise-2.html>`__                                     |
-+-------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 3     | Vulkanismus weltweit      | `Mit Attributtabellen arbeiten <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L3/exercise-3.html>`__                            |
+| 2     | WebGIS mit Masterportal   | `VS Studio und Live Server <https://einfuhrung-gis-fur-geowissenschaften.readthedocs.io/de/latest/lessons/L2/exercise-2.html>`__                                |
 +-------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 --------------
@@ -81,12 +79,6 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
 .. admonition:: Hilfe
 
     Starte mit dem Kurs indem du im Navigationsfesnter (links) die "Kursinhalte" & den Bereich "Wissenswertes" anschaust.
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Kursinhalte
-
-    modul-info/info
 
 .. toctree::
     :maxdepth: 2
@@ -143,6 +135,4 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
     lessons/L5/daten_vorbereiten
     lessons/L5/daten_upload
     lessons/L5/karte_erstellen
-    lessons/L5/geoserver
-    lessons/L5/datenbank
 
