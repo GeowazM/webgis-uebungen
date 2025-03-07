@@ -90,7 +90,15 @@ Jetzt können wir noch zahlreiche Details mit Hilfe des Plugins festlegen.
 - Messwerkzeug & Suchfunktion
 
 
-Weitere Anpassungen wie Quellenangabe, Browsertab, Farbe, Style der Layer gehen wir in Übung 2 an.
+Weitere Anpassungen wie Quellenangabe, Browsertab, Farbe, Style der Layer kannst du in folgendem Video verfolgen.
+
+
+.. admonition:: Einfache und schnelle Web-Karten mit QGIS erstellen
+    :class: admonition-youtube
+
+    ..  youtube:: n6WwFwByXSU
+
+    `Geodata Academy <https://www.youtube.com/watch?v=n6WwFwByXSU>`_.
 
 
 In QGIS können Profile mit speziellen Einstellungen angelegt werden. Beispielsweise können für die Verwendung von Erweiterungen diverse Profile verwendet werden.
