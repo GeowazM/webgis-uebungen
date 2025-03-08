@@ -4,7 +4,7 @@
 .. hint::
 
    Ziel der Übung
-      * Die ersten Schritte zum WEbMapping
+      * Die ersten Schritte zum WebMapping
       * HTML, CSS, JavaScript & Visual Studio Code kennenlernen
 
 .. figure:: img/code-1076536_1280.jpg

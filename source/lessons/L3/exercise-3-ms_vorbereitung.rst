@@ -46,21 +46,19 @@ Installiere dier die Extension *Live Server* (falls noch nicht geschehen)
    `Visual Studio Extension Live Server <https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer>`__
 
 
-1. `Lade dir die vorbereitenten NUTS-Daten von eurostat via ILIAS herunter <https://bitbucket.org/geowerkstatt-hamburg/masterportal/downloads/>`__
-2. Öffne QGIS
-3. Selektiere eine Gemeinde, Landkreis oder Region deiner Wahl & exportiere dir das Feature (bspw. Tübingen)
-4. Berechne die *Bounding box* deiner Region
-5. Lass dir den *Centroid* der berechneten *Bounding box* ausgeben.
-6. Notiere dir die Koordinaten der Bounding box & des Centroid
-7. Reprojiziere die Koordinaten der *Bounding box* in WGS 84 - WGC. Notiere dir die Koordinaten ebenfalls
-8. Lade dir drei WMS-Layer für deine Region (bspw.: 1x Schummerung, 1x Orthophoto, 1x basemap.de)
-9. Speichere dein Projekt & lasse dein QGIS-Projekt geöffnet
+1. Nutze die Geodaten bzw. das QGIS-Projekt von Aufgabe 2 und speichere es erneut ab.
+2. Extrahiere aus der Gemarkung Tübingens die *Layerausdehnung* deiner Region
+3. Lass dir den *Zentroid* der Gemarkung Tübingen ausgeben.
+4. Notiere dir die Koordinaten der *Layerausdehnung* & des *Zentroids*
+5. Reprojiziere die Koordinaten der *Layerausdehnung* in WGS 84 - WGC. Notiere dir die Koordinaten ebenfalls
+6. Lade dir drei WMS-Layer für deine Region (bspw.: 1x Schummerung, 1x Orthophoto, 1x basemap.de)
+7. Speichere dein Projekt & lasse dein QGIS-Projekt geöffnet
 
 .. figure:: img/qgis-projekt.PNG
-   :alt: QGIS-Projekt mit *Bounding box* oder *Extent* & *Centroid*
+   :alt: QGIS-Projekt mit *Layerausdehnung* oder & *Zentroid*
    :width: 800px
 
-   QGIS-Projekt mit *Bounding box* oder *Extent* & *Centroid*
+   QGIS-Projekt mit *Layerausdehnung* oder *Zentroid*
 
 
 
@@ -68,10 +66,10 @@ Masterportal herunterladen & einbinden
 ~~~~~~~~~~~~~~~~~~~~~~
 
 
-1. `Ladet euch das Masterportal example herunter <https://bitbucket.org/geowerkstatt-hamburg/masterportal/downloads/>`__
+1. Lade dir das `Masterportal example (examples-3.3.4-lts.zip) <https://bitbucket.org/geowerkstatt-hamburg/masterportal/downloads/>`__ herunter & enzippe den Ordner an einer für dich geeigneten Stelle.
 2. Innerhalb des Masterportal_example Ordners findest du einen Ordner *Basic*. Kopiere diesen und bennene ihn passend zu deinem Untersuchungsgebiet um (bspw. uni-tuebingen).
 
-3. Öffne in Visual Studio Code deinen Masterportal example Ordner
+3. Öffne dein Masterportal example (bspw. uni-tuebingen) Ordner in Visual Studio Code
 
    .. raw:: html
 
@@ -127,7 +125,7 @@ Masterportal herunterladen & einbinden
 
       <li>
 
-   Durch einfaches anklicken de *index.html*
+   Durch einfaches anklicken der *index.html*
 
 
 5. So (oder so ähnlich) sollte dein Visual Studio Code jetzt aussehen
@@ -170,4 +168,6 @@ Masterportal herunterladen & einbinden
 
    Masterportal *index.html* in Visual Studio
 
- 
+
+Gratulation! Du hast das Masterportal erfolgreich heruntergeladen, in Visual Studio Code geöffnet & die notwendigen Parameter in QGIS berechnet.
+Jetzt kannst du mit der Entwicklung deines eigenen Masterportals beginnen (siehe Geoviewer konfigurieren)!

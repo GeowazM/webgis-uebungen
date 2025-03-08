@@ -33,7 +33,7 @@ Da wir ohnehin die *index.html* Seite offen haben, können wir direkt den Titel 
 1. In der *index.html* kannst du den Titel der Seite ändern 
 2. Füge eine Logo (fiktiv oder dein Eigenes) in den Ordner *resources/img/logo.svg* (siehe Bild)
 3. Füge die Zeile *<link rel="icon" href="./resources/img/logo.svg">* ein und speichere dein Projekt (Strg+S)
-4. Das Logo der Universit Tübingen darf aussschließlich von Mitarbeitern verwendet werden. Nutzt einen Dummy: such beu Pixabay oder Google Material Icon. 
+4. Das Logo der Universit Tübingen darf aussschließlich von Mitarbeitern verwendet werden. Nutzt einen Dummy: suche bei Pixabay oder Google Material Icon. 
 
 .. code-block:: html
 
@@ -64,7 +64,7 @@ Da wir ohnehin die *index.html* Seite offen haben, können wir direkt den Titel 
 
    Angepasster Titel und Logo
 
-4. Öffne nun die Datei *config.json* (bspw. *uni-tuebingen/config.json*)
+4. Öffne nun die Datei **config.json** (bspw. *uni-tuebingen/config.json*)
 5. Navigiere zum Abschnitt **"portalFooter"**. Ändere den URL zu einer Website deiner Wahl. Passe den Alias & den mobilen Alias an. Das kann dann bspw. wie folgt aussehen.
 
 .. code-block:: json
@@ -117,7 +117,7 @@ den zentralen Startpunkt definieren (*Centroid* oder bspw. das *Geoinstitut*). D
       }
     },
 
-Jetzt passen wir in der *config.json* Datei die einzelnen Parameter auf unser Untersuchungsgebiet an.
+Jetzt passen wir in der **config.json** Datei die einzelnen Parameter auf unser Untersuchungsgebiet an.
 
 Startpunkt - **"startCenter"**
 """""""""""
