@@ -11,7 +11,7 @@ WMS publizieren
 .. seealso::
 
       *  `OGC <https://www.ogc.org/de/>`__
-      *  `QGIS Server <https://docs.qgis.org/3.34/en/docs/server_manual/index.html>`__
+      *  `QGIS Server <https://docs.qgis.org/3.40/en/docs/server_manual/index.html>`__
       *  `OGC-Dienste - Basics <https://docs.qgis.org/3.40/en/docs/server_manual/services/basics.html>`__
       *  `FileZilla <https://filezilla-project.org/>`__
 
