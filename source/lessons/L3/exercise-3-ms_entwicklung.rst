@@ -277,3 +277,90 @@ In der folgenden Abbildung kannst du dir einen Überblick verschaffen, welche Co
    :width: 800px
 
    Geoviewer und Masterportal *config.json* kombiniert
+
+
+Weitere nützliche Werkzeuge (Tools)  *config.json*
+-----------
+
+Ansicht teilen (Share view)
+"""""""""""
+
+ .. code-block:: json
+
+         {
+            "icon": "bi-share",
+            "name": "common:modules.shareView.name",
+            "type": "shareView",
+            "facebookShare": false,
+            "qrShare": true
+         }
+
+
+
+Geoobjekte (Features) erstellen, bearbeiten und/oder löschen
+"""""""""""
+
+.. code-block:: json
+
+          {
+            "type": "wfst",
+            "name": "WFS-T Tool",
+            "layerIds": [
+              "lgvline",
+              "lgvpoint",
+              "lgvpolygon"
+            ],
+            "toggleLayer": false,
+            "lineButton": [
+              {
+                "layerId": "lgvline",
+                "available": true
+              }
+            ],
+            "pointButton": [
+              {
+                "layerId": "lgvpoint",
+                "available": true
+              }
+            ],
+            "polygonButton": [
+              {
+                "layerId": "lgvpolygon",
+                "available": true
+              }
+            ],
+            "update": "Bearbeiten!",
+            "delete": true
+          }
+
+Geoobjekte auswählen & anzoomen
+"""""""""""
+
+.. code-block:: json
+
+         {
+            "type": "selectFeatures",
+            "highlightVectorRulesPolygon": {
+                "fill": {
+                    "color": [255, 0, 255, 0.9]
+                },
+                "stroke": {
+                    "width": 4,
+                    "color": [0, 0, 204, 0.9]
+                },
+                "zoomLevel": 5
+            },
+            "highlightVectorRulesPointLine": {
+                "fill": {
+                    "color": [255, 0, 255, 0.9]
+                },
+                "stroke": {
+                    "width": 8,
+                    "color": [255, 0, 255, 0.9]
+                },
+                "image": {
+                    "scale": 2
+                },
+                "zoomLevel": 5
+            }
+        }
