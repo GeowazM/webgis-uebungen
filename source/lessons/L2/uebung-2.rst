@@ -4,8 +4,8 @@
 .. hint::
 
    Ziel der Übung
-      * Die ersten Schritte zum Webmapping
-      * Die Benutzeroberfläche von qgis2web kennenlernen
+      * Die ersten Schritte zum WebMapping
+      * HTML, CSS, JavaScript & Visual Studio Code kennenlernen
 
 .. figure:: img/code-1076536_1280.jpg
    :alt: Code 
@@ -26,7 +26,7 @@ Später werdem wir `Visual Studio Code <https://code.visualstudio.com/>`__ als I
 
 - Das HTML Grundgerüst 
    * Öffne den Link zu `HTML Intro <https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro>`__
-   * Verändere den *Page Title* und den *My first paragraph* und 
+   * Verändere den *My First Heading* und den *My first paragraph* und 
    * klicke auf **Run**
 
 .. hint::
