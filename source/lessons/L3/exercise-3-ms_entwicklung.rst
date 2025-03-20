@@ -288,7 +288,7 @@ Weitere nützliche Werkzeuge (Tools)  *config.json*
    Einige Werkzeuge funktionieren nur, wenn die Anwendung Online ist. 
 
 
-Die Kommune und deine Firma tauschen sich über eine bestimmtes Gebäude aus. Um eine schnelle, digitale und direkte Übersicht des Gebäudes zu erhalten wurdest du beauftragt,
+Die Kommune und deine Firma tauschen sich über ein Bauprojekt aus. Um eine schnelle, digitale und direkte Übersicht einer Straße & eines Gebäudes zu erhalten wurdest du beauftragt,
 den Geoviewer zu erweitern, um einen solchen Austausch zu erleichtern. 
 
 
@@ -355,8 +355,8 @@ Geoobjekte auswählen & anzoomen
 """""""""""
 
 Als erstes Werkzeug wollen wir eine Auswahlfunktion für Geoobjekte in unseren Geoviewer einbinden. 
-Nutze folgenden Code-Schnipsel und teste das Auswahltool am Beispiel der Straßen.
-Wähle die Straßensegmente der Tübinger Neckarbrücke aus! Test auch den Button *Auf dieses Feature zoomen*. Was passiert in der Layer-Übersicht?
+Nutze folgenden Code-Schnipsel und teste das Auswahltool am Beispiel der Straßen ("secondaryMenu" > "section").
+Wähle die Straßensegmente der Tübinger Neckarbrücke aus! Teste den Button *Auf dieses Feature zoomen*. Was passiert in der Layer-Übersicht?
 
 .. code-block:: json
 
@@ -391,7 +391,7 @@ Wähle die Straßensegmente der Tübinger Neckarbrücke aus! Test auch den Butto
 Ansicht teilen (Share view)
 """""""""""
 
-Wir konnten mit dem Auwahlwerkzeug einzelne Segmente aus unserem WFS-Dienst. Können wir diese Auwahl auch mit Kolleginnen & Kollegen teilen?
+Wir konnten mit dem Auwahlwerkzeug einzelne Segmente aus unserem WFS-Dienst selektieren. Können wir diese Auwahl auch mit Kolleginnen & Kollegen teilen?
 Versuchen wir es. Folgender Code kann in unsere *config.json* in die Werkzeugleiste ("secondaryMenu" > "section") eingebunden werden.
 
  .. code-block:: json
@@ -415,7 +415,7 @@ Externe WFS-Dienste einbinden
 """""""""""
 
 Jetzt haben wir unseren Straßenlayer eingebunden. Für unseren Auftrag ist es ebenfalls relevant die Gebäude mit zu berücksichtigen. Dafür binden wir in unserem Tübinger
-Beispiel den Gebäudelayer des WFS-Dienstes (LGL BW Open Data) ALKIS mit ein. 
+Beispiel den Gebäudelayer des WFS-Dienstes (LGL BW Open Data) ALKIS mit ein. Verwende für ein anderes Untersuchungsgebiet einen passenden WFS-Dienst. Bei der Suche kann das QGIS-Plugin *GeoBasis_Loader* helfen.
 Binde folgenden Code ein, verknüpfe diesen in der *config.json* & teste ob er im Geoviewer erscheint.
 
 .. code-block:: json
@@ -476,4 +476,43 @@ Geoobjekte (Features) erstellen, bearbeiten und/oder löschen
           }
 
 
+WFS-Dienst filtern
+"""""""""""
 
+.. code-block:: json
+
+            {   "type": "WFSSuche",
+                "instances": [
+                    {
+                        "requestConfig": {
+                            "layerId": "lgvline"
+                        },
+                        "selectSource": "https://geoportal-hamburg.de/lgv-config/gemarkungen_hh.json",
+                        "literals": [
+                            {
+                                "clause": {
+                                    "type": "and",
+                                    "literals": [
+                                        {
+                                            "field": {
+                                                "queryType": "equal",
+                                                "fieldName": "gemarkung",
+                                                "inputLabel": "Gemarkung",
+                                                "options": ""
+                                            }
+                                        },
+                                        {
+                                            "field": {
+                                                "queryType": "equal",
+                                                "fieldName": "flur",
+                                                "inputLabel": "Flur",
+                                                "options": "flur"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+          },
