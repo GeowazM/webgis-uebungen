@@ -282,8 +282,117 @@ In der folgenden Abbildung kannst du dir einen Überblick verschaffen, welche Co
 Weitere nützliche Werkzeuge (Tools)  *config.json*
 -----------
 
+
+.. caution::
+
+   Einige Werkzeuge funktionieren nur, wenn die Anwendung Online ist. 
+
+
+Die Kommune und deine Firma tauschen sich über eine bestimmtes Gebäude aus. Um eine schnelle, digitale und direkte Übersicht des Gebäudes zu erhalten wurdest du beauftragt,
+den Geoviewer zu erweitern, um einen solchen Austausch zu erleichtern. 
+
+
+Wir haben im ersten Webinar den Straßenlayer (WFS-Dienst) aus unserem Geonode eingebunden & gestylt. Falls du diesen Straßenlayer noch nicht implementiert hast,
+dann füge folgenden Code in deine *services.json* Datei.
+
+.. code-block:: json
+
+  {
+    "id": "lgvline",
+    "name": "strassen_test",
+    "url": "https://prxmx-gdmtesting.rue23.uni-tuebingen.de/geoserver/geonode/strassen_tuebingen/ows",
+    "typ": "WFS",
+    "featureType": "geonode:strassen_tuebingen",
+    "featurePrefix": "",
+    "outputFormat" : "image/png",
+    "version": "1.1.0",
+    "featureNS": "",
+    "gfiAttributes": {
+      "name": "Name"
+    },
+    "gfiTheme": "default",
+    "layerAttribution":"nicht vorhanden",
+	"legendURL":"",
+	"hitTolerance":"",
+	"datasets":[],
+	"urlIsVisible":true
+  }
+
+
+Im Anschluss an das einbinden unseres Straßen-Layers (WFS-Dienstes) haben wir diesen in *style_v3.json* individualisiert.
+
+.. code-block:: json
+
+  {
+    "styleId": "1",
+    "rules": [
+      {
+        "style": {
+          "lineStrokeColor": [
+            255, 0, 0, 0.5
+          ],
+          "lineStrokeWidth": 10
+              }
+      }
+    ]
+  }
+
+Um unseren eingebunden & gestylten Layer im Geoviewer sichtbar zu machen, müssen wir diesen in die *config.json* unter "subjectLayer" > "elements:" einen Verweis einfügen.
+Dafür können wir folgenden Code-Snippet nutzen.
+
+.. code-block:: json
+
+        {
+          "id": "lgvline",
+          "name": "Straßen",
+          "styleId": "1",
+          "visibility": true,
+          "typ": "WFS"
+        },
+
+
+Geoobjekte auswählen & anzoomen
+"""""""""""
+
+Als erstes Werkzeug wollen wir eine Auswahlfunktion für Geoobjekte in unseren Geoviewer einbinden. 
+Nutze folgenden Code-Schnipsel und teste das Auswahltool am Beispiel der Straßen.
+Wähle die Straßensegmente der Tübinger Neckarbrücke aus! Test auch den Button *Auf dieses Feature zoomen*. Was passiert in der Layer-Übersicht?
+
+.. code-block:: json
+
+         {
+            "type": "selectFeatures",
+            "highlightVectorRulesPolygon": {
+                "fill": {
+                    "color": [255, 0, 255, 0.9]
+                },
+                "stroke": {
+                    "width": 4,
+                    "color": [0, 0, 204, 0.9]
+                },
+                "zoomLevel": 5
+            },
+            "highlightVectorRulesPointLine": {
+                "fill": {
+                    "color": [255, 0, 255, 0.9]
+                },
+                "stroke": {
+                    "width": 8,
+                    "color": [255, 0, 255, 0.9]
+                },
+                "image": {
+                    "scale": 2
+                },
+                "zoomLevel": 5
+            }
+        }
+
+
 Ansicht teilen (Share view)
 """""""""""
+
+Wir konnten mit dem Auwahlwerkzeug einzelne Segmente aus unserem WFS-Dienst. Können wir diese Auwahl auch mit Kolleginnen & Kollegen teilen?
+Versuchen wir es. Folgender Code kann in unsere *config.json* in die Werkzeugleiste ("secondaryMenu" > "section") eingebunden werden.
 
  .. code-block:: json
 
@@ -296,6 +405,39 @@ Ansicht teilen (Share view)
          }
 
 
+.. caution::
+
+   Funktioniert nur, wenn die Webseite online ist. Im Entwicklungsmodus (VS Code & Live Server) einbindbar, aber nicht testbar. 
+
+
+
+Externe WFS-Dienste einbinden
+"""""""""""
+
+Jetzt haben wir unseren Straßenlayer eingebunden. Für unseren Auftrag ist es ebenfalls relevant die Gebäude mit zu berücksichtigen. Dafür binden wir in unserem Tübinger
+Beispiel den Gebäudelayer des WFS-Dienstes (LGL BW Open Data) ALKIS mit ein. 
+Binde folgenden Code ein, verknüpfe diesen in der *config.json* & teste ob er im Geoviewer erscheint.
+
+.. code-block:: json
+
+  {
+    "id": "lgvpolygon",
+    "name": "gebaeude_test",
+    "url": "https://owsproxy.lgl-bw.de/owsproxy/wfs/WFS_LGL-BW_ALKIS",
+    "typ": "WFS",
+    "featureType": "nora:v_al_gebaeude",
+    "featurePrefix": "",
+    "outputFormat" : "image/png",
+    "version": "1.1.0",
+    "featureNS": "",
+    "gfiAttributes": "showAll",
+    "gfiTheme": "default",
+    "layerAttribution":"nicht vorhanden",
+	"legendURL":"",
+	"hitTolerance":"",
+	"datasets":[],
+	"urlIsVisible":true
+  }
 
 Geoobjekte (Features) erstellen, bearbeiten und/oder löschen
 """""""""""
@@ -333,34 +475,5 @@ Geoobjekte (Features) erstellen, bearbeiten und/oder löschen
             "delete": true
           }
 
-Geoobjekte auswählen & anzoomen
-"""""""""""
 
-.. code-block:: json
 
-         {
-            "type": "selectFeatures",
-            "highlightVectorRulesPolygon": {
-                "fill": {
-                    "color": [255, 0, 255, 0.9]
-                },
-                "stroke": {
-                    "width": 4,
-                    "color": [0, 0, 204, 0.9]
-                },
-                "zoomLevel": 5
-            },
-            "highlightVectorRulesPointLine": {
-                "fill": {
-                    "color": [255, 0, 255, 0.9]
-                },
-                "stroke": {
-                    "width": 8,
-                    "color": [255, 0, 255, 0.9]
-                },
-                "image": {
-                    "scale": 2
-                },
-                "zoomLevel": 5
-            }
-        }
