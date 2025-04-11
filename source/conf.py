@@ -148,7 +148,7 @@ html_context = {
     # Set the following variables to generate the resulting github URL for each page.
     # Format Template: https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/blob/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}
     "github_user": "GeowazM",
-    "github_repo": "site",
+    "github_repo": "gdm-gis",
     "github_version": "master/",
     "conf_py_path": "/source/",
 }
