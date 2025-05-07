@@ -1,19 +1,16 @@
-Hands-on: Metadaten mit CatMDEdit erstellen (15 Min.)
-========================================================
+Metadaten mit QGIS-Plugin geocat.ch erstellen 
+=============================================
 
-a) Tool-Vorstellung (2 Min.)
-----------------------------
+.. hint::
 
-- **CatMDEdit:** Kostenlos, plattformunabhängig, unterstützt ISO 19115, ISO 19139 und INSPIRE.
-- **Download:** `catmdedit.sourceforge.io <https://catmdedit.sourceforge.io>`_
-- **Installation:** Java erforderlich, dann einfach starten.
-- **Alternativen:** Geoportal.gov.pl Metadata Editor, ArcGIS Pro Metadateneditor (kurz erwähnen).
+   **Plugin:** `geocat.ch Export <https://plugins.qgis.org/plugins/geocat_export/`_
 
-b) Neues Metadaten-Dokument anlegen (2 Min.)
+
+Vorbereitung
 --------------------------------------------
 
-- Starte CatMDEdit.
-- Wähle „Neues Metadatendokument“.
+- Starte QGIS
+- Installiere das Plugin `geocat.ch Export <https://plugins.qgis.org/plugins/geocat_export/`_
 - Wähle das gewünschte Profil: ISO 19115, ISO 19139 oder INSPIRE.
 - Kurzer Überblick über die Oberfläche und wichtigsten Menüs.
 
@@ -61,7 +58,7 @@ c) Schritt für Schritt: Felder ausfüllen (8 Min.)
 
    CatMDEdit zeigt an, ob Pflichtfelder fehlen – so bleibt alles INSPIRE- und ISO-konform.
 
-d) Validierung und Export (3 Min.)
+d) Validierung und Export
 ----------------------------------
 
 **Validierung:**
@@ -87,7 +84,7 @@ d) Validierung und Export (3 Min.)
 
 **Hilfetexte nutzen:**
 
-- Viele Editoren bieten Tooltips und Hilfetexte – diese helfen, Fehler zu vermeiden.
+- Viele Editoren bieten Validierungshilfe.
 
 **Aktualität sicherstellen:**
 
@@ -101,8 +98,8 @@ d) Validierung und Export (3 Min.)
 
 - Metadaten können zwischen Open Data und Geodateninfrastruktur geteilt werden (siehe Leitfaden NRW).
 
-7. Häufige Fehler & Troubleshooting (2 Min.)
-============================================
+7. Häufige Fehler & Troubleshooting
+====================================
 
 - Fehlende Pflichtfelder (z.B. kein räumlicher Bezug)
 - Unklare oder zu knappe Beschreibungen
@@ -110,20 +107,8 @@ d) Validierung und Export (3 Min.)
 
 **Tipp:** Validierungsfunktionen nutzen, Rückfragen an Metadaten-Teams oder Leitfäden.
 
-8. Ausblick & weiterführende Ressourcen (1 Min.)
-================================================
-
-**Weiterbildung:**
-
-- Schulungen der GDI-DE, Online-Kurse, Webinare
 
 **Wichtige Links:**
 
-- `CatMDEdit Download <https://catmdedit.sourceforge.io>`_
 - `Leitfaden NRW <https://open.nrw/system/files/media/document/file/leitfaden_zur_metadatenerfassung.pdf>`_
 - `INSPIRE-Metadatenprofil Deutschland <https://www.gdi.nrw/system/files/media/document/file/architektur_gdi_de_konventionen_metadaten_v2_3_0.pdf>`_
-- `GEOkatalog NRW <https://www.geoportal.nrw/geoportal/metadaten>`_
-
-**Community:**
-
-- Arbeitskreis Metadaten der GDI-DE, Foren, Mailinglisten
