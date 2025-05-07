@@ -135,3 +135,11 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
     lessons/L5/daten_upload
     lessons/L5/karte_erstellen
 
+.. toctree::
+    :maxdepth: 2
+    :caption: Metadatenstandards
+
+    lessons/L6/metadaten
+    lessons/L6/beispiel_nrw
+    lessons/L6/catmdedit 
+    lessons/L6/esri
