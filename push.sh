@@ -3,7 +3,7 @@
 
 # Fill this out with the correct org/repo
 ORG=GeowazM
-REPO=gdm-gis
+REPO=webgis-uebungen
 # This probably should match an email for one of your users.
 EMAIL=mailto:mario@uni-tuebingen.de
 
