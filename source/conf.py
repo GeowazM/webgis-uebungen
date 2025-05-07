@@ -19,9 +19,8 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "WebGIS Übungen"
+project = "GIS1"
 copyright = "2025"
-# author = 'David Whipp, Henrikki Tenkanen, Vuokko Heikinheimo, Håvard Aagesen'
 author = "Mario Blersch"
 
 # The short X.Y version
@@ -60,7 +59,7 @@ templates_path = ["_templates"]
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = ['.rst', '.md']
-source_suffix = ".rst"
+source_suffix = ".md"
 
 # The master toctree document.
 master_doc = "index"
@@ -104,11 +103,11 @@ pygments_style = "sphinx"
 
 html_theme = "sphinx_book_theme"
 html_logo = "_static/logo_trans.png"
-html_title = "WebGIS"
+html_title = "GIS1"
 
 html_theme_options = {
     # "external_links": [],
-    "repository_url": "https://github.com/GeowazM/webgis-uebungen/",
+    "repository_url": "https://github.com/GeowazM/gdm-gis/",
     "repository_branch": "master",
     "path_to_docs": "source/",
     "use_edit_page_button": True,
@@ -149,7 +148,7 @@ html_context = {
     # Set the following variables to generate the resulting github URL for each page.
     # Format Template: https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/blob/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}
     "github_user": "GeowazM",
-    "github_repo": "site",
+    "github_repo": "gdm-gis",
     "github_version": "master/",
     "conf_py_path": "/source/",
 }
@@ -200,7 +199,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, "WebGIS", "WebGIS Übungen Documentation", [author], 1)]
+man_pages = [(master_doc, "GIS1", "GIS1 Übungen Documentation", [author], 1)]
 
 # Allow errors
 execution_allow_errors = True
