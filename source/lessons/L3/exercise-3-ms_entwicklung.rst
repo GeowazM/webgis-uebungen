@@ -1,4 +1,3 @@
-==========
 Geoviewer konfigurieren
 ==========
 
@@ -22,7 +21,7 @@ Ein zentrales Dokument, dass wir für die Konfiguration brauchen ist `die offizi
 Das *Masterportal example* befindet sich in Hamburg. Die dort eingesetzten Parameter ändern wir jetzt Schritt für Schritt, um aus dem Example unseren eigenen Geoviewer zu konfigurieren.
 
 Titel & Logo ändern
-~~~~~~~~~~~~~~~~~~~~~~
+--------
 
 .. hint::
 
@@ -82,7 +81,7 @@ Da wir ohnehin die *index.html* Seite offen haben, können wir direkt den Titel 
     },
 
 Geoviewer anpassen
-~~~~~~~~~~~~~~~~~~~~~~
+--------
 
 Jetzt widmen wir uns dem Kern unseres Geoviewers - der Kartenansicht (engl. Map canvas). Dafür müssen wir die geographische Ausdehnung (*Extent*) & 
 den zentralen Startpunkt definieren (*Centroid* oder bspw. das *Geoinstitut*). Dafür nutzen wir die Daten aus der Vorbereitung.
@@ -120,7 +119,7 @@ den zentralen Startpunkt definieren (*Centroid* oder bspw. das *Geoinstitut*). D
 Jetzt passen wir in der **config.json** Datei die einzelnen Parameter auf unser Untersuchungsgebiet an.
 
 Startpunkt - **"startCenter"**
-~~~~~~~~~~~~~~~~~~~~~~
+--------
 
 Wir starten mit dem `zentralen Startpunkt <https://www.masterportal.org/mkdocs/doc/v3.7.0/User/Portal-Config/config.json.de/#datatypescoordinate>`__.
 Dafür nutzen wir die Koordinaten, die wir in QGIS vorbereitet haben.
@@ -179,7 +178,7 @@ Dafür nutzen wir die Koordinaten, die wir in QGIS vorbereitet haben.
 
 
 Ausdehnung - **"extent"**
-~~~~~~~~~~~~~~~~~~~~~~
+--------
 
 4. Als nächstes definieren wir den geographischen Rahmen (**Extent** bzw. **Bbox**) unseres Geoviewers
 
@@ -241,7 +240,7 @@ Ausdehnung - **"extent"**
 **Gratulation! Die Karte sollte jetzt angepasst sein**
 
 Werkzeuge - **"secondaryMenu"**
-~~~~~~~~~~~~~~~~~~~~~~
+--------
  
 Das **"secondaryMenu"** ist die Toolbox bzw. Werkzeugkiste des Masterportals. Es bezieht sich auf das Navigationsfenster, dass man im rechten Bereich finden kann.
 
@@ -256,7 +255,7 @@ Als erstes wollen wir Werkzeuge löschen, die wir nicht benötigen. Lösche folg
 Durch das Anpassen dieses bereiches kannst du definieren, welche Werkzeuge in deinem Geoviewer zur Verfügung stehen sollen.
 
 Navigationsfenster - **"mainMenu"**
-~~~~~~~~~~~~~~~~~~~~~~
+--------
 
 Lösche im Abschnitt **"sections"** folgendes
 
@@ -273,7 +272,7 @@ Speichere deine Datei und sieh dir die Veränderungen im Geoviewer an. Was hat s
 
 
 Überblick *config.json*
-~~~~~~~~~~~~~~~~~~~~~~
+--------
 
 In der folgenden Abbildung kannst du dir einen Überblick verschaffen, welche Code-Abschnitt der *config.json* für welche Bereiche des Geoviewers zuständig sind.
 
@@ -296,7 +295,7 @@ damit dieser Layer im Geoviewer angezeigt wird.
 
 
 Hintergrundkarte
-~~~~~~~~~~~~~~~~~~~~~~
+--------
 
 Beginnen wir mit einer Hintergrundkarte, die wir als WMS-Layer einbinden.
 
@@ -378,7 +377,7 @@ Vorlagen zur Einbindung von WMS- & WMTS-Layern finden sich auch in `der offiziel
 
 
 Layer im Geoviewer aktivieren
-~~~~~~~~~~~~~~~~~~~~~~
+--------
 
 .. hint::
 
@@ -442,7 +441,7 @@ Layer im Geoviewer aktivieren
 
 
 Beispiel
-~~~~~~~~~~~~~~~~~~~~~~
+--------
 
 So oder do ähnlich kann ein einfacher Geoviewer ausseheb
 
@@ -455,7 +454,7 @@ So oder do ähnlich kann ein einfacher Geoviewer ausseheb
 
 
 Geoportal Hamburg
-~~~~~~~~~~~~~~~~~~~~~~
+--------
 
 .. hint::
 
@@ -475,7 +474,7 @@ Weitere nützliche Werkzeuge (Tools)  *config.json*
    Einige Werkzeuge funktionieren nur, wenn die Anwendung Online ist. 
 
 Geoobjekte auswählen & anzoomen
-~~~~~~~~~~~~~~~~~~~~~~
+--------
 
 Als erstes Werkzeug wollen wir eine Auswahlfunktion für Geoobjekte in unseren Geoviewer einbinden. 
 Nutze folgenden Code-Schnipsel und teste das Auswahltool am Beispiel der Straßen ("secondaryMenu" > "section").
@@ -512,7 +511,7 @@ Wähle die Straßensegmente der Tübinger Neckarbrücke aus! Teste den Button *A
 
 
 Ansicht teilen (Share view)
-~~~~~~~~~~~~~~~~~~~~~~
+--------
 
 Wir konnten mit dem Auwahlwerkzeug einzelne Segmente aus unserem WFS-Dienst selektieren. Können wir diese Auwahl auch mit Kolleginnen & Kollegen teilen?
 Versuchen wir es. Folgender Code kann in unsere *config.json* in die Werkzeugleiste ("secondaryMenu" > "section") eingebunden werden.
@@ -535,7 +534,7 @@ Versuchen wir es. Folgender Code kann in unsere *config.json* in die Werkzeuglei
 
 
 Externe WFS-Dienste einbinden
-~~~~~~~~~~~~~~~~~~~~~~
+--------
 
 Jetzt haben wir unseren Straßenlayer eingebunden. Für unseren Auftrag ist es ebenfalls relevant die Gebäude mit zu berücksichtigen. Dafür binden wir in unserem Tübinger
 Beispiel den Gebäudelayer des WFS-Dienstes (LGL BW Open Data) ALKIS mit ein. Verwende für ein anderes Untersuchungsgebiet einen passenden WFS-Dienst. Bei der Suche kann das QGIS-Plugin *GeoBasis_Loader* helfen.
@@ -563,7 +562,7 @@ Binde folgenden Code ein, verknüpfe diesen in der *config.json* & teste ob er i
   }
 
 Geoobjekte (Features) erstellen, bearbeiten und/oder löschen
-~~~~~~~~~~~~~~~~~~~~~~
+--------
 
 .. code-block:: json
 
@@ -600,7 +599,7 @@ Geoobjekte (Features) erstellen, bearbeiten und/oder löschen
 
 
 WFS-Dienst filtern
-~~~~~~~~~~~~~~~~~~~~~~
+--------
 
 .. code-block:: json
 
