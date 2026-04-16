@@ -6,7 +6,7 @@
 .. image:: img/banner/world-map.png
     :class: dark-light
 
-Willkommen zum Modul WebGIS 🗺🌐
+Hallo - Willkommen zum Modul WebGIS 🗺🌐
 ===========================
 
 Informationen zur `Weiterbildung Geodatenmanager/-in <https://wissenschaftliche-weiterbildung.info/Veranstaltung/cmx64c779c751049.html>`__ finden Sie `hier <https://wissenschaftliche-weiterbildung.info/Veranstaltung/cmx64c779c751049.html>`__  !
