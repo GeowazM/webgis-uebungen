@@ -14,7 +14,7 @@ Geodaten implementieren
       *  `Live Server <https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer>`__
 
 
-OGC-Deinste konfigurieren & implementieren
+OGC-Dienste konfigurieren & implementieren
 ===========
 Wir haben jetzt die Vorbereitungen und die individuelle Konfiguration unseres Geoviewers abgeschlossen. Jetzt fehlen noch die passenden Layer, die wir in unserem Geoviewer angezeigt haben möchten.
 Die Dienste und Layer können wir in der Datei *services.json* anpassen. Es wirkt auf den ersten Blick sehr verwirrend, aber wir werden uns Schritt für Schritt dem Aufbau nähern & konfigurieren.

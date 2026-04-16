@@ -128,7 +128,7 @@ Insert
 Erlaubt, dass ein Client neue Features (Datensätze) hinzufügen darf.
 Beispiel:
 
-•	neue Straßenlaterne als Punkt erfassen 
+•	Neuer Lichtmast als Punkt erfassen bzw. hinzufügen 
 
 Delete
 --------
@@ -140,7 +140,7 @@ Was kann man damit machen (praktisch)?
 
 Wenn du WFS mit Insert/Update/Delete aktivierst, könnten Nutzer z.B.:
 
-•	WFS -T = transaction (OCG Standard)
+•	WFS -T = Transaction (OCG Standard)
 •	über QGIS direkt auf deinen Serverlayer zugreifen 
 •	Features editieren wie bei einer Datenbank 
 •	Änderungen speichern → landen im Backend

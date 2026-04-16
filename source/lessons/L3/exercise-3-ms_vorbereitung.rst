@@ -66,7 +66,7 @@ Masterportal herunterladen & einbinden
 ~~~~~~~~~~~~~~~~~~~~~~
 
 
-1. Lade dir das `Masterportal example (examples-3.3.4-lts.zip) <https://bitbucket.org/geowerkstatt-hamburg/masterportal/downloads/>`__ herunter & enzippe den Ordner an einer für dich geeigneten Stelle.
+1. Lade dir das `neuste Masterportal example (examples-xxx-lts.zip) <https://bitbucket.org/geowerkstatt-hamburg/masterportal/downloads/>`__ herunter & enzippe den Ordner an einer für dich geeigneten Stelle.
 2. Innerhalb des Masterportal_example Ordners findest du einen Ordner *Basic*. Kopiere diesen und bennene ihn passend zu deinem Untersuchungsgebiet um (bspw. uni-tuebingen).
 
 3. Öffne dein Masterportal example (bspw. uni-tuebingen) Ordner in Visual Studio Code
