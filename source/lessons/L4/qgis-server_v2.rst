@@ -14,6 +14,9 @@ WMS erstellen
       *  `OGC-Dienste - Basics <https://docs.qgis.org/3.40/en/docs/server_manual/services/basics.html>`__
 
 
+Lade dir das QGIS Projekt aus ILIAS herunter: "uebung_1_qgis-server_Bota_Lichtmasten-Projekt
+.zip" `https://lms-ubinfo.uni-tuebingen.de/ilias3/goto.php/file/46655/download>`__
+
 Eigenen OGC-Dienst konfigurieren
 -----------
 

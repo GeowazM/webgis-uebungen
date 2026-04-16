@@ -20,7 +20,9 @@ WFS erstellen
 WFS/OAPIF erstellen
 --------
 
-WFS = Web Feature Service, OAPIF = OGC API for Features
+**WFS = Web Feature Service**
+
+**OAPIF = OGC API for Features**
 
 In QGIS Server sind WMS und WFS/OAPIF zwei unterschiedliche Arten um Daten bereitzustellen. Wann sollten Sie WMS und wann WFS/OAPIF verwenden?
 WMS (Web Map Service)
@@ -33,6 +35,8 @@ WMS (Web Map Service)
 *Ideal für Webkarten-Hintergründe, Viewer, schnelle Darstellung.*
 
 WFS (Web Feature Service) / OAPIF
+--------
+
 •	liefert echte Vektordaten (Features: Punkte, Linien, Polygone + Attribute) 
 •	Nutzer können Daten abfragen, filtern, herunterladen 
 •	je nach Konfiguration auch editieren (Update/Insert/Delete) 
@@ -41,7 +45,10 @@ WFS (Web Feature Service) / OAPIF
 *Ideal, wenn andere Systeme deine Geodaten wirklich verwenden sollen, nicht nur anschauen.*
 
 Warum OAPIF?
+--------
+
 OAPIF (OGC API Features) ist die modernere (.json) Nachfolger von WFS:
+
 •	einfacher über HTTP/JSON nutzbar 
 •	besser geeignet für Webentwicklung 
 •	moderner Standard (REST-ähnlich) 
@@ -49,6 +56,8 @@ OAPIF (OGC API Features) ist die modernere (.json) Nachfolger von WFS:
 *Zukunftssicherer als klassischer WFS.*
 
 Kurz gesagt: Wann was?
+====== 
+
 •	Nur anschauen / Karte anzeigen → WMS 
 •	Daten abrufen / GIS-Analyse / Download → WFS/OAPIF 
 •	Daten bearbeiten über Web/GIS → WFS mit Schreibrechten 
@@ -58,12 +67,12 @@ Viele Server (bspw. QGIS Server oder GeoServer) bieten beides gleichzeitig an - 
 Die WFS/OAPIF-Datei können Sie wie bei der WMS-Datei in QGIS über Projekt Eigenschaften  QGIS Server erstellen. Dafür müssen wie gewohnt die Service Capabilities und WMS dem Datensatz entsprechend ausgefüllt werden.
 
 
-.. figure:: /img/Bild1.png
+.. figure:: img/Bild1.png
    :alt: Bild 1
 
    QGIS Server Plugin in QGIS - Service Capabilities
 
-.. figure:: /img/Bild1.png
+.. figure:: img/Bild1.png
    :alt: Bild 2
 
    QGIS Server Plugin in QGIS - WMS definieren
@@ -76,15 +85,15 @@ Einfügen und Löschen verbirgt. Darauf wird im Folgenden etwas genauer
 eingegangen.
 
 
-.. figure:: /img/Bild1.png
-   :alt: Bild 2
+.. figure:: img/Bild1.png
+   :alt: Bild 3
 
    QGIS Server Plugin in QGIS - WFS/OAPIF definieren
 
 
 
 Published
-^^^^^^^^
+--------
 
 Unter Published können Sie auswählen, ob der Layer in der WFS/OAPIF-Datei veröffentlich wird oder nicht.
 
@@ -97,7 +106,7 @@ Wenn nicht aktiviert:
 •	Layer existiert im Projekt, aber nicht als WFS/OAPIF Service 
 
 Geometry precision
-^^^^^^^^
+--------
 
 Die Geometry precision bestimmt, mit wie vielen Dezimalstellen die Koordinaten ausgeliefert werden. Das kann sinnvoll sein, um die Datenmenge zu reduzieren oder Geometrien leichter zu generalisieren.
 Beispiel:
@@ -105,7 +114,7 @@ Beispiel:
 •	weniger Dezimalstellen = weniger Datenvolumen, schnellere Übertragung 
 
 Update
-^^^^^^^^
+--------
 
 Erlaubt, dass ein Client bestehende Features verändern darf und somit einen Schreibzugriff hat oder auch nicht.
 Beispiel:
@@ -114,7 +123,7 @@ Beispiel:
 •	Geometrie verschieben 
 
 Insert
-^^^^^^^^
+--------
 
 Erlaubt, dass ein Client neue Features (Datensätze) hinzufügen darf.
 Beispiel:
@@ -122,12 +131,12 @@ Beispiel:
 •	neue Straßenlaterne als Punkt erfassen 
 
 Delete
-^^^^^^^^
+--------
 
-Erlaubt, dass ein Client Features (Datensätze) löschen darf.
+Erlaubt, dass ein Client (bspw. in QGIS) Features (Datensätze) löschen darf.
 
 Was kann man damit machen (praktisch)?
-^^^^^^^^
+--------
 
 Wenn du WFS mit Insert/Update/Delete aktivierst, könnten Nutzer z.B.:
 
@@ -139,7 +148,7 @@ Wenn du WFS mit Insert/Update/Delete aktivierst, könnten Nutzer z.B.:
 Das ist sehr mächtig, aber auch riskant.
 
 Wichtiger Hinweis (Sicherheit)
-^^^^^^^^
+--------
 
 Wenn du Update/Insert/Delete aktivierst, solltest du unbedingt:
 
@@ -151,6 +160,7 @@ Wenn du Update/Insert/Delete aktivierst, solltest du unbedingt:
 Sonst könnte theoretisch jemand Daten löschen oder verfälschen.
 
 Fazit
+--------
 
 •	WMS: für Kartenbilder (sicher, schnell, Karte wird angezeigt) 
 •	WFS/OAPIF: für echte Geodaten (Analyse, Download, ggf. Editieren) 
