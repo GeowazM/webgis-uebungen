@@ -6,7 +6,7 @@
 .. image:: img/banner/world-map.png
     :class: dark-light
 
-Hallo - Willkommen zum Modul WebGIS 🗺🌐
+Willkommen zum Modul WebGIS 🗺🌐
 ===========================
 
 Informationen zur `Weiterbildung Geodatenmanager/-in <https://wissenschaftliche-weiterbildung.info/Veranstaltung/cmx64c779c751049.html>`__ finden Sie `hier <https://wissenschaftliche-weiterbildung.info/Veranstaltung/cmx64c779c751049.html>`__  !
@@ -125,6 +125,7 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
     gis-data/ogc-standards
     lessons/L4/qgis-server
     lessons/L4/qgis-server_v2
+    lessons/L4/qgis-server_v4
 
 .. toctree::
     :maxdepth: 2
