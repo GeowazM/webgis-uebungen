@@ -233,6 +233,11 @@ Ausdehnung - **"extent"**
 
 **Speichere dein Projekt und schaue dir die Änderungen in deinem Browserfenster an.** 
 
+.. hint::
+
+   Aktiviere im Browser den Layer "TopPlusOpen". Was siehst du?
+
+
 **Gratulation! Die Karte sollte jetzt angepasst sein**
 
 Werkzeuge - **"secondaryMenu"**
