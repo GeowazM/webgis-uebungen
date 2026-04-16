@@ -22,7 +22,7 @@ Ein zentrales Dokument, dass wir für die Konfiguration brauchen ist `die offizi
 Das *Masterportal example* befindet sich in Hamburg. Die dort eingesetzten Parameter ändern wir jetzt Schritt für Schritt, um aus dem Example unseren eigenen Geoviewer zu konfigurieren.
 
 Titel & Logo ändern
------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. hint::
 
@@ -82,7 +82,7 @@ Da wir ohnehin die *index.html* Seite offen haben, können wir direkt den Titel 
     },
 
 Geoviewer anpassen
------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 Jetzt widmen wir uns dem Kern unseres Geoviewers - der Kartenansicht (engl. Map canvas). Dafür müssen wir die geographische Ausdehnung (*Extent*) & 
 den zentralen Startpunkt definieren (*Centroid* oder bspw. das *Geoinstitut*). Dafür nutzen wir die Daten aus der Vorbereitung.
@@ -120,7 +120,7 @@ den zentralen Startpunkt definieren (*Centroid* oder bspw. das *Geoinstitut*). D
 Jetzt passen wir in der **config.json** Datei die einzelnen Parameter auf unser Untersuchungsgebiet an.
 
 Startpunkt - **"startCenter"**
-"""""""""""
+~~~~~~~~~~~~~~~~~~~~~~
 
 Wir starten mit dem `zentralen Startpunkt <https://www.masterportal.org/mkdocs/doc/v3.7.0/User/Portal-Config/config.json.de/#datatypescoordinate>`__.
 Dafür nutzen wir die Koordinaten, die wir in QGIS vorbereitet haben.
@@ -179,7 +179,7 @@ Dafür nutzen wir die Koordinaten, die wir in QGIS vorbereitet haben.
 
 
 Ausdehnung - **"extent"**
-"""""""""""
+~~~~~~~~~~~~~~~~~~~~~~
 
 4. Als nächstes definieren wir den geographischen Rahmen (**Extent** bzw. **Bbox**) unseres Geoviewers
 
@@ -241,7 +241,7 @@ Ausdehnung - **"extent"**
 **Gratulation! Die Karte sollte jetzt angepasst sein**
 
 Werkzeuge - **"secondaryMenu"**
-"""""""""""
+~~~~~~~~~~~~~~~~~~~~~~
  
 Das **"secondaryMenu"** ist die Toolbox bzw. Werkzeugkiste des Masterportals. Es bezieht sich auf das Navigationsfenster, dass man im rechten Bereich finden kann.
 
@@ -256,7 +256,7 @@ Als erstes wollen wir Werkzeuge löschen, die wir nicht benötigen. Lösche folg
 Durch das Anpassen dieses bereiches kannst du definieren, welche Werkzeuge in deinem Geoviewer zur Verfügung stehen sollen.
 
 Navigationsfenster - **"mainMenu"**
-"""""""""""
+~~~~~~~~~~~~~~~~~~~~~~
 
 Lösche im Abschnitt **"sections"** folgendes
 
@@ -273,7 +273,7 @@ Speichere deine Datei und sieh dir die Veränderungen im Geoviewer an. Was hat s
 
 
 Überblick *config.json*
------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 In der folgenden Abbildung kannst du dir einen Überblick verschaffen, welche Code-Abschnitt der *config.json* für welche Bereiche des Geoviewers zuständig sind.
 
@@ -296,7 +296,7 @@ damit dieser Layer im Geoviewer angezeigt wird.
 
 
 Hintergrundkarte
-"""""""""""
+~~~~~~~~~~~~~~~~~~~~~~
 
 Beginnen wir mit einer Hintergrundkarte, die wir als WMS-Layer einbinden.
 
@@ -374,56 +374,11 @@ Beginnen wir mit einer Hintergrundkarte, die wir als WMS-Layer einbinden.
     },
 
 
-Jetzt wollen wir noch eine weitere Hintergrundkarte als WMTS-Layer einbinden.
-
-
-.. code-block:: json
-
-  {
-    "id": "topplus_wmts",
-    "name": "TopPlusOpen",
-    "capabilitiesUrl": "https://sgx.geodatenzentrum.de/wmts_topplus_open/1.0.0/WMTSCapabilities.xml",
-    "optionsFromCapabilities": true,
-    "urls": [
-      "https://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.png"
-    ],
-    "typ": "WMTS",
-    "layers": "web",
-    "format": "image/png",
-    "version": "1.0.0",
-    "origin": [
-      -3803165.98427,
-      8805908.08285
-    ],
-    "isBaseLayer": true,
-    "style": "default",
-    "transparent": false,
-    "tileSize": "256",
-    "minScale": "0",
-    "maxScale": "9999999999",
-    "tileMatrixSet": "EU_EPSG_25832_TOPPLUS",
-    "coordinateSystem": "EPSG:25832",
-    "legend": [
-      "https://sg.geodatenzentrum.de/wms_topplus_open?styles=&layer=web&service=WMS&format=image/png&sld_version=1.1.0&request=GetLegendGraphic&version=1.1.1"
-    ],
-    "requestEncoding": "REST",
-    "resLength": "13",
-    "layerAttribution": "Quellenvermerk: © Bundesamt für Kartographie und Geodäsie",
-    "datasets": [
-      {
-        "md_id": "A1C4E929-3EC9-4758-9677-DB4970D226AB",
-        "csw_url": " https://gdk.gdi-de.org/gdi-de/srv/ger/csw?",
-        "show_doc_url": "https://gdk.gdi-de.org/gdi-de/srv/ger/catalog.search#/metadata/"
-      }
-    ]
-  },
-
-
 Vorlagen zur Einbindung von WMS- & WMTS-Layern finden sich auch in `der offizielle Dokumentation (Masterportal Docs) <https://www.masterportal.org/mkdocs/doc/v3.7.0/User/Global-Config/services.json/#wms-layer>`__.
 
 
 Layer im Geoviewer aktivieren
-"""""""""""
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. hint::
 
@@ -487,7 +442,7 @@ Layer im Geoviewer aktivieren
 
 
 Beispiel
------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 So oder do ähnlich kann ein einfacher Geoviewer ausseheb
 
@@ -500,7 +455,7 @@ So oder do ähnlich kann ein einfacher Geoviewer ausseheb
 
 
 Geoportal Hamburg
-"""""""""""
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. hint::
 
@@ -519,72 +474,8 @@ Weitere nützliche Werkzeuge (Tools)  *config.json*
 
    Einige Werkzeuge funktionieren nur, wenn die Anwendung Online ist. 
 
-
-Die Kommune und deine Firma tauschen sich über ein Bauprojekt aus. Um eine schnelle, digitale und direkte Übersicht einer Straße & eines Gebäudes zu erhalten wurdest du beauftragt,
-den Geoviewer zu erweitern, um einen solchen Austausch zu erleichtern. 
-
-
-Wir haben im ersten Webinar den Straßenlayer (WFS-Dienst) aus unserem Geonode eingebunden & gestylt. Falls du diesen Straßenlayer noch nicht implementiert hast,
-dann füge folgenden Code in deine *services.json* Datei.
-
-.. code-block:: json
-
-  {
-    "id": "lgvline",
-    "name": "strassen_test",
-    "url": "https://prxmx-gdmtesting.rue23.uni-tuebingen.de/geoserver/geonode/strassen_tuebingen/ows",
-    "typ": "WFS",
-    "featureType": "geonode:strassen_tuebingen",
-    "featurePrefix": "",
-    "outputFormat" : "image/png",
-    "version": "1.1.0",
-    "featureNS": "",
-    "gfiAttributes": {
-      "name": "Name"
-    },
-    "gfiTheme": "default",
-    "layerAttribution":"nicht vorhanden",
-	"legendURL":"",
-	"hitTolerance":"",
-	"datasets":[],
-	"urlIsVisible":true
-  }
-
-
-Im Anschluss an das einbinden unseres Straßen-Layers (WFS-Dienstes) haben wir diesen in *style_v3.json* individualisiert.
-
-.. code-block:: json
-
-  {
-    "styleId": "1",
-    "rules": [
-      {
-        "style": {
-          "lineStrokeColor": [
-            255, 0, 0, 0.5
-          ],
-          "lineStrokeWidth": 10
-              }
-      }
-    ]
-  }
-
-Um unseren eingebunden & gestylten Layer im Geoviewer sichtbar zu machen, müssen wir diesen in die *config.json* unter "subjectLayer" > "elements:" einen Verweis einfügen.
-Dafür können wir folgenden Code-Snippet nutzen.
-
-.. code-block:: json
-
-        {
-          "id": "lgvline",
-          "name": "Straßen",
-          "styleId": "1",
-          "visibility": true,
-          "typ": "WFS"
-        },
-
-
 Geoobjekte auswählen & anzoomen
-"""""""""""
+~~~~~~~~~~~~~~~~~~~~~~
 
 Als erstes Werkzeug wollen wir eine Auswahlfunktion für Geoobjekte in unseren Geoviewer einbinden. 
 Nutze folgenden Code-Schnipsel und teste das Auswahltool am Beispiel der Straßen ("secondaryMenu" > "section").
@@ -621,7 +512,7 @@ Wähle die Straßensegmente der Tübinger Neckarbrücke aus! Teste den Button *A
 
 
 Ansicht teilen (Share view)
-"""""""""""
+~~~~~~~~~~~~~~~~~~~~~~
 
 Wir konnten mit dem Auwahlwerkzeug einzelne Segmente aus unserem WFS-Dienst selektieren. Können wir diese Auwahl auch mit Kolleginnen & Kollegen teilen?
 Versuchen wir es. Folgender Code kann in unsere *config.json* in die Werkzeugleiste ("secondaryMenu" > "section") eingebunden werden.
@@ -644,7 +535,7 @@ Versuchen wir es. Folgender Code kann in unsere *config.json* in die Werkzeuglei
 
 
 Externe WFS-Dienste einbinden
-"""""""""""
+~~~~~~~~~~~~~~~~~~~~~~
 
 Jetzt haben wir unseren Straßenlayer eingebunden. Für unseren Auftrag ist es ebenfalls relevant die Gebäude mit zu berücksichtigen. Dafür binden wir in unserem Tübinger
 Beispiel den Gebäudelayer des WFS-Dienstes (LGL BW Open Data) ALKIS mit ein. Verwende für ein anderes Untersuchungsgebiet einen passenden WFS-Dienst. Bei der Suche kann das QGIS-Plugin *GeoBasis_Loader* helfen.
@@ -672,7 +563,7 @@ Binde folgenden Code ein, verknüpfe diesen in der *config.json* & teste ob er i
   }
 
 Geoobjekte (Features) erstellen, bearbeiten und/oder löschen
-"""""""""""
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: json
 
@@ -709,7 +600,7 @@ Geoobjekte (Features) erstellen, bearbeiten und/oder löschen
 
 
 WFS-Dienst filtern
-"""""""""""
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: json
 

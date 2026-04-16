@@ -237,3 +237,73 @@ Geoportal Hamburg
 
       Die Stadt Hamburg zeigt in ihrem Geoportal eine breite Palette an Werkzeugen und Möglichkeiten, die das Masterportal bietet. -> `Geoportal Hamburg <https://geoportal-hamburg.de/?lng=de#>`__
 
+
+
+
+Einen eigenen WMS-Dienst hinzufügen
+~~~~~~~~~~~~~~~~~~~~~~
+
+http://134.2.21x.x//cgi-bin/qgis_mapserv.fcgi?MAP=/projects/data/ag/qgis-server_Lichtmasten-Projekt_v2/Lichtmastenmonitoring_in_Tuebingen.qgs
+
+Die Kommune und deine Firma tauschen sich über ein Bauprojekt aus. Um eine schnelle, digitale und direkte Übersicht einer Straße & eines Gebäudes zu erhalten wurdest du beauftragt,
+den Geoviewer zu erweitern, um einen solchen Austausch zu erleichtern. 
+
+
+Wir haben im ersten Webinar den Straßenlayer (WFS-Dienst) aus unserem Geonode eingebunden & gestylt. Falls du diesen Straßenlayer noch nicht implementiert hast,
+dann füge folgenden Code in deine *services.json* Datei.
+
+.. code-block:: json
+
+  {
+    "id": "lgvline",
+    "name": "strassen_test",
+    "url": "https://prxmx-gdmtesting.rue23.uni-tuebingen.de/geoserver/geonode/strassen_tuebingen/ows",
+    "typ": "WFS",
+    "featureType": "geonode:strassen_tuebingen",
+    "featurePrefix": "",
+    "outputFormat" : "image/png",
+    "version": "1.1.0",
+    "featureNS": "",
+    "gfiAttributes": {
+      "name": "Name"
+    },
+    "gfiTheme": "default",
+    "layerAttribution":"nicht vorhanden",
+	"legendURL":"",
+	"hitTolerance":"",
+	"datasets":[],
+	"urlIsVisible":true
+  }
+
+
+Im Anschluss an das einbinden unseres Straßen-Layers (WFS-Dienstes) haben wir diesen in *style_v3.json* individualisiert.
+
+.. code-block:: json
+
+  {
+    "styleId": "1",
+    "rules": [
+      {
+        "style": {
+          "lineStrokeColor": [
+            255, 0, 0, 0.5
+          ],
+          "lineStrokeWidth": 10
+              }
+      }
+    ]
+  }
+
+Um unseren eingebunden & gestylten Layer im Geoviewer sichtbar zu machen, müssen wir diesen in die *config.json* unter "subjectLayer" > "elements:" einen Verweis einfügen.
+Dafür können wir folgenden Code-Snippet nutzen.
+
+.. code-block:: json
+
+        {
+          "id": "lgvline",
+          "name": "Straßen",
+          "styleId": "1",
+          "visibility": true,
+          "typ": "WFS"
+        },
+
