@@ -17,11 +17,18 @@ Metadaten mit GeoNetwork erstellen
       Diese Normen finden sich in der *Adminkonsole* unter *Metadaten & Vorlagen*
 
 
+INSPIRE Ja oder Nein?
+----------------
+
+Hier ist ein guter **Leitfdaden der GDI-DE** zum Vorgehen mit Metadaten & deren Geodatendienste (WMS/WFS): `INSPIRE Umsetzung - GDI-DE <https://www.gdi-de.org/umsetzung/inspire-umsetzung/>`__
+
+
+
+
 Metadaten mit GeoNetwork erstellen
 ---------
 
-`INSPIRE-konforme Einträge in GeoNetwork <https://docs.geonetwork-opensource.org/4.4/user-guide/describing-information/inspire-editing/>`__
-
+Eine Schritt für Schritt Anleitung (engl.): `INSPIRE-konforme Einträge in GeoNetwork <https://docs.geonetwork-opensource.org/4.4/user-guide/describing-information/inspire-editing/>`__
 
 
 ===========================================
@@ -30,29 +37,30 @@ Metadaten mit GeoNetwork erstellen
 
 Anstatt klassischer Arbeitsblätter kannst du die Aufgaben als "Quests" oder Level strukturieren. Das erhöht den Reiz, die oft pingelige Metadaten-Validierung erfolgreich abzuschließen.
 
-Level 1: Der Daten-Scout (Import & Analyse)
+Level 1: Metadaten importieren
 -------------------------------------------
 
 * **Lernziel:** Verständnis für den XML-Austausch von Metadaten.
-* **Aufgabe:** Lade den Beispiel-Datensatz über den bereitgestellten Link der GDI-BW herunter (als XML) und importiere ihn in dein GeoNetwork-Konto.
+* **Aufgabe:** Lade einen Beispiel-Datensatz über den bereitgestellten Link der GDI-BW herunter (als XML) und importiere ihn in deinem GeoNetwork-Konto.
   
-  * *Hinweis: Häkchen bei "Neue UUID generieren"! aktivieren.*
+  * Füge Ihn der Gruppe *webgis-2026* hinzu
+  * Hinweis: Häkchen bei **"Neue UUID generieren"!** aktivieren.
 
 * **Arbeitsauftrag:** Finde heraus, unter welcher INSPIRE-Kategorie (Thema) dieser Datensatz aktuell einsortiert ist. Ändere den Titel so ab, dass dein Vorname darin vorkommt, damit wir ihn im Katalog wiederfinden.
 
-Level 2: Der INSPIRE-Wächter (Fehlerbehebung & Validierung)
+Level 2: Die Validierung
 -----------------------------------------------------------
 
-* **Lernziel:** Anwendung der VO 1205/2008 in der Praxis.
+* **Lernziel:** Anwendung der `Verordnung (EG) Nr. 1205/2008 hinsichtlich Metadaten <https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=CELEX:32008L0120>`__ in der Praxis.
 * **Aufgabe:** Nutze die interne Validierungsfunktion im GeoNetwork.
-* **Arbeitsauftrag:** Führe eine INSPIRE-Validierung deines Datensatzes durch. Das System wird dir (wahrscheinlich) Fehler anzeigen. Deine Mission: Behebe die roten Warnungen (z. B. fehlende Zugänglichkeitseinschränkungen oder unvollständige Ansprechpartner), bis die Validierung erfolgreich durchläuft.
+* **Arbeitsauftrag:** Führe eine Validierung deines Metadatensatzes durch. Das System wird dir (wahrscheinlich) Fehler anzeigen. Deine Mission: Behebe die roten Warnungen (z. B. fehlende Zugänglichkeitseinschränkungen oder unvollständige Ansprechpartner), bis die Validierung erfolgreich durchläuft.
 
-Level 3: Der Netzwerker (Dienste koppeln - VO 976/2009)
+Level 3: Metadaten mit Geodiensten koppeln
 -------------------------------------------------------
 
 * **Lernziel:** Metadaten als Brücke zu echten Geodiensten (WMS/WFS) verstehen.
-* **Aufgabe:** Verknüpfe den "toten" Metadatensatz mit lebendigen Daten.
-* **Arbeitsauftrag:** Wechsle in den Tab "Online-Ressourcen". Fü
+* **Aufgabe:** Verknüpfe den "toten" Metadatensatz mit lebendigen Daten. Dies ist im Sinne der `Verordnung (EG) Nr. 1089/2010 über die Bereitstellung von Geodaten und Geodatendiensten <https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:32010R1089>`__ ein wichtiger Schritt, um die Auffindbarkeit und Nutzbarkeit deiner Daten zu erhöhen.
+* **Arbeitsauftrag:** Wechsle zu deinem Metadatensatz, bearbeite Ihn und füge unter "Online-Ressourcen" die GetCapabilities-URL des GeoServers hinzu (z. B. ``https://[DEIN-SERVER]/geoserver/wms``). Wähle als Protokoll **OGC:WMS Web Map Service** aus und trage den Layer-Namen ein (Format: ``Workspace:Layer``). Speichere die Änderungen und teste die Verknüpfung, indem du den WMS in QGIS über die CSW-Schnittstelle suchst und lädst.
 
 
 ===========================================
