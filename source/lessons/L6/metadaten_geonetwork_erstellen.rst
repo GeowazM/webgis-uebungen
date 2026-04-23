@@ -25,7 +25,7 @@ Hier ist ein guter **Leitfdaden der GDI-DE** zum Vorgehen mit Metadaten & deren 
 
 Eine Schritt für Schritt Anleitung (engl.): `INSPIRE-konforme Einträge in GeoNetwork <https://docs.geonetwork-opensource.org/4.4/user-guide/describing-information/inspire-editing/>`__
 
-
+Eine sehr gute Übersicht, welche Felder INSPIRE-konform ausgefüllt werden müssen, findet sich auf dieser Seite: `Metadatenelemente für Dienste nach INSPIRE-Festlegungen <https://www.geosn.sachsen.de/redmine/projects/metadaten/wiki/Metadatenelemente_nach_INSPIRE-Festlegungen_Dienst>`__
 
 🎯 Übung
 ========
