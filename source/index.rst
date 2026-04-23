@@ -141,5 +141,7 @@ Anhand der Übungen lernt ihr, **wie** ihr praktisch vorgeht, um ans Ziel zu kom
     :caption: Metadatenstandards
 
     lessons/L6/metadaten
+    lessons/L6/metadaten_geonetwork_konfig
+    lessons/L6/metadaten_geonetwork_erstellen
     lessons/L6/beispielnrw
     lessons/L6/catmdedit 
